@@ -1,1 +1,1 @@
-# HCIProjectGroup31-2020-HCIProject
+# HCI Project of Group 31
