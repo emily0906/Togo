@@ -1,1 +1,1 @@
-# HCI Project of Group 31
+# TO GO ordering food system
