@@ -1,0 +1,190 @@
+﻿body {
+    background-color:white;
+}
+
+#top, #mid, #bottom {
+    /* Prevent highlight / selections of the arrows */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*
+    Editting the logo image
+*/
+#top .logo{
+    border-radius:30%;
+    margin-left: auto;
+    width:125px;
+    height:75px;
+    left:20px;
+    top:20px;
+}
+
+/*
+    This is the address at the top area of the screen
+    The location image should be placed inside the textfield
+*/
+#top .topAddress {
+    position:relative;
+    width:250px;
+}
+
+#top .topAddress input {
+    position:relative;
+    background:#fff;
+    box-sizing:border-box;
+    width:250px;
+    height:20px;
+    left:50px;
+    bottom:5px;
+}
+
+ #top .topAddress img {
+    position:absolute;
+    width:20px;
+    height:20px;
+    bottom:3px;
+    left:280px;
+}
+
+ #top #shoppingCart {
+     position:absolute;
+     right:7%;
+     top:60px;
+ }
+
+ #top #shoppingCart img {
+     float:left;
+     width:35px;
+     height:35px;
+ }
+
+/*
+    This is the lines that divide the portions of the screens
+*/
+.dividers{
+    opacity:0.3;
+}
+
+/*
+    slides for coupons
+*/
+
+#mid .slide {
+    display: none;
+}
+
+#mid .slide .coupon {
+    float:left;
+    width:250px;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+#mid .slide img {
+    height:90px;
+}
+
+#mid .rightRotate,
+#mid .leftRotate {
+    float:left;
+    color:black;
+    cursor:pointer;
+    position:absolute;
+    font-weight:bold;
+    font-size:25px;
+    top:135px;
+}
+
+#mid .rightRotate{
+    right:10px;
+}
+
+#mid .leftRotate {
+    left:10px;
+}
+
+#mid .rightRotate:hover,
+#mid .leftRotate:hover {
+    background-color:#808080;
+}
+
+#mid::after {
+    /* Clears rest of page for no overlap */
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Having the circles under the coupons look like circles */
+#mid .circles {
+    height:10px;
+    width:10px;
+    display:inline-block;
+    border-radius:50%; /* this is what makes it a circle */
+    background-color:black;
+    opacity:0.9;
+}
+
+#bottom .bottomSearch {
+    /* Main position for the bottom search bar */
+    left: 50px;
+    bottom: 5px;
+}
+
+#bottom .bottomSearch input {
+    background: #fff;
+    box-sizing: border-box;
+    width: 250px;
+    height: 20px;
+    position: relative;
+}
+
+#bottom .bottomSearch img {
+    position:relative;
+    width: 18px;
+    height: 18px;
+    right: 25px;
+    top:5px;
+}
+
+#bottom .titleText {
+    position: relative;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#bottom #packages {
+    top: 5px;
+}
+
+/* Food package pictures user clicks on */
+#bottom #packageIcons .col, #bottom #restaurantsNearYouIcons .col {
+    float: left;
+    padding-left: 25px;
+    padding-top: 15px;
+}
+
+#bottom #packageIcons .col img, #bottom #restaurantsNearYouIcons .col img {
+    width:75px;
+    height:75px;
+}
+
+#bottom #packageIcons .row::after, #bottom #restaurantsNearYouIcons .row {
+    /* Render to next line */
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Centering text */
+#bottom #restaurantsNearYouIcons .row .col .centerText, #bottom #packageIcons .row .col .centerText {
+    position:relative;
+    text-align:center;
+    color:black;
+    font-size:12px;
+    font-weight:600;
+    top:-5px;
+} 

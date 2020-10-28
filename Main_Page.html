@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Importing all necessary files -->
+    <link rel="stylesheet" href="css/Main_Page.css" />
+    <script type="text/javascript" src="js/database.js"></script>
+    <script type="text/javascript" src="js/User.js"></script>
+
+    <meta charset="utf-8" />
+    <title>TO GO online delivery</title>
+</head>
+<body>
+    <!-- Divider, This is the first (top) portion of the main page-->
+    <div id="top">
+        <a href="Main_Page.html"><img src="images/logo.jpg" alt="Logo" class="logo"></a>
+
+        <!-- Address at top of screen -->
+        <span class="topAddress">
+            <input type="text" id="deliveryAddress" onchange="addressChange();"/>
+            <img src="images/locationIcon.png" />
+        </span>
+
+        <!-- TODO: Add a window to pop up when this cart is clicked on -->
+        <div id="shoppingCart">
+            <a><img src="images/cart.png" class="package"></a>
+        </div>
+
+    </div>
+
+    <hr class="dividers" />
+
+    <!-- Divier, This is the upper center portion of the main page (coupon section)-->
+    <div id="mid">
+        <div class="slide">
+            <div class="coupon">
+                <img src="images/coupon1.jpg" style="width:100%" />
+            </div>
+            <div class="coupon">
+                <img src="images/coupon2.jpg" style="width:100%" />
+            </div>
+            <div class="coupon">
+                <img src="images/coupon3.jpg" style="width:100%" />
+            </div>
+        </div>
+        <div class="slide">
+            <div class="coupon">
+                <img src="images/coupon4.jpg" style="width:100%" />
+            </div>
+            <div class="coupon">
+                <img src="images/coupon5.jpg" style="width:100%" />
+            </div>
+            <div class="coupon">
+                <img src="images/coupon6.jpg" style="width:100%" />
+            </div>
+        </div>
+        <div class="slide">
+            <div class="coupon">
+                <img src="images/coupon4.jpg" style="width:100%" />
+            </div>
+            <div class="coupon">
+                <img src="images/coupon4.jpg" style="width:100%" />
+            </div>
+            <div class="coupon">
+                <img src="images/coupon4.jpg" style="width:100%" />
+            </div>
+        </div>
+
+        <a class="rightRotate" onclick="rotateCouponSection(1)">❯</a>
+        <a class="leftRotate" onclick="rotateCouponSection(-1)">❮</a>
+
+        <!-- The dots below the coupons to indicate which section the user is seeing -->
+        <center>
+        <span class="circles"></span>
+        <span class="circles"></span>
+        <span class="circles"></span>
+        </center>
+
+    </div>
+
+    <hr class="dividers" />
+
+    <!-- This is the bottom section of the main page (Packages / Restaurants) -->
+    <div id="bottom">
+        <span class="bottomSearch">
+            <input type="text" id="restaurantAddress" />
+            <img src="images/search.png" />
+        </span>
+
+        <span class="titleText" id="packages">
+            <br />
+            Food Packages
+        </span>
+
+        <div id="packageIcons">
+            <div class="row">
+                <div class="col">
+                    <a><img src="images/empty.jpg" class="package">
+                        <div class="centerText">Chow Mein</div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a><img src="images/empty.jpg" class="package">
+                        <div class="centerText">Chow Mein</div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a>
+                        <img src="images/empty.jpg" class="package">
+                        <div class="centerText">Chow Mein</div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a>
+                        <img src="images/empty.jpg" class="package">
+                        <div class="centerText">Chow Mein</div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a>
+                        <img src="images/empty.jpg" class="package">
+                        <div class="centerText">Chow Mein</div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a>
+                        <img src="images/empty.jpg" class="package">
+                        <div class="centerText">Chow Mein</div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a>
+                        <img src="images/empty.jpg" class="package">
+                        <div class="centerText">Chow Mein</div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a>
+                        <img src="images/empty.jpg" class="package">
+                        <div class="centerText">Chow Mein</div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a>
+                        <img src="images/empty.jpg" class="package">
+                        <div class="centerText">Chow Mein</div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a>
+                        <img src="images/empty.jpg" class="package">
+                        <div class="centerText">Chow Mein</div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a>
+                        <img src="images/empty.jpg" class="package">
+                        <div class="centerText">Chow Mein</div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a>
+                        <img src="images/empty.jpg" class="package">
+                        <div class="centerText">Chow Mein</div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a>
+                        <img src="images/coupon1.jpg" class="package">
+                        <div class="centerText">Chow Mein</div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a>
+                        <img src="images/empty.jpg" class="package">
+                        <div class="centerText">Chow Mein</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <span class="titleText" id="packages">
+            <br />
+            Restaurants Near You
+        </span>
+
+        <div id="restaurantsNearYouIcons">
+            <div class="row" id="restaurantRow">
+                <div class="col">
+                    <a>
+                        <img src="images/empty.jpg" class="package">
+                        <div class="centerText">Chow Mein</div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a>
+                        <img src="images/empty.jpg" class="package">
+                        <div class="centerText">Chow Mein</div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a>
+                        <img src="images/empty.jpg" class="package">
+                        <div class="centerText">Chow Mein</div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a>
+                        <img src="images/empty.jpg" class="package">
+                        <div class="centerText">Chow Mein</div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a>
+                        <img src="images/empty.jpg" class="package">
+                        <div class="centerText">Chow Mein</div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a>
+                        <img src="images/coupon1.jpg" class="package">
+                        <div class="centerText">Chow Mein</div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a>
+                        <img src="images/empty.jpg" class="package">
+                        <div class="centerText">Chow Mein</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
