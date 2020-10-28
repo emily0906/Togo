@@ -1,4 +1,4 @@
-﻿body {
+body {
     background-color:white;
 }
 
@@ -161,18 +161,18 @@
 }
 
 /* Food package pictures user clicks on */
-#bottom #packageIcons .col, #bottom #restaurantsNearYouIcons .col {
+#bottom #packageIcons .col, #bottom #restaurantsNearYouIcons .col, #bottom #Foods .col {
     float: left;
     padding-left: 25px;
     padding-top: 15px;
 }
 
-#bottom #packageIcons .col img, #bottom #restaurantsNearYouIcons .col img {
+#bottom #packageIcons .col img, #bottom #restaurantsNearYouIcons .col img, #bottom #Foods .col img {
     width:75px;
     height:75px;
 }
 
-#bottom #packageIcons .row::after, #bottom #restaurantsNearYouIcons .row {
+#bottom #packageIcons .row::after, #bottom #restaurantsNearYouIcons .row, #bottom #Foods .row {
     /* Render to next line */
     content: "";
     clear: both;
@@ -180,7 +180,9 @@
 }
 
 /* Centering text */
-#bottom #restaurantsNearYouIcons .row .col .centerText, #bottom #packageIcons .row .col .centerText {
+#bottom #restaurantsNearYouIcons .row .col .centerText, 
+#bottom #packageIcons .row .col .centerText, 
+#bottom #Foods .row .col .centerText {
     position:relative;
     text-align:center;
     color:black;
