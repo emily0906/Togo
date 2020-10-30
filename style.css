@@ -41,7 +41,7 @@ h1{
   color: #000;
   border-radius: 25px;
 }
-search-btn:hover{
+.search-btn:hover{
   background: #ffc107;
   cursor: pointer;
 }
