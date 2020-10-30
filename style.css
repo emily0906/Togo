@@ -14,7 +14,7 @@ body {
   font-family: sans-serif;
 }
 h1{
-  color: #ffc107;
+  color: rgba(0,0,0,0.5);
   margin-bottom: 70px;
   font-size:45px;
   letter-spacing:2px;
