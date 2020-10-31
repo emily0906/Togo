@@ -2,24 +2,30 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .header
 {
   height: 100vh;
-  background-image:url('togo.jpg');
-  background-size: cover;
-  background-position: center;
+  background-image: url('images/logo.png'), url('images/welcomePage.jpg');
+  background-position: 50% 70px, left top;
+  background-repeat: no-repeat, repeat;
+  background-size: 20% auto , auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: sans-serif;
 }
-h1{
-  color: rgba(0,0,0,0.5);
-  margin-bottom: 70px;
-  font-size:45px;
+
+.welcome_page_instruc
+{
+  color: rgb(255, 255, 255);
+  margin-top: 250px;
+  font-size:20px;
   letter-spacing:2px;
   text-align: center;
+  font-family: Helvetica;
+  font-weight: 15;
 }
+
 .search-field
 {
   height: 50px;
@@ -46,6 +52,8 @@ h1{
   cursor: pointer;
 }
 .form-box{
+  margin-top: 20px;
   background: rgba(0,0,0,0.5);
-  padding: 30px;
+  border-radius: 25px;
+  padding: 25px;
 }
