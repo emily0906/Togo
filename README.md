@@ -8,4 +8,3 @@ This is the group project for HCI (COMP 3020) at University of Manitoba. This is
 * [Gordon Stewart](https://github.com/Gordo5556) 
 * [Pengyu Wang](https://github.com/Skadoosh777)
 
-## Test to see if i can commit - Gordon
