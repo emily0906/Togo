@@ -3,8 +3,8 @@ This is the group project for HCI (COMP 3020) at University of Manitoba. This is
 ## Group work assign:
 ## Contributors:
 [Connor Hryhoruk](https://github.com/h-connor)
-[Suhjin Kang](https://github.com/skang9810)
-[Emily Nguyen](https://github.com/emily0906)
-Gordon Stewart
-[Pengyu Wang](https://github.com/Skadoosh777)
+/ [Suhjin Kang](https://github.com/skang9810)
+/ [Emily Nguyen](https://github.com/emily0906)
+/ Gordon Stewart
+/ [Pengyu Wang](https://github.com/Skadoosh777)
 
