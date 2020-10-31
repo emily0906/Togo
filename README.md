@@ -5,6 +5,7 @@ This is the group project for HCI (COMP 3020) at University of Manitoba. This is
 * [Connor Hryhoruk](https://github.com/h-connor)
 * [Suhjin Kang](https://github.com/skang9810)
 * [Emily Nguyen](https://github.com/emily0906)  
-* [Gordon Stewart](https://github.com/Gordo5556)
+* [Gordon Stewart](https://github.com/Gordo5556) 
 * [Pengyu Wang](https://github.com/Skadoosh777)
 
+## Test to see if i can commit - Gordon
