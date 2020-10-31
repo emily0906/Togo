@@ -9,8 +9,7 @@ body {
   background-image: url('images/logo.png'), url('images/welcomePage.jpg');
   background-position: 50% 70px, left top;
   background-repeat: no-repeat, repeat;
-  filter: none, blur(8px);
-  background-size: 20% auto , auto;
+  background-size: 20% auto , cover;
   display: flex;
   justify-content: center;
   align-items: center;
