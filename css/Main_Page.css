@@ -2,63 +2,12 @@ body {
     background-color:white;
 }
 
-#top, #mid, #bottom {
+#mid, #bottom {
     /* Prevent highlight / selections of the arrows */
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
-
-/*
-    Editting the logo image
-*/
-#top .logo{
-    border-radius:30%;
-    margin-left: auto;
-    width:125px;
-    height:75px;
-    left:20px;
-    top:20px;
-}
-
-/*
-    This is the address at the top area of the screen
-    The location image should be placed inside the textfield
-*/
-#top .topAddress {
-    position:relative;
-    width:250px;
-}
-
-#top .topAddress input {
-    position:relative;
-    background:#fff;
-    box-sizing:border-box;
-    width:250px;
-    height:20px;
-    left:50px;
-    bottom:5px;
-}
-
- #top .topAddress img {
-    position:absolute;
-    width:20px;
-    height:20px;
-    bottom:3px;
-    left:280px;
-}
-
- #top #shoppingCart {
-     position:absolute;
-     right:7%;
-     top:60px;
- }
-
- #top #shoppingCart img {
-     float:left;
-     width:35px;
-     height:35px;
- }
 
 /*
     This is the lines that divide the portions of the screens
