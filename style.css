@@ -6,13 +6,14 @@ body {
 .header
 {
   height: 100vh;
-  background-image: url('images/logo_welcome_page.png'), url('images/welcome-page.jpg');
-  background-position: 50% 90px, left top;
+  background-image: url('images/logo-welcome-page.png'), url('images/welcome-page.jpg');
+  background-position: 50% 130px, left top;
   background-repeat: no-repeat, no-repeat;
-  background-size: 20% auto, 100%;
+  background-size: 23% auto, 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .welcome_text
