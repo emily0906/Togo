@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" href="css/FoodItemDisplayer.css" />
+
+    <!-- Include the top portion of the page. NOTE: Should be last AND requires Jquery -->
+    <script type="text/javascript" src="js/database.js"></script>
+    <script type="text/javascript" src="js/FoodItemDisplayer.js"></script>
+    <script type="text/javascript" src="js/CategoryDisplayer.js"></script>
+    <script type="text/javascript" src="js/User.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/IncludeTop.js"></script>
+
+</head>
+<body>
+    <div id="top">
+
+    </div>
+
+    <span class="searchBar">
+        <input type="text" id="restaurantAddress" />
+        <img src="images/search.png" />
+    </span>
+
+    <div id="historyText">
+        <a class="historyT">
+            <span class ="text" id="text1">
+                123
+            </span>
+        </a>
+        <a class="historyT">
+            <span id="divider">
+                <<
+            </span>
+        </a>
+        <a class="historyT">
+            <span class="text" id="text2">
+                abc
+            </span>
+        </a>
+    </div>
+
+    <!-- This is where all the food items will be appended-->
+    <div id="bodyComponents">
+
+        <!--
+            
+            --------------------------------------------------------------
+            The items are created dynamically 
+            
+            Here's an example of what it will look like when it's created
+            --------------------------------------------------------------
+
+        <span class="header">
+            Starters
+        </span>
+        <div class="foodItem">
+            <img src="images/coupon4.jpg" />
+            <span id="title">Mac and Cheese </span>
+            <span id="price">$15.00 </span>
+            <span id="location"> Stellas </span>
+            <span id="description">MMHMMMM you AINT NEVA HAD SO MUCH CHEESE </span>
+            <span id="ingrediants">Cheese, noodles, more cheese, dairy free cheese, carrots, rice, screw it you'll eat it anyway </span>
+        </div>
+
+        <div class="foodItem">
+            <img src="images/coupon4.jpg" />
+            <span id="title">Mac and Cheese </span>
+            <span id="price">$15.00 </span>
+            <span id="location"> Stellas </span>
+            <span id="description">MMHMMMM you AINT NEVA HAD SO MUCH CHEESE </span>
+            <span id="ingrediants">Cheese, noodles, more cheese, dairy free cheese, carrots, rice, screw it you'll eat it anyway </span>
+        </div>
+        -->
+    </div>
+
+
+    <script>
+        changeHistoryText();
+        displayFoodItems();
+    </script>
+</body>
+</html>
