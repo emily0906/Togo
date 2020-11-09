@@ -1,0 +1,89 @@
+﻿body {
+}
+
+.searchBar {
+    /* Main position for the bottom search bar */
+    left: 50px;
+    bottom: 5px;
+}
+
+.searchBar input {
+    background: #fff;
+    box-sizing: border-box;
+    width: 250px;
+    height: 20px;
+    position: relative;
+}
+
+.searchBar img {
+    position:relative;
+    width: 18px;
+    height: 18px;
+    right: 25px;
+    top:5px;
+}
+
+/* The body components contains the display of food items */
+#bodyComponents {
+    position:relative;
+}
+
+#bodyComponents .foodItem {
+    position:relative;
+    left:45px;
+    width:70%;
+    height:130px;
+    margin-top:15px;
+    border:1px solid black;
+    border-radius:25px; /* rounding edges */
+}
+
+#bodyComponents img {
+    position:absolute;
+    width:125px;
+    height:110px;
+    padding:5px;
+    padding-top:10px;
+    padding-left:7px;
+    border-radius:20px;
+}
+
+#bodyComponents #title {
+    left:180px;
+    top:10px;
+    position:relative;
+    font-size:25px;
+    font-weight:bold;
+}
+
+#bodyComponents #price {
+    position:relative;
+    left:225px;
+    top:10px;
+    font-size:25px;
+    font-weight:bold;
+    color:red;
+}
+
+#bodyComponents #location {
+    position:relative;
+    left:-20px;
+    top:30px;
+    font-size:20px;
+}
+
+#bodyComponents #description {
+    position:relative;
+    left:-150px;
+    top:50px;
+    font-size:15px;
+}
+
+#bodyComponents #ingrediants {
+    position:relative;
+    top:50px;
+    left:150px;
+    font-size:15px;
+    text-overflow:"";
+    overflow:hidden;
+}

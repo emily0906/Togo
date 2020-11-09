@@ -1,4 +1,4 @@
-﻿// Assumption: Jquery is already imported
+// Assumption: Jquery is already imported
 $(document).ready(function () {
     displayAddress();
 });

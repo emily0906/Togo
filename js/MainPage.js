@@ -1,4 +1,4 @@
-﻿const NUM_COUPON_SECTIONS = 3;
+const NUM_COUPON_SECTIONS = 3;
 var circles = []; // Circles.length = NUM_COUPON_SECTIONS
 var couponSection = 1;
 var curCouponSection = 0;
@@ -79,9 +79,6 @@ function restaurantsNearYouSetup() {
         distances.push(restaurants[minDist]);
     }
 
-    //for (var i = 0; i < distances.length; i++)
-    //alert(userLocation + " " + distances[i].name);
-
     for (var i = 0; i < icons.length; i++) {
         // Set the childs equal to the restaurants information
         var childs = icons[i].childNodes;
@@ -123,3 +120,21 @@ function rotateCouponSection(amount) {
 function mod(a, b) {
     return ((a % b) + b) % b;
 };
+
+// Redirect the user to the FoodItemDisplayer page
+// This may either be to display a restaurants menu
+// Or, to display the products in a particular package
+function redirectToMenuPage(event) {
+    var locationName;
+
+    // Grab name of the package/food/restaurant from the onclick event
+    for (var i = 0; i < event.childNodes.length; i++) {
+        if ("DIV" == event.childNodes[i].tagName)
+            locationName = event.childNodes[i].textContent;
+    }
+
+    document.cookie = "history=" + locationName;
+
+    // Redirect the user to another page
+    window.location = "FoodItemDisplayer.html";
+}
