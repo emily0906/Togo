@@ -9,7 +9,7 @@ body {
   background-image: url('images/logo-welcome-page.png'), url('images/welcome-page.jpg');
   background-position: 50% 130px, left top;
   background-repeat: no-repeat, no-repeat;
-  background-size: 23% auto, 100%;
+  background-size: 23% auto, cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,7 @@ body {
 .welcome_text
 {
   color: rgb(255, 255, 255);
-  margin-top: 200px;
+  margin-top: 150px;
   font-size:35px;
   letter-spacing:2px;
   text-align: center;
