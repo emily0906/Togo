@@ -1,5 +1,6 @@
 body {
-    background-color:white;
+    color: #fff;
+    background: #c4b7a6;
 }
 
 #mid, #bottom {
@@ -19,7 +20,6 @@ body {
 /*
     slides for coupons
 */
-
 #mid .slide {
     display: none;
 }
@@ -75,7 +75,30 @@ body {
     background-color:black;
     opacity:0.9;
 }
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
 
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/*botom for the site*/
 #bottom .bottomSearch {
     /* Main position for the bottom search bar */
     left: 50px;
@@ -129,8 +152,8 @@ body {
 }
 
 /* Centering text */
-#bottom #restaurantsNearYouIcons .row .col .centerText, 
-#bottom #packageIcons .row .col .centerText, 
+#bottom #restaurantsNearYouIcons .row .col .centerText,
+#bottom #packageIcons .row .col .centerText,
 #bottom #Foods .row .col .centerText {
     position:relative;
     text-align:center;
@@ -138,4 +161,4 @@ body {
     font-size:12px;
     font-weight:600;
     top:-5px;
-} 
+}
