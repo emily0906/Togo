@@ -11,6 +11,18 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="js/IncludeTop.js"></script>
 
+    <script>
+       $(document).ready(function(){
+         $( ".coupon" ).mouseover(function() {
+           $(this).addClass( "blur" );
+         });
+         $( ".coupon" ).mouseout(function() {
+           $(this).removeClass( "blur" );
+         });
+         $().UItoTop({ easingType: 'easeOutQuart' });
+       })
+    </script>
+
     <meta charset="utf-8" />
     <title>TO GO online delivery</title>
 </head>
@@ -26,6 +38,8 @@
         <div class="slide">
             <div class="coupon fade">
                 <img src="images/coupon/coupon1.png" style="width:100%" />
+                <span class="addTo"><span>Add to cart</span>
+                <span><strong></strong></span>
             </div>
         </div>
         <div class="slide">
