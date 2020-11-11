@@ -35,6 +35,9 @@ body {
 
 #mid .slide .coupon img {
     vertical-align: middle;
+    width: 1500px;
+    height: 400px;
+
 }
 #mid .slide .coupon:hover img{
   -webkit-filter: blur(3px);
