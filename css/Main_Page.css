@@ -198,6 +198,7 @@ body {
     text-decoration: underline;
     font-weight: bold;
     font-size: 16px;
+    padding: 5px;
 }
 
 #bottom #packages {
@@ -209,11 +210,12 @@ body {
     float: left;
     padding-left: 25px;
     padding-top: 15px;
+    flex: 33.33%
 }
 
 #bottom #packageIcons .col img, #bottom #restaurantsNearYouIcons .col img, #bottom #Foods .col img {
-    width:75px;
-    height:75px;
+    width:100px;
+    height:100px;
 }
 
 #bottom #packageIcons .row::after, #bottom #restaurantsNearYouIcons .row, #bottom #Foods .row {
