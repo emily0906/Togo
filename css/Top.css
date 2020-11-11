@@ -5,7 +5,7 @@
     user-select: none;
 }
 
-header {
+div #top {
     position: fixed;
     top: 0;
     left: 0;
@@ -45,8 +45,6 @@ The location image should be placed inside the textfield
     top: 20px;
     left: 180px;
     border: none;
-    /* opacity: 0.9; */
-    /* background-color: black; */
     box-shadow: 1px 1px 3px 3px rgb(255, 255, 255);
 }
 
