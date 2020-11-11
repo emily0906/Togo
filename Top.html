@@ -9,22 +9,17 @@
         <link rel="stylesheet" href="css/Top.css" />
         <script type="text/javascript" src="js/Top.js"></script>
 
-        <!-- Divider, This is the first (top) portion of the main page-->
-        <div id="top">
-            <a href="Main_Page.html"><img src="images/logo.jpg" alt="Logo" class="logo"></a>
-
-            <!-- Address at top of screen -->
+        <!-- top part of the screen -->
+        <header id="top">
+            <a href="Main_Page.html"><img src="images/logo-welcome-page.png" class="logo"></a>
             <span class="topAddress">
-                <input type="text" id="deliveryAddress" onchange="addressChange();" />
-                <img src="images/locationIcon.png" />
+               <input type="text" id="deliveryAddress" onchange="addressChange();" />
+               <img src="images/locationIcon.png" />
             </span>
-
+            
             <!-- TODO: Add a window to pop up when this cart is clicked on -->
-            <div id="shoppingCart">
-                <a><img src="images/cart.png" class="package"></a>
-            </div>
-
-        </div>
+            <img src="images/cart.png" class="shoppingCart">
+        </header>
 
         <hr class="dividers" />
     </div>
