@@ -1,6 +1,8 @@
 body {
     color: #fff;
     background: #c4b7a6;
+    font-family: Verdana, sans-serif;
+    margin:0;
 }
 
 #mid, #bottom {
@@ -20,38 +22,45 @@ body {
 /*
     slides for coupons
 */
+
 #mid .slide {
     display: none;
 }
 
 #mid .slide .coupon {
-    float:left;
-    width:250px;
-    padding-left:15px;
-    padding-right:15px;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
 
 #mid .slide img {
-    height:90px;
+    vertical-align: middle;
 }
 
 #mid .rightRotate,
 #mid .leftRotate {
-    float:left;
-    color:black;
-    cursor:pointer;
-    position:absolute;
-    font-weight:bold;
-    font-size:25px;
-    top:135px;
+  top:135px;
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
 #mid .rightRotate{
-    right:10px;
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
 #mid .leftRotate {
-    left:10px;
+    left: 0;
+    border-radius: 3px 0 0 3px;
 }
 
 #mid .rightRotate:hover,
@@ -68,12 +77,17 @@ body {
 
 /* Having the circles under the coupons look like circles */
 #mid .circles {
-    height:10px;
-    width:10px;
-    display:inline-block;
-    border-radius:50%; /* this is what makes it a circle */
-    background-color:black;
-    opacity:0.9;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #3e4444;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+#mid .circles:hover{
+  background-color: #717171;
 }
 /* Fading animation */
 .fade {
@@ -95,10 +109,9 @@ body {
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+  .leftRotate, .rightRotate {font-size: 11px}
 }
 
-/*botom for the site*/
 #bottom .bottomSearch {
     /* Main position for the bottom search bar */
     left: 50px;

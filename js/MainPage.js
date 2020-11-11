@@ -1,4 +1,4 @@
-const NUM_COUPON_SECTIONS = 3;
+const NUM_COUPON_SECTIONS = 4;
 var circles = []; // Circles.length = NUM_COUPON_SECTIONS
 var couponSection = 1;
 var curCouponSection = 0;
@@ -52,7 +52,7 @@ function restaurantsNearYouSetup() {
     if (icons.length > restaurants.length)
         alert("Error, please make sure that we can display enough restaurants.");
 
-    // Order the restaurants randomly 
+    // Order the restaurants randomly
     var distances = [];
 
     // Order restaurants by distance to the user
