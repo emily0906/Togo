@@ -35,7 +35,20 @@ var restaurants = [
         ),
         210),
 
-    new Restaurant(1, "Stellas", "images/restaurants/Earls.jpg", null, 200),
+    new Restaurant(1, "Stellas", "images/restaurants/Earls.jpg", new Menu(
+        {
+            starters:
+                [
+                    foodItems[0],
+                    foodItems[1]
+                ],
+            mains:
+                [
+                    foodItems[2]
+                ]
+        }
+    ),
+    200),
     new Restaurant(2, "Earls", "images/restaurants/Earls.jpg", null, 105),
     new Restaurant(3, "Gong Cha", "images/restaurants/Stellas.jpg", null, 21),
     new Restaurant(4, "Jolibee", "images/restaurants/Stellas.jpg", null, 80),
@@ -113,8 +126,7 @@ function getRestaurantByName(name) {
 // A menu object is defined by key value pairs
 // The format of these key value is like so:
 /*
-    { 
-    Menu :
+    {
     heading1 : [FootItemList],
     heading2 : [FoodItemList],
     headingn : [FoodItemList]

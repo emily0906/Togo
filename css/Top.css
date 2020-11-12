@@ -1,12 +1,11 @@
-<<<<<<< HEAD
-﻿#top {
+#top {
     /* Prevent highlight / selections of the arrows */
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
 
-    /*
+/*
     Editting the logo image
 */
 #top .logo {
@@ -18,7 +17,7 @@
     top: 20px;
 }
 
-    /*
+/*
     This is the address at the top area of the screen
     The location image should be placed inside the textfield
 */
@@ -57,74 +56,90 @@
     height: 35px;
 }
 
+#invis {
+    z-index:-1;
+    background-color:black;
+    border-width:5px;
+    border-style:solid;
+    background:border-box;
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+}
+
+#cartPopUp {
+    position:absolute;
+    right:7%;
+    top:100px;
+    width:270px;
+
+    /* 
+        The default height will be 'min-height'
+    */
+    min-height:350px;
+    box-sizing:border-box;
+    height:auto;
+    
+    background-color:white;
+    border-color:black;
+    border-width:5px;
+    border-style:solid;
+    border-radius:30px;
+    display:none;
+}
+
+#allOrders {
+    /* 
+        If the user has lots of orders, there will be a scroll bar for the items
+        Rather than the items being continually displayed
+    */
+    overflow-y:auto;
+    height:150px;
+
+    /* Different color so its noticeable*/
+    background-color:lightgrey;
+}
+
+#details {
+    position:relative;
+    left:31%;
+    font-weight:200;
+    font-size:19px;
+}
+
+#totalsSection {
+    position:relative;
+    width:auto;
+    height:100px;
+    padding:5px;
+    margin-top:20px;
+    display:inline-block;
+}
+
+.order {
+    position:relative;
+    margin-top:10px;
+    padding:5px;
+    top:10px;
+}
+
+.cartDividor {
+    width:97%;
+    right:10px;
+}
+
+#makeOrder {
+    position:relative;
+    padding:10px;
+    left:31%;
+    background-color:aqua;
+    font-weight:900;
+}
+
 /*
-    This is the lines that divide the portions of the screens
+    This is the lines that divide the portions of the screens when the top is included in another html file
 */
 .dividers {
     opacity: 0.3;
-=======
-﻿#top {
-    /* Prevent highlight / selections of the arrows */
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-    /*
-    Editting the logo image
-*/
-#top .logo {
-    border-radius: 30%;
-    margin-left: auto;
-    width: 125px;
-    height: 75px;
-    left: 20px;
-    top: 20px;
-}
-
-    /*
-    This is the address at the top area of the screen
-    The location image should be placed inside the textfield
-*/
-#top .topAddress {
-    position: relative;
-    width: 250px;
-}
-
-#top .topAddress input {
-    position: relative;
-    background: #fff;
-    box-sizing: border-box;
-    width: 250px;
-    height: 20px;
-    left: 50px;
-    bottom: 5px;
-}
-
-#top .topAddress img {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    bottom: 3px;
-    left: 280px;
-}
-
-#top #shoppingCart {
-    position: absolute;
-    right: 7%;
-    top: 60px;
-}
-
-#top #shoppingCart img {
-    float: left;
-    width: 35px;
-    height: 35px;
-}
-
-/*
-    This is the lines that divide the portions of the screens
-*/
-.dividers {
-    opacity: 0.3;
->>>>>>> a5d3e93965fd83b3b7e2dad3001ac551e4d63f07
 }
