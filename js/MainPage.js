@@ -17,7 +17,7 @@ function circleSetup() {
 
 function addressChange(input) {
     // Recall this function when the users location is changed
-    address = document.getElementById("deliveryAddress").value;
+    setUserAddress(document.getElementById("deliveryAddress").value);
     setAddressLocation(); // The user has a new address location, get its location
     restaurantsNearYouSetup();
 }
@@ -27,13 +27,15 @@ function addressChange(input) {
 // Multiplying each numeric value by 2
 function setAddressLocation() {
     var sum = 0;
-    for (var i = 0; i < address.length; i++) {
-        if (isNaN(parseInt(address.charAt(i)))) {
+
+    var addr = getUserAddress();
+    for (var i = 0; i < addr.length; i++) {
+        if (isNaN(parseInt(addr.charAt(i)))) {
             // Not a number
-            sum += address.codePointAt(i) / 10;
+            sum += addr.codePointAt(i) / 10;
         }
         else {
-            sum += parseInt(address.charAt(i)) * 2;
+            sum += parseInt(addr.charAt(i)) * 2;
         }
     }
 
