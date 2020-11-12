@@ -40,10 +40,10 @@ body {
 
 #mid .slide .coupon img {
     display: block;
+    top: 50%;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-    height: 250px;
+    height: 300px;
     transition: 0.5s ease;
   	-o-transition: 0.5s ease;
   	-webkit-transition: 0.5s ease;
@@ -69,7 +69,8 @@ body {
 	top: 50%;
 	overflow: hidden;
 	margin-top: -108px;
-	margin-left: 10%;
+	margin-left: auto;
+  margin-right: auto;
 	font: bold 20px/20px 'Open Sans', sans-serif;
 	color: #fff;
 	width: 217px;
