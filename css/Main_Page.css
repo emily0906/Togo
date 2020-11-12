@@ -1,6 +1,7 @@
 body {
     color: #fff;
-    background-image: #484f4f;
+    background-image: url("../images/MainPage.jpg");
+    background-color: #cccccc;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -186,13 +187,7 @@ body {
 @media only screen and (max-width: 300px) {
   .leftRotate, .rightRotate {font-size: 11px}
 }
-#bottom {
-  background-image: url("../images/MainPage.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
+
 #bottom .bottomSearch {
     /* Main position for the bottom search bar */
     left: 50px;
