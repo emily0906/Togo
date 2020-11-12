@@ -1,4 +1,3 @@
-// List of all Food Items and their information
 
 var foodItems = [
     new FoodItem(0, "Mushroom Soup", "images/FoodItems/mushroomSoup.jpg", "Roughage Eatery",
@@ -62,9 +61,11 @@ var restaurants = [
         ),
         210),
     new Restaurant(1, "Bobby's Buffalo Shack", "images/Restaurant - Bobby's Buffalo Shack.jpg", 
+    new Restaurant(1, "Bobby's Buffalo Shack", "images/Restaurant - Bobby's Buffalo Shack.jpg",
         new Menu(
             {
                 starters: 
+                starters:
                 [
                     foodItems[8],
                     foodItems[6]
@@ -78,8 +79,10 @@ var restaurants = [
 
             }
         ), 
+        ),
         175),
     new Restaurant(2, "Ume Japanese", "images/restaurants/Earls.jpg", 
+    new Restaurant(2, "Ume Japanese", "images/restaurants/Earls.jpg",
         new Menu(
             {
                 starters:
@@ -191,4 +194,4 @@ function getFoodItemByName(name) {
 // For example, the 'breakfast' section on a menu, followeed by all fooditems in that list
 function Menu(menuObject) {
     this.menu = menuObject;
-}
+}}
