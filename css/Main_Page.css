@@ -1,5 +1,13 @@
 body {
-    background-color:white;
+    color: #fff;
+    background-image: url("../images/MainPage.jpg");
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-family: Verdana, sans-serif;
+    margin:0;
 }
 
 #mid, #bottom {
@@ -25,33 +33,110 @@ body {
 }
 
 #mid .slide .coupon {
-    float:left;
-    width:250px;
-    padding-left:15px;
-    padding-right:15px;
+  max-width: 100%;
+  position: relative;
+  margin: auto;
 }
 
-#mid .slide img {
-    height:90px;
+#mid .slide .coupon img {
+    display: block;
+    top: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    transition: 0.5s ease;
+  	-o-transition: 0.5s ease;
+  	-webkit-transition: 0.5s ease;
+
+}
+#mid .slide .coupon:hover img{
+  -webkit-filter: blur(3px);
+	-moz-filter: blur(3px);
+	-o-filter: blur(3px);
+	-ms-filter: blur(3px);
+	filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+	filter: blur(3px)
+}
+#mid .slide .coupon .addTo{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+	padding: 70px 0 67px;
+	left: 50%;
+	height: 217px;
+	display: block;
+	top: 50%;
+	overflow: hidden;
+	margin-top: -108px;
+	margin-left: auto;
+  margin-right: auto;
+	font: bold 20px/20px 'Open Sans', sans-serif;
+	color: #fff;
+	width: 217px;
+	position: absolute;
+	border: 5px solid #fff;
+	border-radius: 500px;
+  text-align: center;
+}
+#mid .slide .coupon .addTo span+span{
+  padding-top: 14px;
+	font-size: 36px;
+	display: block;
+}
+#mide .slide .coupon .addTo *{
+  position: relative;
+	z-index: 10;
+}
+#mid .slide .coupon:hover .addTo{
+  color: #4f4f4f;
+  background-color: white;
+}
+#mid .slide .coupon:hover .addTo strong{
+  opacity: 1;
+}
+#mid .slide .coupon .addTo strong{
+  z-index: 0;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	border-radius: 500px;
+	opacity: 0;
+	right: 0;
+	height: 100%;
+	background: url(../overlay.png) 0 0 repeat;
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+  text-align: center;
 }
 
 #mid .rightRotate,
 #mid .leftRotate {
-    float:left;
-    color:black;
-    cursor:pointer;
-    position:absolute;
-    font-weight:bold;
-    font-size:25px;
-    top:135px;
+  top:135px;
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
 #mid .rightRotate{
-    right:10px;
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
 #mid .leftRotate {
-    left:10px;
+    left: 0;
+    border-radius: 3px 0 0 3px;
 }
 
 #mid .rightRotate:hover,
@@ -68,12 +153,39 @@ body {
 
 /* Having the circles under the coupons look like circles */
 #mid .circles {
-    height:10px;
-    width:10px;
-    display:inline-block;
-    border-radius:50%; /* this is what makes it a circle */
-    background-color:black;
-    opacity:0.9;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+#mid .circles:hover{
+  background-color: #717171;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .leftRotate, .rightRotate {font-size: 11px}
 }
 
 #bottom .bottomSearch {
@@ -96,6 +208,7 @@ body {
     height: 18px;
     right: 25px;
     top:5px;
+    border-radius: 25px;
 }
 
 #bottom .titleText {
@@ -103,6 +216,7 @@ body {
     text-decoration: underline;
     font-weight: bold;
     font-size: 16px;
+    padding: 5px;
 }
 
 #bottom #packages {
@@ -112,13 +226,17 @@ body {
 /* Food package pictures user clicks on */
 #bottom #packageIcons .col, #bottom #restaurantsNearYouIcons .col, #bottom #Foods .col {
     float: left;
+    border-radius: 25px;
     padding-left: 25px;
     padding-top: 15px;
+    flex: 33.33%;
 }
 
 #bottom #packageIcons .col img, #bottom #restaurantsNearYouIcons .col img, #bottom #Foods .col img {
-    width:75px;
-    height:75px;
+    width:100px;
+    height:100px;
+    background: white;
+    border-radius: 25px;
 }
 
 #bottom #packageIcons .row::after, #bottom #restaurantsNearYouIcons .row, #bottom #Foods .row {
@@ -129,13 +247,24 @@ body {
 }
 
 /* Centering text */
-#bottom #restaurantsNearYouIcons .row .col .centerText, 
-#bottom #packageIcons .row .col .centerText, 
+#bottom #restaurantsNearYouIcons .row .col .centerText,
+#bottom #packageIcons .row .col .centerText,
 #bottom #Foods .row .col .centerText {
     position:relative;
     text-align:center;
-    color:black;
+    border-radius: 25px;
+    background-color: #3e4444;
+    color: white;
     font-size:12px;
     font-weight:600;
-    top:-5px;
-} 
+    top: 5px;
+}
+.footer {
+   position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: linear-gradient(rgb(51, 51, 51), black, black, rgb(51, 51, 51));
+   color: white;
+   text-align: center;
+}

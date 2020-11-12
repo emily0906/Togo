@@ -11,59 +11,43 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="js/IncludeTop.js"></script>
 
-    <!-- Include TOP.html using W3schools
-    <script src="http://www.w3schools.com/lib/w3data.js"></script>
-    -->
-
     <meta charset="utf-8" />
     <title>TO GO online delivery</title>
 </head>
 <body>
-
-    <!-- Include TOP.html using W3schools-->
-    <!--
-    <div w3-include-html="Top.html"></div>
-    <script>w3IncludeHTML();</script>
-    -->
-
     <!-- What the TOP will append into-->
     <div id="top">
 
     </div>
-
+    <hr class="dividers" />
     <!-- Divier, This is the upper center portion of the main page (coupon section)-->
     <div id="mid">
         <div class="slide">
-            <div class="coupon">
-                <img src="images/coupon1.jpg" style="width:100%" />
-            </div>
-            <div class="coupon">
-                <img src="images/coupon2.jpg" style="width:100%" />
-            </div>
-            <div class="coupon">
-                <img src="images/coupon3.jpg" style="width:100%" />
+            <div class="coupon fade">
+                <img src="images/coupon/coupon1.png" style="width:100%" />
+                <span class="addTo"><span>Add to cart</span>
+                <span><strong></strong></span>
             </div>
         </div>
         <div class="slide">
-            <div class="coupon">
-                <img src="images/coupon4.jpg" style="width:100%" />
-            </div>
-            <div class="coupon">
-                <img src="images/coupon5.jpg" style="width:100%" />
-            </div>
-            <div class="coupon">
-                <img src="images/coupon6.jpg" style="width:100%" />
+            <div class="coupon fade">
+                <img src="images/coupon/coupon2.png" style="width:100%" />
+                <span class="addTo"><span>Add to cart</span>
+                <span><strong></strong></span>
             </div>
         </div>
         <div class="slide">
-            <div class="coupon">
-                <img src="images/coupon4.jpg" style="width:100%" />
+            <div class="coupon fade">
+                <img src="images/coupon/coupon3.png" style="width:100%" />
+                <span class="addTo"><span>Add to cart</span>
+                <span><strong></strong></span>
             </div>
-            <div class="coupon">
-                <img src="images/coupon4.jpg" style="width:100%" />
-            </div>
-            <div class="coupon">
-                <img src="images/coupon4.jpg" style="width:100%" />
+        </div>
+        <div class="slide">
+            <div class="coupon fade">
+                <img src="images/coupon/coupon4.png" style="width:100%" />
+                <span class="addTo"><span>Add to cart</span>
+                <span><strong></strong></span>
             </div>
         </div>
 
@@ -72,9 +56,10 @@
 
         <!-- The dots below the coupons to indicate which section the user is seeing -->
         <center>
-            <span class="circles"></span>
-            <span class="circles"></span>
-            <span class="circles"></span>
+        <span class="circles"></span>
+        <span class="circles"></span>
+        <span class="circles"></span>
+        <span class="circles"></span>
         </center>
 
     </div>
@@ -191,60 +176,67 @@
                 </div>
             </div>
         </div>
+            <span class="titleText" id="packages"> <!-- Should the id be restaurants or something?-->
+                <br />
+                Restaurants Near You
+            </span>
 
-        <span class="titleText" id="packages">
-            <br />
-            Restaurants Near You
-        </span>
-
-        <div id="restaurantsNearYouIcons">
-            <div class="row" id="restaurantRow">
-                <div class="col">
-                    <a href="#" onclick="redirectToMenuPage (this);">
-                        <img src="images/empty.jpg" class="package">
-                        <div class="centerText">Chow Mein</div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#" onclick="redirectToMenuPage (this);">
-                        <img src="images/empty.jpg" class="package">
-                        <div class="centerText">Chow Mein</div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#" onclick="redirectToMenuPage (this);">
-                        <img src="images/empty.jpg" class="package">
-                        <div class="centerText">Chow Mein</div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#" onclick="redirectToMenuPage (this);">
-                        <img src="images/empty.jpg" class="package">
-                        <div class="centerText">Chow Mein</div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#" onclick="redirectToMenuPage (this);">
-                        <img src="images/empty.jpg" class="package">
-                        <div class="centerText">Chow Mein</div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#" onclick="redirectToMenuPage (this);">
-                        <img src="images/coupon1.jpg" class="package">
-                        <div class="centerText">Chow Mein</div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#" onclick="redirectToMenuPage (this);">
-                        <img src="images/empty.jpg" class="package">
-                        <div class="centerText">Chow Mein</div>
-                    </a>
+            <div id="restaurantsNearYouIcons">
+                <div class="row" id="restaurantRow">
+                    <div class="col">
+                        <a href ="#" onclick="redirectToMenuPage (this);">
+                            <img src="images/Restaurant - Bobby's Buffalo Shack.jpg" class="package">
+                            <div class="centerText">Bobby's Buffalo Shack</div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href ="#" onclick="redirectToMenuPage (this);">
+                            <img src="images/empty.jpg" class="package">
+                            <div class="centerText">Ume Japanese</div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href ="#" onclick="redirectToMenuPage (this);">
+                            <img src="images/empty.jpg" class="package">
+                            <div class="centerText">Chow Mein</div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href ="#" onclick="redirectToMenuPage (this);">
+                            <img src="images/empty.jpg" class="package">
+                            <div class="centerText">Chow Mein</div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href ="#" onclick="redirectToMenuPage (this);">
+                            <img src="images/empty.jpg" class="package">
+                            <div class="centerText">Chow Mein</div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href ="#" onclick="redirectToMenuPage (this);">
+                            <img src="images/coupon1.jpg" class="package">
+                            <div class="centerText">Chow Mein</div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href ="#" onclick="redirectToMenuPage (this);">
+                            <img src="images/empty.jpg" class="package">
+                            <div class="centerText">Chow Mein</div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
+        <hr class="dividers" />
+        <div class="footer">
 
-    </div>
-
+          <p> COMP3020, Group 31 © 2020 </p>
+          <p> Connor Hryhoruk	(7805584) </p>
+          <p> Suhjin Kang	(7870942) </p>
+          <p>Emily Nguyen	(7791764)</p>
+          <p>Gordon Stewart 	(7830814)</p>
+          <p>Pengyu Wang	(7863401)</p>
+        </div>
 </body>
 </html>
