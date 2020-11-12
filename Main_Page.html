@@ -5,9 +5,14 @@
     <link rel="stylesheet" href="css/Main_Page.css" />
     <script type="text/javascript" src="js/database.js"></script>
     <script type="text/javascript" src="js/User.js"></script>
-
     <script type="text/javascript" src="js/MainPage.js"></script>
-    <script>
+
+    <!-- Include the top portion of the page. NOTE: Should be last AND requires Jquery -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/MainPage.js"></script>
+    <script type="text/javascript" src="js/IncludeTop.js"></script>
+
+        <script>
     $(document).ready(function(){
       $( ".coupon" ).mouseover(function() {
         $(this).addClass( "blur" );
@@ -15,13 +20,10 @@
       $( ".coupon" ).mouseout(function() {
         $(this).removeClass( "blur" );
       });
-      $().UItoTop({ easingType: 'easeOutQuart' });
+      // $().UItoTop({ easingType: 'easeOutQuart' });
+        // Still the same problem as before, moving wont fix
     })
     </script>
-    <!-- Include the top portion of the page. NOTE: Should be last AND requires Jquery -->
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="js/MainPage.js"></script>
-    <script type="text/javascript" src="js/IncludeTop.js"></script>
 
     <meta charset="utf-8" />
     <title>TO GO online delivery</title>

@@ -31,7 +31,7 @@ var foodItems = [
         "Edamame Soybeans", "Soybeans", 3.59, 3.6), 
     new FoodItem(14, "Salmon Sushi", "images/Food - Shushi2.jpg", "Ume Japanese", 
         "Sushi Wrapped in Salmon", "Rice, Salmon", 11.99, 3.6), 
-    new FoodItem(15, "Kale Sushi", "images/Food - Sushi3.jpg", "Ume Japanese", 
+    new FoodItem(15, "Kale Sushi", "images/Food - Sushi3.jpg", "Ume Japanese",
         "Kale Sushi", "Kale, Rice", 12.99, 3.5)
 ]
 
@@ -61,11 +61,9 @@ var restaurants = [
             }
         ),
         210),
-    new Restaurant(1, "Bobby's Buffalo Shack", "images/Restaurant - Bobby's Buffalo Shack.jpg", 
     new Restaurant(1, "Bobby's Buffalo Shack", "images/Restaurant - Bobby's Buffalo Shack.jpg",
         new Menu(
             {
-                starters: 
                 starters:
                 [
                     foodItems[8],
@@ -79,10 +77,8 @@ var restaurants = [
                 ]
 
             }
-        ), 
         ),
         175),
-    new Restaurant(2, "Ume Japanese", "images/restaurants/Earls.jpg", 
     new Restaurant(2, "Ume Japanese", "images/restaurants/Earls.jpg",
         new Menu(
             {
@@ -195,5 +191,4 @@ function getFoodItemByName(name) {
 // For example, the 'breakfast' section on a menu, followeed by all fooditems in that list
 function Menu(menuObject) {
     this.menu = menuObject;
-}}
 }
