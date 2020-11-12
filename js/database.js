@@ -123,6 +123,15 @@ function getRestaurantByName(name) {
     return null;
 }
 
+function getFoodItemByName(name) {
+    for (var i = 0; i < foodItems.length; i++) {
+        if (foodItems[i].name == name)
+            return foodItems[i];
+    }
+
+    return null;
+}
+
 // A menu object is defined by key value pairs
 // The format of these key value is like so:
 /*

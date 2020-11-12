@@ -89,6 +89,17 @@
     display:none;
 }
 
+#cartPopUp #closeWindow {
+    position:relative;
+    left:230px;
+    font-size:20px;
+    font-weight:200;
+    background-color:red;
+    color:black;
+    width:10px;
+    height:10px;
+}
+
 #allOrders {
     /* 
         If the user has lots of orders, there will be a scroll bar for the items

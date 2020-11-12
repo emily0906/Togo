@@ -17,6 +17,14 @@ function modifyAddress(input) {
     }
 }
 
+/*
+    Adds everything the user had ordered into the cart
+    Updates the cart accordingly
+*/
+function addContentsToCart() {
+
+}
+
 // Open the carts pop up window
 // Returns true if the cart was opened or closed
 function openCart() {
@@ -41,4 +49,9 @@ function closeCart() {
     cart.style.display = "none";
 
     return true;
+}
+
+function makeOrder() {
+    alert("Order has been made!");
+    alert("This page is not created yet");
 }
