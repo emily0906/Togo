@@ -1,3 +1,4 @@
+﻿// List of all Food Items and their information
 
 var foodItems = [
     new FoodItem(0, "Mushroom Soup", "images/FoodItems/mushroomSoup.jpg", "Roughage Eatery",
@@ -195,3 +196,4 @@ function getFoodItemByName(name) {
 function Menu(menuObject) {
     this.menu = menuObject;
 }}
+}
