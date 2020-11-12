@@ -1,4 +1,4 @@
-// List of all Food Items and their information
+﻿// List of all Food Items and their information
 
 var foodItems = [
     new FoodItem("Mushroom Soup", "images/FoodItems/mushroomSoup.jpg", "Roughage Eatery",
@@ -17,7 +17,7 @@ var foodItems = [
         "A Green Salad Starter", "Asparagus", 9.99, 3), 
     new FoodItem("Tacos", "images/Food - Tacos.jpg", "Roughage Eatery",
         "Basic Tacos", "Groundbeef, Tomatoes, Letuce, Corn", 4.99, 3.8),  
-    new FoodItem("Vegetable Skewer", "images/Food - Vegetable Skewer.jpg", "Bobby's Buffalo Shack",
+    new FoodItem("Vegetable Skewer", "images/Food/Food - Vegetable Skewer.jpg", "Bobby's Buffalo Shack",
         "A Skewer of Vegetables", "Vegtables", 9.99, 3.7),   
     new FoodItem("Potato Soup", "images/Food - Potato Soup.jpg", "Roughage Eatery",
         "Warm Potato Soup", "Potatoes", 12.99, 4.1 ),  
