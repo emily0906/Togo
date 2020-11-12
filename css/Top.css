@@ -3,6 +3,7 @@
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    z-index:1;
 }
 
 div #top {
@@ -77,9 +78,10 @@ The location image should be placed inside the textfield
 }
 
 #cartPopUp {
-    position:absolute;
+    z-index:1;
+    position:fixed;
     right:7%;
-    top:100px;
+    top:10%;
     width:270px;
 
     /* 
@@ -118,6 +120,7 @@ The location image should be placed inside the textfield
 
     /* Different color so its noticeable*/
     background-color:lightgrey;
+    color:black;
 }
 
 #details {
@@ -134,6 +137,7 @@ The location image should be placed inside the textfield
     padding:5px;
     margin-top:20px;
     display:inline-block;
+    color:black;
 }
 
 .order {

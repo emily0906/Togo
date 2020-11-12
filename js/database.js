@@ -1,37 +1,37 @@
 // List of all Food Items and their information
 
 var foodItems = [
-    new FoodItem("Mushroom Soup", "images/FoodItems/mushroomSoup.jpg", "Roughage Eatery",
+    new FoodItem(0, "Mushroom Soup", "images/FoodItems/mushroomSoup.jpg", "Roughage Eatery",
         "Cashew creamy mushroom soup", "Cachews, mushrooms", 15.45, 4),
-    new FoodItem("Banana Soup", "images/FoodItems/mushroomSoup.jpg", "Roughage Eatery",
+    new FoodItem(1, "Banana Soup", "images/FoodItems/mushroomSoup.jpg", "Roughage Eatery",
         "Cashew creamy Banana soup, ew wtf", "Banana, mushrooms", 2.50, 4),
-    new FoodItem("Mac & Cheeze", "images/FoodItems/mushroomSoup.jpg", "Roughage Eatery",
+    new FoodItem(2, "Mac & Cheeze", "images/FoodItems/mushroomSoup.jpg", "Roughage Eatery",
         "Mac and cheese mmmm", "mac and 10% cheese", 5, 5),
-    new FoodItem("Chicken Burger", "images/Foo - Chicken Burger.jpg", "Bobby's Buffalo Shack", 
+    new FoodItem(3, "Chicken Burger", "images/Foo - Chicken Burger.jpg", "Bobby's Buffalo Shack", 
         "Organic Chicken Burger", "Letuce, Tomatoes, Bread, Chicken", 16.99, 3.8), 
-    new FoodItem("Sushi", "images/Food - Sushi.jpg", "Ume Japanese",
+    new FoodItem(4, "Sushi", "images/Food - Sushi.jpg", "Ume Japanese",
         "Sushi", "Rice, Salmon", 12.00, 4.1), 
-    new FoodItem("Crepe", "images/Food - Crepe.jpg", "Roughage Eatery", 
+    new FoodItem(5, "Crepe", "images/Food - Crepe.jpg", "Roughage Eatery", 
         "Traditional Crepe", "Egg, Milk, Fruit", 8.99, 4.2), 
-    new FoodItem("Asparagus Starter", "images/Food - Asparagus Green Starter.jpg", "Bobby's Buffalo Shack",
+    new FoodItem(6, "Asparagus Starter", "images/Food - Asparagus Green Starter.jpg", "Bobby's Buffalo Shack",
         "A Green Salad Starter", "Asparagus", 9.99, 3), 
-    new FoodItem("Tacos", "images/Food - Tacos.jpg", "Roughage Eatery",
+    new FoodItem(7, "Tacos", "images/Food - Tacos.jpg", "Roughage Eatery",
         "Basic Tacos", "Groundbeef, Tomatoes, Letuce, Corn", 4.99, 3.8),  
-    new FoodItem("Vegetable Skewer", "images/Food - Vegetable Skewer.jpg", "Bobby's Buffalo Shack",
+    new FoodItem(8, "Vegetable Skewer", "images/Food - Vegetable Skewer.jpg", "Bobby's Buffalo Shack",
         "A Skewer of Vegetables", "Vegtables", 9.99, 3.7),   
-    new FoodItem("Potato Soup", "images/Food - Potato Soup.jpg", "Roughage Eatery",
+    new FoodItem(9, "Potato Soup", "images/Food - Potato Soup.jpg", "Roughage Eatery",
         "Warm Potato Soup", "Potatoes", 12.99, 4.1 ),  
-    new FoodItem("Cupcake", "image/Food - Cupcakes.jpg", "Roughage Eatery",
+    new FoodItem(10, "Cupcake", "image/Food - Cupcakes.jpg", "Roughage Eatery",
          "Chocolate Cupcakes", "Chocolate", 3.99, 4.6), 
-    new FoodItem("Fried Spring Rolls", "images/Food - Fried Spring Rolls.jpg", "Roughage Eatery", 
+    new FoodItem(11, "Fried Spring Rolls", "images/Food - Fried Spring Rolls.jpg", "Roughage Eatery", 
         "Fried Spring Rolls", "Been sprouts, Carro", 8.99, 4.3),
-    new FoodItem("Chicken Wings", "images/Food - Buffalo Wings.jpg", "Bobby's Buffalo Shack", 
+    new FoodItem(12, "Chicken Wings", "images/Food - Buffalo Wings.jpg", "Bobby's Buffalo Shack", 
         "Spicey Chicken Wings", "Chicken", 7.99, 3.8), 
-    new FoodItem("Edamame", "images/Food - Edamame.jpg", "Ume Japanese", 
+    new FoodItem(13, "Edamame", "images/Food - Edamame.jpg", "Ume Japanese", 
         "Edamame Soybeans", "Soybeans", 3.59, 3.6), 
-    new FoodItem("Salmon Sushi", "images/Food - Shushi2.jpg", "Ume Japanese", 
+    new FoodItem(14, "Salmon Sushi", "images/Food - Shushi2.jpg", "Ume Japanese", 
         "Sushi Wrapped in Salmon", "Rice, Salmon", 11.99, 3.6), 
-    new FoodItem("Kale Sushi", "images/Food - Sushi3.jpg", "Ume Japanese", 
+    new FoodItem(15, "Kale Sushi", "images/Food - Sushi3.jpg", "Ume Japanese", 
         "Kale Sushi", "Kale, Rice", 12.99, 3.5)
 ]
 
@@ -140,7 +140,8 @@ function Restaurant(id, name, image, menu, location) {
 }
 
 // A menu contains the list of all food items along with all information about the food item
-function FoodItem(name, image, restaurantCreator, description, ingrediants, price, stars) {
+function FoodItem(id, name, image, restaurantCreator, description, ingrediants, price, stars) {
+    this.id = id;
     this.name = name;
     this.image = image;
     this.restaurant = restaurantCreator;

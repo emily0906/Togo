@@ -20,6 +20,9 @@ function addressChange(input) {
     setUserAddress(document.getElementById("deliveryAddress").value);
     setAddressLocation(); // The user has a new address location, get its location
     restaurantsNearYouSetup();
+
+    // TESTING CART, when we change the address we will also modify the cart
+    addContentsToCart("Vegetable Skewer");
 }
 
 // This grabs the location of the user
@@ -140,6 +143,7 @@ function redirectToMenuPage(event) {
     // Redirect the user to another page
     window.location = "FoodItemDisplayer.html";
 }
+
 $(document).ready(function(){
   $( ".coupon" ).mouseover(function() {
     $(this).addClass( "blur" );
@@ -147,5 +151,6 @@ $(document).ready(function(){
   $( ".coupon" ).mouseout(function() {
     $(this).removeClass( "blur" );
   });
-  $().UItoTop({ easingType: 'easeOutQuart' });
+  // $().UItoTop({ easingType: 'easeOutQuart' });
+    // ERROR: UItoTop not a function
 })
