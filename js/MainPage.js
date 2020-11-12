@@ -140,12 +140,3 @@ function redirectToMenuPage(event) {
     // Redirect the user to another page
     window.location = "FoodItemDisplayer.html";
 }
-$(document).ready(function(){
-  $( ".coupon" ).mouseover(function() {
-    $(this).addClass( "blur" );
-  });
-  $( ".coupon" ).mouseout(function() {
-    $(this).removeClass( "blur" );
-  });
-  $().UItoTop({ easingType: 'easeOutQuart' });
-})
