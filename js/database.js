@@ -73,7 +73,7 @@ var restaurants = [
                 mains:
                 [
                     foodItems[3],
-                    foodItem[12]
+                    foodItems[12]
 
                 ]
 
