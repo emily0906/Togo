@@ -3,7 +3,7 @@ body {
     background-image: url("../images/MainPage.jpg");
     background-color: #cccccc;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
     position: relative;
     font-family: Verdana, sans-serif;
