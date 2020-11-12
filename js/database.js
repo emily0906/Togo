@@ -9,7 +9,7 @@ var foodItems = [
         "Mac and cheese mmmm", "mac and 10% cheese", 5, 5),
     new FoodItem("Chicken Burger", "images/Foo - Chicken Burger.jpg", "Bobby's Buffalo Shack", 
         "Organic Chicken Burger", "Letuce, Tomatoes, Bread, Chicken", 16.99, 3.8), 
-    new FoodItem("Sushi", "images/Food - Sushi.jpg", "Roughage Eatery",
+    new FoodItem("Sushi", "images/Food - Sushi.jpg", "Ume Japanese",
         "Sushi", "Rice, Salmon", 12.00, 4.1), 
     new FoodItem("Crepe", "images/Food - Crepe.jpg", "Roughage Eatery", 
         "Traditional Crepe", "Egg, Milk, Fruit", 8.99, 4.2), 
@@ -24,10 +24,15 @@ var foodItems = [
     new FoodItem("Cupcake", "image/Food - Cupcakes.jpg", "Roughage Eatery",
          "Chocolate Cupcakes", "Chocolate", 3.99, 4.6), 
     new FoodItem("Fried Spring Rolls", "images/Food - Fried Spring Rolls.jpg", "Roughage Eatery", 
-        "Fried Spring Rolls", ),
+        "Fried Spring Rolls", "Been sprouts, Carro", 8.99, 4.3),
     new FoodItem("Chicken Wings", "images/Food - Buffalo Wings.jpg", "Bobby's Buffalo Shack", 
         "Spicey Chicken Wings", "Chicken", 7.99, 3.8), 
-
+    new FoodItem("Edamame", "images/Food - Edamame.jpg", "Ume Japanese", 
+        "Edamame Soybeans", "Soybeans", 3.59, 3.6), 
+    new FoodItem("Salmon Sushi", "images/Food - Shushi2.jpg", "Ume Japanese", 
+        "Sushi Wrapped in Salmon", "Rice, Salmon", 11.99, 3.6), 
+    new FoodItem("Kale Sushi", "images/Food - Sushi3.jpg", "Ume Japanese", 
+        "Kale Sushi", "Kale, Rice", 12.99, 3.5)
 ]
 
 // List of all packages, and their information
@@ -75,7 +80,22 @@ var restaurants = [
             }
         ), 
         175),
-    new Restaurant(2, "Earls", "images/restaurants/Earls.jpg", null, 105),
+    new Restaurant(2, "Ume Japanese", "images/restaurants/Earls.jpg", 
+        new Menu(
+            {
+                starters:
+                [
+                    foodItems[13]
+                ],
+                mains:
+                [
+                    foodItems[14],
+                    foodItems[15],
+                    foodItems[4],
+
+                ]
+            }
+        ), 105),
     new Restaurant(3, "Gong Cha", "images/restaurants/Stellas.jpg", null, 21),
     new Restaurant(4, "Jolibee", "images/restaurants/Stellas.jpg", null, 80),
     new Restaurant(5, "Fion", "images/restaurants/Earls.jpg", "", 100),
