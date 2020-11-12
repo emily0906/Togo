@@ -3,6 +3,8 @@
 <head>
     <title>To Go | Welcome</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+    <script type="text/javascript" src="js/User.js"></script>
+    <script type="text/javascript" src="js/Index.js"></script>
 </head>
 
 <body>
@@ -10,8 +12,8 @@
         <form>
             <h1 class="welcome_text">Expect The Best From Where You Are</h1>
             <div class="form-box">
-                <input type="text" id="search-field" placeholder="Please Enter Your Address Here">
-                <a href="./Main_Page.html"><button class="search-btn" type="button"> Search </button></a>
+                <input type="text" id="search-field" placeholder="Please Enter Your Address Here" onkeydown="return keyPressed(this)">
+                <a onclick="submitAddress();"><button class="search-btn" type="button"> Search </button></a>
             </div>
         </form>
     </div>

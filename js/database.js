@@ -1,4 +1,4 @@
-﻿// List of all Food Items and their information
+// List of all Food Items and their information
 
 var foodItems = [
     new FoodItem("Mushroom Soup", "images/FoodItems/mushroomSoup.jpg", "Roughage Eatery",
@@ -61,7 +61,6 @@ var restaurants = [
             }
         ),
         210),
-
     new Restaurant(1, "Bobby's Buffalo Shack", "images/Restaurant - Bobby's Buffalo Shack.jpg", 
         new Menu(
             {
@@ -169,11 +168,19 @@ function getRestaurantByName(name) {
     return null;
 }
 
+function getFoodItemByName(name) {
+    for (var i = 0; i < foodItems.length; i++) {
+        if (foodItems[i].name == name)
+            return foodItems[i];
+    }
+
+    return null;
+}
+
 // A menu object is defined by key value pairs
 // The format of these key value is like so:
 /*
-    { 
-    Menu :
+    {
     heading1 : [FootItemList],
     heading2 : [FoodItemList],
     headingn : [FoodItemList]
