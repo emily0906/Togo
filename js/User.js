@@ -13,6 +13,62 @@ const FOOD_COOKIE_KEY = "foodOrder"
 function addFoodToCartCookie(FoodItem) {
     if (FoodItem == null)
         alert("Sorry, this selection is invalid. Please try a different option. /0 bad value.");
+
+    return addFoodToCartCookieByName(FoodItem.name);
+}
+
+function addFoodToCartCookieByName(FoodName) {
+    if (FoodItem == null)
+        alert("Sorry, this selection is invalid. Please try a different option. /0 bad value.");
+
+    var foodItems = getFoodCookies();
+
+    // No cookies found, so we create the cookie with the food items name
+    if (foodItems == "")
+        foodItems = FoodName;
+    else // Cookie was found, append the new food item to the cookie
+        foodItems = foodItems + "," + FoodName;
+
+    // Update the cookie
+    document.cookie = FOOD_COOKIE_KEY + "=" + foodItems;
+
+    return foodItems;
+}
+
+// Accepts a string to be removed from the cookies list
+function removeFoodCartCookie(FoodName) {
+    if (FoodName == null)
+        alert("Sorry, this selection is invalid. Please try a different option. /0 bad value.");
+
+    var foodItems = getFoodCookies();
+
+    // No cookies found, so there's nothing to remove
+    if (foodItems == "")
+        return;
+    else // Cookie was found, remove an element of the name FoodName
+    {
+        var lastIndex = foodItems.lastIndexOf(FoodName);
+
+        // With the last index, we now remove each character
+        // Subtract 1 to remove comma
+        var start;
+        if (foodItems.charAt(lastIndex - 1) == ',')
+            start = foodItems.substring(0, lastIndex - 1);
+        else
+            start = foodItems.substring(0, lastIndex);
+        var end = foodItems.substring(lastIndex + FoodName.length, foodItems.length);
+
+        // Combine the start and end of new string that excludes the items name
+        foodItems = start.concat(end);
+    }
+
+    // Update the cookie
+    document.cookie = FOOD_COOKIE_KEY + "=" + foodItems;
+
+    return foodItems;
+}
+
+function getFoodCookies() {
     var foodItems = "";
 
     // First, we get the current food items, then append our new food item to the cart
@@ -25,29 +81,12 @@ function addFoodToCartCookie(FoodItem) {
         }
     }
 
-    // No cookies found, so we create the cookie with the food items name
-    if (foodItems == "")
-        foodItems = FoodItem.name;
-    else // Cookie was found, append the new food item to the cookie
-        foodItems = foodItems + "," + FoodItem.name;
-
-    // Update the cookie
-    document.cookie = FOOD_COOKIE_KEY + "=" + foodItems;
-
     return foodItems;
 }
 
 // Gets the cookies storing the users current order
 function getCurrentOrder() {
-    var cookies = document.cookie.split(";");
-    for (var i = 0; i < cookies.length; i++) {
-        var keyValue = cookies[i].split("=");
-        if (keyValue[0].trim() == FOOD_COOKIE_KEY)
-            return keyValue[1];
-    }
-
-    // There is nothing associated with the order yet
-    return null;
+    return getFoodCookies();
 }
 
 function getUserAddress() {

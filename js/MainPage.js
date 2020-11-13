@@ -23,6 +23,7 @@ function addressChange(input) {
 
     // TESTING CART, when we change the address we will also modify the cart
     addContentsToCart("Vegetable Skewer");
+    addContentsToCart("Banana Soup");
 }
 
 // This grabs the location of the user

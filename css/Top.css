@@ -160,6 +160,23 @@ The location image should be placed inside the textfield
     font-weight:900;
 }
 
+.count {
+    position:relative;
+    left:1%;
+}
+
+#addRemove .addToCart {
+    margin:2px;
+    font-weight:400;
+    color:red;
+}
+
+#addRemove .removeFromCart {
+    margin:2px;
+    font-weight:400;
+    color:red;
+}
+
 /*
 This is the lines that divide the portions of the screens
 */

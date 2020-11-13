@@ -1,4 +1,28 @@
 var cartOpen = false; // True of false, if the carts popup window is open
+var originalCartState = null; // Saving the state or cart originally
+
+// Obtained from https://stackoverflow.com/questions/1726630/formatting-a-number-with-exactly-two-decimals-in-javascript
+// Formatting a number to an exact 2 decimals following currency
+const formatter = new Intl.NumberFormat('en-US', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+});
+
+// At any time, the user may click on the object to add or remove items from the cart
+$(document).ready(function () {
+    // Obtained from https://stackoverflow.com/questions/34896106/attach-event-to-dynamic-elements-in-javascript
+    // Dynamic button pressed, with attached event
+    document.addEventListener('click', function (e) {
+        if (e.target && e.target.id == 'addToCart') {
+            addCartItem(e);
+        }
+        else if (e.target && e.target.id == 'removeFromCart') {
+            removeCartItem(e);
+        }
+    });
+
+    updateCart(getCurrentOrder());
+});
 
 function displayAddress() {
     try {
@@ -32,42 +56,104 @@ function addContentsToCart(foodName) {
 // But it will be fine for our purposes, and the number of elements will practically always be small (< 10)
 function updateCart(allFoodNamesCookieKey) {
     var orders = document.getElementById("allOrders");
+    var elem = document.getElementById("totalsSection");
+
+    if (originalCartState == null)
+        originalCartState = orders.innerHTML;
+
+    // No food has been ordered yet
+    if (allFoodNamesCookieKey == "" || allFoodNamesCookieKey == null) {
+        orders.innerHTML = originalCartState;
+
+        // Erase totals display if it exists
+        if (elem != null)
+            elem.style.display = "none";
+
+        return;
+    }
+
     orders.innerHTML = "";
+    elem.style.display = "inline";
 
     // Each item is split by comma
     var food = allFoodNamesCookieKey.split(",");
+
+    // Counting any duplicates 
+    var nonDupes = [];
+    var dupeCount = []; // The number of elements, cooresponds to the index of nonDupes
+
+    for (var i = 0; i < food.length; i++) {
+        if (food[i] == "") // Remove any Empty split
+            continue;
+
+        var index = nonDupes.indexOf(food[i]);
+        if (index != -1) {
+            dupeCount[index]++;
+        }
+        else {
+            nonDupes.push(food[i]);
+            dupeCount.push(1);
+        }
+    }
+
+
     var FoodItemObject = null;
 
     try {
         var sumPrice = 0;
 
-        for (var i = 0; i < food.length; i++) {
-            if (food[i] == "") // Remove any Empty split
-                continue;
-
-            FoodItemObject = getFoodItemByName(food[i].trim());
+        // Go through each non-duplicate food item in the order, then display it
+        // This will also display the total prices of the order
+        for (var i = 0; i < nonDupes.length; i++) {
+            FoodItemObject = getFoodItemByName(nonDupes[i].trim());
 
             if (FoodItemObject == null) {
                 alert("Incorrect names for food items detected, please check the console encase of any errors.");
                 return;
             }
 
-            // Create price and order object
+            // Create objects
             var order = document.createElement("div");
             var price = document.createElement("span");
+            var count = document.createElement("span");
+            var addRemoveSection = document.createElement("div");
+            var add = document.createElement("button");
+            var remove = document.createElement("button");
+            var leftBar = document.createElement("span");
+            var rightBar = document.createElement("span");
+
+            // Creating content for Add/Remove from cart for the specific item
+            leftBar.textContent = "[ ";
+            add.textContent = "+"
+            rightBar.textContent = " ]";
+            remove.textContent = "-";
+            addRemoveSection.appendChild(leftBar);
+            addRemoveSection.appendChild(add);
+            addRemoveSection.appendChild(remove);
+            addRemoveSection.appendChild(rightBar);
+
 
             price.className = "price";
             order.className = "order";
+            count.className = "count";
+            addRemoveSection.id = "addRemove";
+            add.id = "addToCart";
+            remove.id = "removeFromCart";
+            leftBar.className = "bar";
+            rightBar.className = "bar";
 
             // Settings content values
-            price.textContent = "$" + FoodItemObject.price;
+            price.textContent = "$" + formatter.format (FoodItemObject.price * dupeCount[i]);
+            count.textContent = " x" + dupeCount[i];
             order.textContent = FoodItemObject.name;
 
             // Appending children
             order.appendChild(price);
             orders.appendChild(order);
+            order.appendChild(count);
+            order.appendChild(addRemoveSection);
 
-            sumPrice += FoodItemObject.price;
+            sumPrice = sumPrice + (FoodItemObject.price * dupeCount[i]);
         }
         
         // ASSUMPTION: Manitoba's taxes
@@ -76,10 +162,10 @@ function updateCart(allFoodNamesCookieKey) {
         var total = sumPrice + GST + PST;
 
         // Truncating decimals
-        sumPrice = toFixed(sumPrice, 2);
-        GST = toFixed(GST, 2);
-        PST = toFixed(PST, 2);
-        total = toFixed(total, 2);
+        sumPrice = formatter.format(sumPrice);
+        GST = formatter.format(GST);
+        PST = formatter.format(PST);
+        total = formatter.format(total);
 
         // Now we will set the prices
         // Subtotal
@@ -92,16 +178,34 @@ function updateCart(allFoodNamesCookieKey) {
         getPriceChild(document.getElementById("Total")).textContent = "$" + total;
     }
     catch (err) {
-        alert(err);
+        alert(err + " " + err.lineNumber);
         alert("Sorry, a problem has occurred. Please try again. \0 User.js required.");
     }
 }
 
-// Obtained from https://stackoverflow.com/questions/4187146/truncate-number-to-two-decimal-places-without-rounding
-// Truncating a float to a specific number of decimal points
-function toFixed(num, fixed) {
-    var re = new RegExp('^-?\\d+(?:\.\\d{0,' + (fixed || -1) + '})?');
-    return num.toString().match(re)[0];
+// Adds the item to the cart
+// Assumption: The text contained the items name followed by a '$'
+function addCartItem(event) {
+    var foodName = itemNameFromWholeText(event.target.parentNode.parentNode.innerHTML).trim();
+
+    // Update cart once added
+    updateCart(addFoodToCartCookieByName(foodName));
+}
+
+// Removes the item to the cart
+// Assumption: The text contained the items name followed by a '$'
+function removeCartItem(event) {
+    var foodName = itemNameFromWholeText(event.target.parentNode.parentNode.innerHTML).trim();
+    
+    // Update cart once removed
+    updateCart(removeFoodCartCookie(foodName));
+}
+
+// Given the entire innerHTML of an order in the cart
+// Return the name of item that was ordered
+// Assumption: The name of the item stops at '<'
+function itemNameFromWholeText(wholeText) {
+    return wholeText.substring(0, wholeText.indexOf('<'));
 }
 
 // Returns the 'price' child of the span object
