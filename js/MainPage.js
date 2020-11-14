@@ -104,6 +104,11 @@ function restaurantsNearYouSetup() {
     }
 }
 
+// Move the coupon section to a specific coupon
+function rotateCouponToIndex(index) {
+    rotateCouponSection(index - curCouponSection);
+}
+
 function rotateCouponSection(amount) {
     if (typeof (circles) == undefined)
         alert("An error has occurred. Please try again later.");
