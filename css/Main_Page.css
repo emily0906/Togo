@@ -230,7 +230,9 @@ body {
     border-radius: 25px;
 }
 
-#bottom #packageIcons .row::after, #bottom #restaurantsNearYouIcons .row, #bottom #Foods .row {
+#bottom #packageIcons .row::after,
+#bottom #restaurantsNearYouIcons .row::after,
+#bottom #Foods .row::after{
     /* Render to next line */
     content: "";
     clear: both;
