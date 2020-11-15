@@ -224,8 +224,8 @@ body {
 }
 
 #bottom #packageIcons .col img, #bottom #restaurantsNearYouIcons .col img, #bottom #Foods .col img {
-    width:150px;
-    height:150px;
+    width:100px;
+    height:100px;
     background: white;
     border-radius: 25px;
 }
