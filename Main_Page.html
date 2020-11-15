@@ -87,10 +87,16 @@
         <div id="Foods">
             <div class="row">
                 <div class="col">
-                    <a href="#" onclick="redirectToMenuPage (this);">
-                        <img id="myImg" src="images/empty.jpg" class="package">
-                        <div class="centerText">Chow Mein</div>
-                    </a>
+                  <img src="images/empty.jpg" onclick="openModal()" class="package">
+                  <div class="centerText">Protein</div>
+                  <div id="myModal" class="modal">
+                    <span class="close"onclick="closeModal()">&times;</span>
+                    <img class="modal-content">
+                    <div class="container">
+                      <h4><b>Chow Mein</b></h4>
+                      <p> Something about the dishes </p>
+                    </div>
+                  </div>
                 </div>
                 <div class="col">
                     <a href="#" onclick="redirectToMenuPage (this);">
@@ -273,7 +279,6 @@
         </div>
         <hr class="dividers" />
         <div class="footer">
-
           <p> COMP3020, Group 31 © 2020 </p>
           <p> Connor Hryhoruk	(7805584) </p>
           <p> Suhjin Kang	(7870942) </p>
