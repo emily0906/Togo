@@ -88,6 +88,7 @@
 
 .container {
   padding: 2px 16px;
+  text-align: center;
 }
 .container button {
   border: none;
