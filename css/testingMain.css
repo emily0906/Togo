@@ -220,7 +220,6 @@ body {
 #bottom #restaurantsNearYouIcons .mySlides2,
 #bottom #packageIcons .mySlides1,
 #bottom #Foods .mySlide3 {
-  display: none;
   overflow: auto;
   white-space: nowrap;
 }
