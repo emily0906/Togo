@@ -1,0 +1,324 @@
+body {
+    color: #fff;
+    background-image: url("../images/MainPage.jpg");
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    position: relative;
+    font-family: Verdana, sans-serif;
+    margin:0;
+}
+
+#mid, #bottom {
+    /* Prevent highlight / selections of the arrows */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*
+    This is the lines that divide the portions of the screens
+*/
+.dividers{
+    opacity:0.3;
+}
+
+/*
+    slides for coupons
+*/
+
+#mid .slide {
+    left:20%;
+    display: none;
+    position: relative;
+    margin: auto;
+    padding-top:90px;
+}
+
+#mid .slide img {
+    display:block;
+    top: 50%;
+    height: 250px;
+    width:480px;
+    max-width:480px;
+
+    transition: 0.5s ease;
+  	-o-transition: 0.5s ease;
+  	-webkit-transition: 0.5s ease;
+
+}
+
+#mid .slide:hover img{
+    -webkit-filter: blur(1px);
+	-moz-filter: blur(1px);
+	-ms-filter: blur(1px);
+	filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+	filter: blur(1px);
+    opacity:0.5;
+}
+
+#mid .slide:hover .addTo span {
+    visibility:visible;
+}
+
+#mid .slide .addTo{
+    z-index:1;
+    display:inline-block;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    top: 26%;
+    margin:auto;
+	position: absolute;
+    text-align:center;
+}
+
+#mid .slide .addTo span {
+    visibility:hidden;
+    font: bold 20px/20px 'Open Sans', sans-serif;
+    color:black;
+    font-weight:500;
+    padding-top: 110px;
+	font-size: 50px;
+	display: inline-block;
+
+    z-index:1;
+    display:inline-block;
+    height: 250px;
+    width:480px;
+
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    top: 26%;
+    margin:auto;
+	position: absolute;
+	border: 5px solid #fff;
+    text-align:center;
+}
+
+#mid .slide:hover .addTo{
+  color: #4f4f4f;
+  background-color: white;
+}
+
+#mid .rightRotate,
+#mid .leftRotate {
+  display:inline-block;
+  bottom:110px;
+
+  cursor: pointer;
+  position: relative;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+#mid .rightRotate{
+  left: 25%;
+  border-radius: 3px 0 0 3px;
+}
+
+#mid .leftRotate {
+    right: 37.5%;
+    border-radius: 3px 0 0 3px;
+}
+
+#mid .rightRotate:hover,
+#mid .leftRotate:hover {
+    background-color:#808080;
+}
+
+#mid::after {
+    /* Clears rest of page for no overlap */
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Having the circles under the coupons look like circles */
+#mid .circles {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+#mid .circles:hover{
+  background-color: #717171;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .leftRotate, .rightRotate {font-size: 11px}
+}
+
+#bottom .bottomSearch {
+    /* Main position for the bottom search bar */
+    left: 50px;
+    bottom: 5px;
+}
+
+#bottom .bottomSearch input {
+    background: #fff;
+    box-sizing: border-box;
+    width: 250px;
+    height: 20px;
+    position: relative;
+}
+
+#bottom .bottomSearch img {
+    position:relative;
+    width: 18px;
+    height: 18px;
+    right: 25px;
+    top:5px;
+    border-radius: 25px;
+}
+
+#bottom .titleText {
+    position: relative;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px;
+}
+
+#bottom #packages {
+    top: 5px;
+}
+
+/*-----------------------------------------------------------------------------
+-------------------------------------------------------------------------------*/
+/*Slide show for the bottom */
+#bottom #restaurantsNearYouIcons .mySlides2,
+#bottom #packageIcons .mySlides1,
+#bottom #Foods .mySlide3 {
+  display: none;
+  overflow: auto;
+  white-space: nowrap;
+}
+#bottom #restaurantsNearYouIcons .slideshow-container,
+#bottom #packageIcons .slideshow-container,
+#bottom #Foods .slideshow-container{
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+/* Next & previous buttons */
+#bottom #restaurantsNearYouIcons .prev, #bottom #restaurantsNearYouIcons .next,
+#bottom #packageIcons .prev, #bottom #packageIcons .next,
+#bottom #Foods .prev, #bottom #Foods .next{
+  cursor: pointer;
+  position: relative;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+#bottom #restaurantsNearYouIcons .next,
+#bottom #Foods .next,
+#bottom #packageIcons .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+#bottom #restaurantsNearYouIcons .prev:hover, #bottom #restaurantsNearYouIcons .next:hover,
+#bottom #packageIcons .prev:hover, #bottom #packageIcons .next:hover,
+#bottom #Foods .prev:hover, #bottom #Foods .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+/*-----------------------------------------------------------------------------
+-------------------------------------------------------------------------------*/
+
+/* Food package pictures user clicks on */
+#bottom #packageIcons .mySlide1, #bottom #restaurantsNearYouIcons .mySlide2, #bottom #Foods .mySlide3 {
+    float: left;
+    border-radius: 25px;
+    padding-left: 25px;
+    padding-top: 15px;
+    flex: 33.33%;
+}
+
+#bottom #packageIcons .mySlide1 img,
+#bottom #restaurantsNearYouIcons .mySlide2 img,
+#bottom #Foods .mySlide3 img {
+    display: block;
+    width:100px;
+    height:100px;
+    background: white;
+    border-radius: 25px;
+    border-radius: 25px;
+}
+
+#bottom #packageIcons .mySlide1::after,
+#bottom #restaurantsNearYouIcons .mySlide2,
+#bottom #Foods .mySlide3 {
+    /* Render to next line */
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Centering text */
+#bottom #restaurantsNearYouIcons .slideshow-container .mySlide2 .centerText,
+#bottom #packageIcons .slideshow-container .mySlide1 .centerText,
+#bottom #Foods .slideshow-container .mySlide3 .centerText {
+    position:relative;
+    text-align:center;
+    border-radius: 25px;
+    background-color: #3e4444;
+    color: white;
+    font-size:12px;
+    font-weight:600;
+    top: 5px;
+}
+
+
+.footer {
+   position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: linear-gradient(rgb(51, 51, 51), black, black, rgb(51, 51, 51));
+   color: white;
+   text-align: center;
+}
