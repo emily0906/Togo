@@ -2,11 +2,16 @@ const NUM_COUPON_SECTIONS = 4;
 var circles = []; // Circles.length = NUM_COUPON_SECTIONS
 var couponSection = 1;
 var curCouponSection = 0;
+var slideIndex = [1,1,1];
+var slideId = ["mySlides1", "mySlides2", "mySlide3"]
 
 window.onload = function () {
     circleSetup();
     restaurantsNearYouSetup();
     rotateCouponSection(0);
+    showSlides(1, 0);
+    showSlides(1, 1);
+    showSlides(1, 2);
     document.getElementById("restaurantAddress").value = "Search for a restaurant";
 }
 
@@ -149,13 +154,6 @@ function redirectToMenuPage(event) {
     // Redirect the user to another page
     window.location = "FoodItemDisplayer.html";
 }
-
-//for multiple slideshow
-var slideIndex = [1,1,1];
-var slideId = ["mySlides1", "mySlides2", "mySlide3"]
-showSlides(1, 0);
-showSlides(1, 1);
-showSlides(1, 2);
 
 function plusSlides(n, no) {
   showSlides(slideIndex[no] += n, no);
