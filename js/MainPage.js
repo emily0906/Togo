@@ -104,10 +104,6 @@ function addressChange(input) {
     setUserAddress(document.getElementById("deliveryAddress").value);
     setAddressLocation(); // The user has a new address location, get its location
     restaurantsNearYouSetup();
-
-    // TESTING CART, when we change the address we will also modify the cart
-    addContentsToCart("Vegetable Skewer");
-    addContentsToCart("Banana Soup");
 }
 
 // This grabs the location of the user
