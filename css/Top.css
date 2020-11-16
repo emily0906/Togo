@@ -11,19 +11,19 @@ div #top {
     top: 0;
     left: 0;
     right: 0;
-    height: 90px;
-    background-image: linear-gradient(rgb(51, 51, 51), black, black, rgb(51, 51, 51));
+    height: 80px;
+    background-color: rgb(253, 94, 46);
+    /* background-image: linear-gradient(rgb(51, 51, 51), black, black, rgb(51, 51, 51)); */
 }
 
 /* Editting the logo image */
 #top .logo {
     position: absolute;
     width: auto;
-    height: 75px;
-    left: 20px;
+    height: 70px;
+    left: 15%;
     top: 6px;
     bottom: 10px;
-    z-index:100;
 }
 
 /*
@@ -37,40 +37,73 @@ The location image should be placed inside the textfield
 
 #top .topAddress input {
     position: relative;
-    width: 35%;
+    width: 25%;
     height: 20px;
     padding: 12px;
-    border-radius: 30px;
+    border-radius: 4px 0 0 4px;
     text-indent: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: Gill Sans, sans-serif;
     font-size: 18px;
-    top: 20px;
-    left: 180px;
-    border: none;
-    box-shadow: 1px 1px 3px 3px rgb(255, 255, 255);
+    top: 18px;
+    /* left: 200px; */
+    left: 33%;
+    border: solid white 0.5px;
+    color: rgb(90, 90, 90);
+    background: rgba(255, 255, 255, 0.836);
+    /* box-shadow: 1px 1px 3px 3px rgb(255, 255, 255); */
+}
+
+#top .topAddress button{
+    position: relative;
+    width: 6%;
+    height: 46px;
+    padding: 12px;
+    border-radius: 0 4px 4px 0;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: Gill Sans, sans-serif;
+    font-size: 18px;
+    top: 19px;
+    /* left: 350px; */
+    left: 32.6%;
+    border: solid white 0.5px;
+    color: white;
+    background-color: transparent;
+}
+
+#top .topAddress button:hover{
+    background: #f7eae3;
+    color: rgb(88, 86, 86);
+    cursor: pointer;
 }
 
 #top .topAddress img {
     position: absolute;
     width: auto;
     height: 30px;
-    top: 13px;
-    left: 190px;
+    top: 11px;
+    left: 480px;
+    /* left: 50%; */
 }
 
 #top #included #top #shoppingCart {
     /* Always clickable */
     z-index:299;
-    cursor:pointer;
 }
 
 #shoppingCart img {
     position: absolute;
-    right: 5%;
-    top: 30px;
+    right: 20%;
+    top: 22px;
     height: 35px;
     width: auto;
     z-index:299;
+}
+
+#shoppingCart img:hover {
+    border-radius: 10px;
+    border: solid rgba(255, 233, 161, 0.555) 1px;
+    padding: 3px;
 }
 
 #invis {
@@ -190,6 +223,6 @@ This is the lines that divide the portions of the screens
 */
 .dividers {
     position: relative;
-    top: 80px;
+    top: 60px;
     opacity: 0.2;
 }

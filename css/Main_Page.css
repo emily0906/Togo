@@ -1,11 +1,11 @@
 body {
-    color: #fff;
-    background-color: #cccccc;
+    /* color: #fff; */
+    background-color: #f0f0ef;
     background-position: center;
     background-repeat: repeat;
     background-size: cover;
     position: relative;
-    font-family: Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin:0;
 }
 
@@ -16,19 +16,27 @@ body {
     user-select: none;
 }
 
+#bottom {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
 /*
-    This is the lines that divide the portions of the screens
+This is the lines that divide the portions of the screens
 */
-.dividers{
+.mid-bottom-divider {
+    position: relative;
+    top: 10px;
     opacity:0.3;
 }
 
 /*
-    slides for coupons
+slides for coupons
 */
 
 #mid .slide {
-    left:20%;
+    left:32%;
+    /* display: flex; */
     display: none;
     position: relative;
     margin: auto;
@@ -36,16 +44,14 @@ body {
 }
 
 #mid .slide img {
-    display:block;
+    display: block;
     top: 50%;
-    height: 250px;
-    width:480px;
-    max-width:480px;
+    height: auto;
+    max-width:500px;
 
     transition: 0.5s ease;
   	-o-transition: 0.5s ease;
   	-webkit-transition: 0.5s ease;
-
 }
 
 #mid .slide:hover img{
@@ -75,12 +81,13 @@ body {
 
 #mid .slide .addTo span {
     visibility:hidden;
-    font: bold 20px/20px 'Open Sans', sans-serif;
-    color:black;
-    font-weight:500;
+    /* font: bold 20px/20px 'Open Sans', sans-serif; */
+    color:rgb(53, 53, 53);
+    font-family: 'Gill Sans', sans-serif;
+    font-weight:50;
     padding-top: 110px;
-	font-size: 50px;
-	display: inline-block;
+	font-size: 25px;
+	/* display: inline-block; */
 
     z-index:1;
     display:inline-block;
@@ -93,7 +100,7 @@ body {
     top: 26%;
     margin:auto;
 	position: absolute;
-	border: 5px solid #fff;
+	/* border: 5px solid #fff; */
     text-align:center;
 }
 
@@ -111,21 +118,19 @@ body {
   position: relative;
   width: auto;
   padding: 16px;
-  color: white;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
   user-select: none;
 }
 
 #mid .rightRotate{
-  left: 25%;
-  border-radius: 3px 0 0 3px;
+    left: 35%;
+    border-radius: 0 3px 3px 0;
 }
 
 #mid .leftRotate {
-    right: 37.5%;
+    right: 15%;
     border-radius: 3px 0 0 3px;
 }
 
@@ -144,6 +149,8 @@ body {
 /* Having the circles under the coupons look like circles */
 #mid .circles {
   cursor: pointer;
+  /* position: relative;
+  left: -2%; */
   height: 15px;
   width: 15px;
   margin: 0 2px;
@@ -178,37 +185,74 @@ body {
   .leftRotate, .rightRotate {font-size: 11px}
 }
 
+#bottom {
+    font-family: Gill Sans, sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+}
+
 #bottom #search {
-    padding:7px;
+    padding:10px;
     padding-left:0px;
     display:inline-block;
     position:relative;
 }
 
 #bottom #search input {
-    background: #fff;
-    box-sizing: border-box;
-    width: 250px;
-    height:20px;
     position: relative;
+    left: 20px;
+    top: 20px;
+    background: rgba(255, 255, 255, 0.685);
+    border: none;
+    /* box-sizing: border-box; */
+    width: 470px;
+    height: 25px;
+    padding: 5px;
+    box-shadow: 1px 1px 3px 3px rgb(221, 220, 220);
+    border-radius: 3px;
+
+    font-family: Gill Sans, sans-serif;
+    font-size: 18px;
+    text-indent: 30px;
+    color: rgb(63, 63, 63);
 }
 
 #bottom #search img {
     position:relative;
-    width: 18px;
-    height: 18px;
-    right: 25px;
-    top:5px;
-    border-radius: 25px;
+    width: 20px;
+    height: 20px;
+    right: 455px;
+    top:23px;
+}
+#bottom .famous-food {
+    margin-top: 25px;
+}
+
+#bottom .packages {
+    margin-top: 20px;
+}
+
+#bottom .near-you {
+    margin-top: 25px;
 }
 
 /* The suggested search individual elements */
-#bottom #restaurantsFromSearch div {
+#bottom #restaurantsFromSearch div{
     cursor:pointer;
-    background-color:white;
-    border-bottom:1px solid #d4d4d4;
-    color:black;
-    width:220px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    top: 20px;
+    left: 20px;
+
+    width: 470px;
+    height: 25px;
+    padding: 5px;
+    box-shadow: 1px 1px 3px 3px rgb(221, 220, 220);
+    border-radius: 1px;
+    font-family: Gill Sans, sans-serif;
+    font-size: 18px;
+    text-indent: 30px;
+    color: rgb(63, 63, 63);
 }
 
 /* Obtained from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_autocomplete
@@ -224,22 +268,17 @@ body {
     top:83%;
     left:0;
     right:0;
-
-    /*
-    padding-left:5px;
-    height:16px;
-        */
 }
 
 #bottom #restaurantsFromSearch div:hover {
-    background-color:dimgrey;
+    background-color:rgb(255, 203, 124);
 }
 
 #bottom .titleText {
     position: relative;
-    text-decoration: underline;
-    font-weight: bold;
-    font-size: 16px;
+    font-weight: 530;
+    font-size: 22px;
+    left: 20px;
     padding: 5px;
 }
 
@@ -250,17 +289,16 @@ body {
 /* Food package pictures user clicks on */
 #bottom #packageIcons .col, #bottom #restaurantsNearYouIcons .col, #bottom #Foods .col {
     float: left;
-    border-radius: 25px;
     padding-left: 25px;
     padding-top: 15px;
     flex: 33.33%;
 }
 
 #bottom #packageIcons .col img, #bottom #restaurantsNearYouIcons .col img, #bottom #Foods .col img {
-    width:100px;
-    height:100px;
-    background: white;
-    border-radius: 25px;
+    width: 220px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 3px;
 }
 
 #bottom #packageIcons .row::after,
@@ -277,20 +315,22 @@ body {
 #bottom #packageIcons .row .col .centerText,
 #bottom #Foods .row .col .centerText {
     position:relative;
-    text-align:center;
-    border-radius: 25px;
-    background-color: #3e4444;
-    color: white;
-    font-size:12px;
-    font-weight:600;
+    text-align: center;
+    width: 220px;
+    color: rgb(77, 77, 77);
+    font-size:18px;
+    font-weight: 500;
     top: 5px;
 }
-.footer {
-   position: relative;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: linear-gradient(rgb(51, 51, 51), black, black, rgb(51, 51, 51));
-   color: white;
-   text-align: center;
+
+footer {
+    text-align: center;
+    position: relative;
+    top: 50px;
+    padding: 3px;
+    font-family: "Gills Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    color: white;
+    background-color: rgb(78, 78, 78);
 }
