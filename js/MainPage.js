@@ -104,10 +104,6 @@ function addressChange(input) {
     setUserAddress(document.getElementById("deliveryAddress").value);
     setAddressLocation(); // The user has a new address location, get its location
     restaurantsNearYouSetup();
-
-    // TESTING CART, when we change the address we will also modify the cart
-    addContentsToCart("Vegetable Skewer");
-    addContentsToCart("Banana Soup");
 }
 
 // This grabs the location of the user
@@ -228,15 +224,13 @@ function redirectToMenuPage(event) {
             locationName = event.childNodes[i].textContent;
     }
     window.localStorage.setItem("history", locationName);
-    //document.cookie = "history=" + locationName;
 
     // Redirect the user to another page
     window.location = "FoodItemDisplayer.html";
 }
 
-function redirectToRestaurantByName(restaurantName) {
-    //document.cookie = "history=" + restaurantName;
-    window.localStorage.setItem("history", restaurantName);
+function redirectToRestaurantByObject(obj) {
+    window.localStorage.setItem("history", obj.textContent);
 
     // Redirect the user to another page
     window.location = "FoodItemDisplayer.html";

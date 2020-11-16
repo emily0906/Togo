@@ -104,11 +104,3 @@ function createFoodItem(foodItem, includeLocation, header) {
     child.onclick = function () { setupModal(this, true); openModal(); }
     header.appendChild(child);
 }
-
-function redirectToRestaurantByName(restaurantName) {
-    //document.cookie = "history=" + restaurantName;
-    window.localStorage.setItem("history", restaurantName);
-
-    // Redirect the user to another page
-    window.location = "FoodItemDisplayer.html";
-}
