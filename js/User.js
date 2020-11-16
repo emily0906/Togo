@@ -5,9 +5,6 @@
 var address = "123 fake street";
 var userLocation = 100;
 
-//const ADDRESS_COOKIE_KEY = "userAddress";
-//const FOOD_COOKIE_KEY = "foodOrder"
-
 const ADDRESS_STORAGE_KEY = "userAddress";
 const FOOD_STORAGE_KEY = "foodOrder";
 
@@ -26,14 +23,13 @@ function addFoodToCartCookieByName(FoodName) {
 
     var foodItems = getFoodCookies();
 
-    // No cookies found, so we create the cookie with the food items name
+    // No storage found, so we create the cookie with the food items name
     if (foodItems == "" || foodItems == null)
         foodItems = FoodName;
     else // Cookie was found, append the new food item to the cookie
         foodItems = foodItems + "," + FoodName;
 
-    // Update the cookie
-    //document.cookie = FOOD_COOKIE_KEY + "=" + foodItems;
+    // Update the storage
     window.localStorage.setItem(FOOD_STORAGE_KEY, foodItems);
 
     return foodItems;
@@ -47,10 +43,10 @@ function removeFoodCartCookie(FoodName) {
 
     var foodItems = getFoodCookies();
 
-    // No cookies found, so there's nothing to remove
+    // No storage found, so there's nothing to remove
     if (foodItems == "" || foodItems == null)
         return;
-    else // Cookie was found, remove an element of the name FoodName
+    else // storage was found, remove an element of the name FoodName
     {
         var lastIndex = foodItems.lastIndexOf(FoodName);
 
@@ -68,27 +64,12 @@ function removeFoodCartCookie(FoodName) {
     }
 
     // Update the cookie
-    //document.cookie = FOOD_COOKIE_KEY + "=" + foodItems;
     window.localStorage.setItem(FOOD_STORAGE_KEY, foodItems);
 
     return foodItems;
 }
 
 function getFoodCookies() {
-    /* var foodItems = "";
-
-    // First, we get the current food items, then append our new food item to the cart
-    var cookies = document.cookie.split(";");
-    for (var i = 0; i < cookies.length; i++) {
-        var keyValue = cookies[i].split("=");
-        if (keyValue[0].trim() == FOOD_COOKIE_KEY) {
-            foodItems = keyValue[1];
-            break;
-        }
-    }
-
-    return foodItems;
-    */
     return window.localStorage.getItem(FOOD_STORAGE_KEY);
 }
 
@@ -98,19 +79,12 @@ function getCurrentOrder() {
 }
 
 function getUserAddress() {
-    /*
-    var cookies = document.cookie.split(";");
+    var addr = window.localStorage.getItem(ADDRESS_STORAGE_KEY);
 
-    for (var i = 0; i < cookies.length; i++) {
-        var keyValue = cookies[i].split("=");
-        if (keyValue[0].trim() == ADDRESS_COOKIE_KEY)
-            return keyValue[1];
-    }
+    if (addr == null)
+        return address;
 
-    // No cookies found, so we use default address instead
-    return address;
-    */
-    return window.localStorage.getItem(ADDRESS_STORAGE_KEY);
+    return addr;
 }
 
 function setUserAddress(newAddress) {
