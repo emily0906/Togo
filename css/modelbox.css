@@ -121,6 +121,7 @@
 
 #container #closeButton {
   border-color:yellowgreen;
+  border-style:dashed;
 }
 
 #container #closeButton:hover {
