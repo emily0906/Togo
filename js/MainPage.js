@@ -5,10 +5,10 @@ var curCouponSection = 0;
 
 window.onload = function () {
     circleSetup();
+    setAddressLocation();
     restaurantsNearYouSetup();
     rotateCouponSection(0);
     document.getElementById("restaurantAddress").value = "";
-    document.addEventListener("click", flushSuggestedSearches());
 }
 
 $(document).click(function (event) {

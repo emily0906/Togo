@@ -3,7 +3,7 @@ var originalCartState = null; // Saving the state or cart originally
 
 // Obtained from https://stackoverflow.com/questions/1726630/formatting-a-number-with-exactly-two-decimals-in-javascript
 // Formatting a number to an exact 2 decimals following currency
-const formatter = new Intl.NumberFormat('en-US', {
+var formatter = new Intl.NumberFormat('en-US', {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
 });
