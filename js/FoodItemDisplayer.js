@@ -2,6 +2,8 @@
 
 window.onload = function () {
     document.getElementById("restaurantAddress").value = "Search for a restaurant";
+    changeHistoryText();
+    displayFoodItems();
 }
 
 // Dynamically display the food items

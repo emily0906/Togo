@@ -7,12 +7,91 @@ window.onload = function () {
     circleSetup();
     restaurantsNearYouSetup();
     rotateCouponSection(0);
-    document.getElementById("restaurantAddress").value = "Search for a restaurant";
+    document.getElementById("restaurantAddress").value = "";
+    document.addEventListener("click", flushSuggestedSearches());
 }
+
+$(document).click(function (event) {
+    var $target = $(event.target);
+    if (!$target.closest('#search').length &&
+        $('#restaurantsFromSearch').is(":visible")) {
+        $('#restaurantsFromSearch').hide();
+    }
+});
+
+
 
 // Sets up the 3 circles so that the currently selected one will be more opague
 function circleSetup() {
     circles = document.getElementsByClassName("circles");
+}
+
+function flushSuggestedSearches() {
+    var elem = document.getElementById("restaurantsFromSearch");
+    if (typeof elem !== 'undefined' && elem != null) {
+        elem.parentElement.removeChild(elem);
+    }
+}
+
+// This function displays restaurants that the user is searching for
+function displayRelatedRestaurants(obj, event) {
+    // Remove any previous searches from list
+    flushSuggestedSearches();
+
+    var text = obj.value;
+
+    if (typeof event !== 'undefined') {
+        // Check for backspace character
+        if (event.keyCode == 8)
+            text = text.substring(0, text.length - 1);
+        else {
+            text = text + String.fromCharCode(event.keyCode);
+        }
+
+        // Do not display any form of empty text
+        // Note that without this, all restaurants will display
+        if (text.trim() == "")
+            return;
+    }
+    else if (text == "")
+        return; // Do not display empty text without a backspace character
+
+    // Find the suggested restaurants based on the users input
+    var candidateRestaurants = [];
+
+    for (var i = 0; i < restaurants.length; i++) {
+        if (restaurants[i].name.toLowerCase().startsWith(text.trim().toLowerCase())) {
+            candidateRestaurants.push(restaurants[i].name);
+        }
+    }
+
+    // Now sort them in order
+    candidateRestaurants.sort();
+
+    // Create the suggestions
+    createSuggestions(candidateRestaurants);
+}
+
+// Creates the suggested searches from a list of restaurants
+function createSuggestions(suggestedRestaurants) {
+    var elem = document.getElementById("search");
+    var div = document.createElement("div");
+    div.id = "restaurantsFromSearch";
+    for (var i = 0; i < suggestedRestaurants.length; i++) {
+
+        // Creating object
+        var name = document.createElement("div");
+        name.innerHTML = suggestedRestaurants[i];
+        name.className = "suggestedName";
+        div.appendChild(name);
+
+        // Create on click event for object
+        name.onclick = function (event) {
+            redirectToRestaurantByName(event.target.textContent.trim());
+        }
+    }
+
+    elem.appendChild(div);
 }
 
 function addressChange(input) {
@@ -145,6 +224,13 @@ function redirectToMenuPage(event) {
     }
 
     document.cookie = "history=" + locationName;
+
+    // Redirect the user to another page
+    window.location = "FoodItemDisplayer.html";
+}
+
+function redirectToRestaurantByName(restaurantName) {
+    document.cookie = "history=" + restaurantName;
 
     // Redirect the user to another page
     window.location = "FoodItemDisplayer.html";

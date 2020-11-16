@@ -3,7 +3,7 @@
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    z-index:1;
+    z-index:99;
 }
 
 div #top {

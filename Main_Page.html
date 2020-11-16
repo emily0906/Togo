@@ -72,10 +72,11 @@
 
     <!-- This is the bottom section of the main page (Packages / Restaurants) -->
     <div id="bottom">
-        <span class="bottomSearch">
-            <input type="text" id="restaurantAddress" />
+        <div id="search">
+            <input type="text" placeholder="Search for a restaurant" id="restaurantAddress" 
+                   onfocus="displayRelatedRestaurants(this);" onkeydown="displayRelatedRestaurants(this, event);">
             <img src="images/search.png" />
-        </span>
+        </div>
 
         <span class="titleText" id="famous foods">
             <br />
