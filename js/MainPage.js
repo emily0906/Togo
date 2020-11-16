@@ -17,6 +17,11 @@ $(document).click(function (event) {
         $('#restaurantsFromSearch').is(":visible")) {
         $('#restaurantsFromSearch').hide();
     }
+
+    if (!$target.closest('#top').length &&
+        $('#cartPopUp').is(":visible")) {
+        closeCart();
+    }
 });
 
 

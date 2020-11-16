@@ -5,13 +5,13 @@
     <link rel="stylesheet" href="css/Main_Page.css" />
     <link rel="stylesheet" href="css/modelbox.css"/>
     <link rel="stylesheet" href="css/Top.css" />
-    <script type="text/javascript" src="js/modelBox.js"></script>
     <script type="text/javascript" src="js/database.js"></script>
     <script type="text/javascript" src="js/User.js"></script>
 
     <!-- Include the top portion of the page. NOTE: Should be last AND requires Jquery -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="js/Top.js"></script>
+    <script type="text/javascript" src="js/modelBox.js"></script>
     <script type="text/javascript" src="js/MainPage.js"></script>
 
     <meta charset="utf-8" />
@@ -34,12 +34,7 @@
                 <div id="shoppingCart">
                     <a onclick="openCart();"><img src="images/cart.png" class="package"></a>
                 </div>
-
             </div>
-            <!--
-                Failed attempt at clicking off / closing cart
-            <div id="invis" onclick="closeCart();"></div>
-            -->
 
             <!-- The pop up window displayed when clicking on the cart-->
             <div id="cartPopUp">
@@ -131,87 +126,40 @@
             Famous Foods
         </span>
 
+        <div id="modal">
+            <div id="container">
+                <img id="modal-content">
+                <h4><b>Chow Mein</b></h4>
+                <p> Something about the dishes </p>
+                <input type="text" id="customize" placeholder="Add special instruction">
+                <br />
+                <p></p>
+                <button a href="#" onclick="redirectToMenuPage (this);">Add To Cart</a></button>
+                <button a href="#" onclick="closeModal()">Close</a></button>
+            </div>
+        </div>
+
         <div id="Foods">
             <div class="row">
                 <div class="col">
-                  <img src="images/food/Food - Brussel Sprouts.jpg" onclick="openModal()" class="package">
+                  <img src="images/food/Food - Brussel Sprouts.jpg" onclick="setupModal(this); openModal();" class="package">
                   <div class="centerText">Brussels Sprouts</div>
-                  <div id="myModal" class="modal">
-                    <img class="modal-content">
-                    <div class="container">
-                      <h4><b>Chow Mein</b></h4>
-                      <p> Something about the dishes </p>
-                      <input type="text" id="customize" placeholder="Add special instruction">
-                      <br />
-                      <p></p>
-                      <button a href="#" onclick="redirectToMenuPage (this);">Add To Cart</a></button>
-                      <button a href="#" onclick="closeModal()">Close</a></button>
-                    </div>
-                  </div>
                 </div>
                 <div class="col">
-                  <img src="images/food/Food - Tacos.jpg" onclick="openModal()" class="package">
+                  <img src="images/food/Food - Tacos.jpg" onclick="setupModal(this); openModal();" class="package">
                   <div class="centerText">Stuffed Tacos</div>
-                  <div id="myModal" class="modal">
-                    <img class="modal-content">
-                    <div class="container">
-                      <h4><b>Chow Mein</b></h4>
-                      <p> Something about the dishes </p>
-                      <input type="text" id="customize" placeholder="Add special instruction">
-                      <br />
-                      <p></p>
-                      <button a href="#" onclick="redirectToMenuPage (this);">Add To Cart</a></button>
-                      <button a href="#" onclick="closeModal()">Close</a></button>
-                    </div>
-                  </div>
                 </div>
                 <div class="col">
-                  <img src="images/food/Food - Mac&Cheese.jpg" onclick="openModal()" class="package">
+                  <img src="images/food/Food - Mac&Cheese.jpg" onclick="setupModal(this); openModal();" class="package">
                   <div class="centerText">Baked Mac & Cheese</div>
-                  <div id="myModal" class="modal">
-                    <img class="modal-content">
-                    <div class="container">
-                      <h4><b>Chow Mein</b></h4>
-                      <p> Something about the dishes </p>
-                      <input type="text" id="customize" placeholder="Add special instruction">
-                      <br />
-                      <p></p>
-                      <button a href="#" onclick="redirectToMenuPage (this);">Add To Cart</a></button>
-                      <button a href="#" onclick="closeModal()">Close</a></button>
-                    </div>
-                  </div>
                 </div>
                 <div class="col">
-                  <img src="images/food/Food - Rice Noodles.jpg" onclick="openModal()" class="package">
+                  <img src="images/food/Food - Rice Noodles.jpg" onclick="setupModal(this); openModal();" class="package">
                   <div class="centerText">Vietnamese Rice Noodles</div>
-                  <div id="myModal" class="modal">
-                    <img class="modal-content">
-                    <div class="container">
-                      <h4><b>Chow Mein</b></h4>
-                      <p> Something about the dishes </p>
-                      <input type="text" id="customize" placeholder="Add special instruction">
-                      <br />
-                      <p></p>
-                      <button a href="#" onclick="redirectToMenuPage (this);">Add To Cart</a></button>
-                      <button a href="#" onclick="closeModal()">Close</a></button>
-                    </div>
-                  </div>
                 </div>
                 <div class="col">
-                  <img src="images/food/Food - Sushi.jpg" onclick="openModal()" class="package">
+                  <img src="images/food/Food - Sushi.jpg" onclick="setupModal(this); openModal();" class="package">
                   <div class="centerText">Seafood Sushi</div>
-                  <div id="myModal" class="modal">
-                    <img class="modal-content">
-                    <div class="container">
-                      <h4><b>Chow Mein</b></h4>
-                      <p> Something about the dishes </p>
-                      <input type="text" id="customize" placeholder="Add special instruction">
-                      <br />
-                      <p></p>
-                      <button a href="#" onclick="redirectToMenuPage (this);">Add To Cart</a></button>
-                      <button a href="#" onclick="closeModal()">Close</a></button>
-                    </div>
-                  </div>
                 </div>
             </div>
         </div>

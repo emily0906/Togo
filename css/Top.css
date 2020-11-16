@@ -57,12 +57,18 @@ The location image should be placed inside the textfield
     left: 190px;
 }
 
+#top #included #top #shoppingCart {
+    /* Always clickable */
+    z-index:299;
+}
+
 #shoppingCart img {
     position: absolute;
     right: 5%;
     top: 30px;
     height: 35px;
     width: auto;
+    z-index:299;
 }
 
 #invis {
@@ -78,7 +84,7 @@ The location image should be placed inside the textfield
 }
 
 #cartPopUp {
-    z-index:1;
+    z-index:199;
     position:fixed;
     right:7%;
     top:10%;
