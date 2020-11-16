@@ -5,7 +5,7 @@
 var address = "123 fake street";
 var userLocation = 100;
 
-const ADDRESS_COOKIE_KEY = 'userAddress';
+const ADDRESS_COOKIE_KEY = "userAddress";
 const FOOD_COOKIE_KEY = "foodOrder"
 
 // Adds food to the cart
@@ -91,6 +91,7 @@ function getCurrentOrder() {
 
 function getUserAddress() {
     var cookies = document.cookie.split(";");
+
     for (var i = 0; i < cookies.length; i++) {
         var keyValue = cookies[i].split("=");
         if (keyValue[0].trim() == ADDRESS_COOKIE_KEY)
@@ -102,5 +103,8 @@ function getUserAddress() {
 }
 
 function setUserAddress(newAddress) {
-    document.cookie = ADDRESS_COOKIE_KEY + '=' + newAddress;
+    var d = new Date();
+    d.setTime(d.getTime() + (7 * 24 * 60 * 60 * 1000));
+
+    document.cookie = ADDRESS_COOKIE_KEY + '=' + newAddress + ";expires=" + d.toUTCString() + ";path=/";
 }
