@@ -35,7 +35,7 @@
                 </span>
 
                 <div id="shoppingCart">
-                    <a onclick="openCart();"><img src="images/cart.png" class="package"></a>                
+                    <a onclick="openCart();"><img src="images/cart.png" class="package"></a>
                 </div>
 
             </div>
@@ -49,10 +49,10 @@
                 <span id="closeWindow" onclick="closeCart();">X</span>
                 <span id="details">Order Details</span>
                 <div id="allOrders">
-                    <!-- 
-                        The orders for the cart 
+                    <!--
+                        The orders for the cart
                         Here is an example of what it will look like once generated for an item
-                    
+
                         <div class="order">
                         Banana Soup
                             <span class="price">$15</span>
@@ -124,7 +124,7 @@
     <!-- This is the bottom section of the main page (Packages / Restaurants) -->
     <div id="bottom">
         <div id="search">
-            <input type="text" placeholder="Search for a restaurant" id="restaurantAddress" 
+            <input type="text" placeholder="Search for a restaurant" id="restaurantAddress"
                    onfocus="displayRelatedRestaurants(this);" onkeydown="displayRelatedRestaurants(this, event);">
             <img src="images/search.png" />
         </div>
@@ -140,12 +140,15 @@
                   <img src="images/empty.png" onclick="openModal()" class="package">
                   <div class="centerText">Protein</div>
                   <div id="myModal" class="modal">
-                    <span class="close"onclick="closeModal()">&times;</span>
                     <img class="modal-content">
                     <div class="container">
                       <h4><b>Chow Mein</b></h4>
                       <p> Something about the dishes </p>
+                      <input type="text" id="customize" placeholder="Add special instruction">
+                      <br />
+                      <p></p>
                       <button a href="#" onclick="redirectToMenuPage (this);">Add To Cart</a></button>
+                      <button a href="#" onclick="closeModal()">Close</a></button>
                     </div>
                   </div>
                 </div>

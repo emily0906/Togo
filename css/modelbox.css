@@ -90,6 +90,9 @@
   padding: 2px 16px;
   text-align: center;
 }
+.container p{
+  text-align: left;
+}
 .container button {
   color: white; /* Text color */
   background-color: transparent; /* Remove background color */
@@ -99,4 +102,15 @@
 }
 .container button:hover {
   opacity: 0.7;
+}
+#customize{
+  width: 650px;
+  height: 70px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 10px;
+  font-family: Gill Sans, sans-serif;
+  text-indent: .5cm;
 }
