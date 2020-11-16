@@ -5,8 +5,8 @@ var foodItems = [
         "Cashew creamy mushroom soup", "Cachews, mushrooms", 15.45, 4),
     new FoodItem(1, "Banana Soup", "images/food/mushroomSoup.jpg", "Roughage Eatery",
         "Cashew creamy Banana soup, ew wtf", "Banana, mushrooms", 2.50, 4),
-    new FoodItem(2, "Mac & Cheeze", "images/food/mushroomSoup.jpg", "Roughage Eatery",
-        "Mac and cheese mmmm", "mac and 10% cheese", 5, 5),
+    new FoodItem(2, "Baked Mac & Cheese", "images/food/Food - Mac&Cheese.jpg", "Roughage Eatery",
+        "The finest grating in the city", "Elbow Macaroni, Olive Oil, Fine Cheddar, Monterey Jack, Parmesan", 5, 5),
     new FoodItem(3, "Chicken Burger", "images/food/Food - Chicken Burger.jpg", "Bobby's Buffalo Shack",
         "Organic Chicken Burger", "Letuce, Tomatoes, Bread, Chicken", 16.99, 3.8),
     new FoodItem(4, "Sushi", "images/Food - Sushi.jpg", "Ume Japanese",
@@ -15,8 +15,8 @@ var foodItems = [
         "Traditional Crepe", "Egg, Milk, Fruit", 8.99, 4.2),
     new FoodItem(6, "Asparagus Starter", "images/food/Food - Asparagus Green Starter.jpg", "Bobby's Buffalo Shack",
         "A Green Salad Starter", "Asparagus", 9.99, 3),
-    new FoodItem(7, "Tacos", "images/food/Food - Tacos.jpg", "Roughage Eatery",
-        "Basic Tacos", "Groundbeef, Tomatoes, Letuce, Corn", 4.99, 3.8),
+    new FoodItem(7, "Stuffed Tacos", "images/food/Food - Tacos.jpg", "Roughage Eatery",
+        "A special set of tacos marinated with care", "Groundbeef, Tomatoes, Letuce, Corn, Sour Cream, Avacado, Green Pepper", 8.99, 5),
     new FoodItem(8, "Vegetable Skewer", "images/food/Food - Vegetable Skewer.jpg", "Bobby's Buffalo Shack",
         "A Skewer of Vegetables", "Vegtables", 9.99, 3.7),
     new FoodItem(9, "Potato Soup", "images/food/Food - Potato Soup.jpg", "Roughage Eatery",
@@ -32,7 +32,13 @@ var foodItems = [
     new FoodItem(14, "Salmon Sushi", "images/food/Food - Shushi2.jpg", "Ume Japanese",
         "Sushi Wrapped in Salmon", "Rice, Salmon", 11.99, 3.6),
     new FoodItem(15, "Kale Sushi", "images/food/Food - Sushi3.jpg", "Ume Japanese",
-        "Kale Sushi", "Kale, Rice", 12.99, 3.5)
+        "Kale Sushi", "Kale, Rice", 12.99, 3.5),
+    new FoodItem(16, "Brussels Sprouts", "images/food/Food - Brussel Sprouts.jpg", "Stellas",
+        "Charred brussel sprouts with a garlic spicy-sweet asian glaze", "Brussel Sprouts, garlic, secret sauce (GF, Vegan)", 10.95, 5),
+    new FoodItem(17, "Vietnamese Rice Noodles", "images/food/Food - Rice Noodles.jpg", "Pho Kim Tuong",
+        "Noodles spiced so well it will bring you to new season", "Spicy Rice Noodles, Pork, Avacado", 13.15, 5),
+    new FoodItem(18, "Seafood Sushi", "images/food/Food - Sushi.jpg", "Ume Japanese",
+        "A finely pieced seafood suschi dish", "Seasoned Rice, Smoked Salmon, Noodles, Sweet and Sour Sauce", 10.35, 5)
 ]
 
 // List of all packages, and their information
@@ -56,7 +62,8 @@ var restaurants = [
                 ],
                 mains:
                 [
-                    foodItems[2]
+                    foodItems[2],
+                    foodItems[7]
                 ]
             }
         ),
@@ -91,15 +98,35 @@ var restaurants = [
                     foodItems[14],
                     foodItems[15],
                     foodItems[4],
-
+                    foodItems[18]
                 ]
             }
-        ), 105),
+        ),
+        105),
     new Restaurant(3, "Gong Cha", "images/restaurants/Stellas.jpg", null, 21),
     new Restaurant(4, "Jolibee", "images/restaurants/Stellas.jpg", null, 80),
     new Restaurant(5, "Fion", "images/restaurants/Earls.jpg", "", 100),
     new Restaurant(6, "Smittys", "images/restaurants/Stellas.jpg", null, 50),
-    new Restaurant(7, "Brah", "images/restaurants/Stellas.jpg", null, 33),
+    new Restaurant(7, "Pho Kim Tuong", "images/restaurants/Stellas.jpg",
+        new Menu(
+            {
+                mains:
+                    [
+                        foodItems[17],
+                    ]
+            }
+        ),
+        33),
+    new Restaurant(8, "Stellas", "images/restaurants/Stellas.jpg",
+        new Menu(
+            {
+                mains:
+                    [
+                        foodItems[16],
+                    ]
+            },
+        ),
+        63)
 ];
 
 // A food package menu is the list of food items cooresponding with the package
