@@ -5,6 +5,7 @@
     <title></title>
 
     <link rel="stylesheet" href="css/FoodItemDisplayer.css" />
+    <link rel="stylesheet" href="css/Top.css" />
 
     <!-- Include the top portion of the page. NOTE: Should be last AND requires Jquery -->
     <script type="text/javascript" src="js/database.js"></script>
@@ -12,12 +13,76 @@
     <script type="text/javascript" src="js/CategoryDisplayer.js"></script>
     <script type="text/javascript" src="js/User.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="js/IncludeTop.js"></script>
+    <script type="text/javascript" src="js/Top.js"></script>
 
 </head>
 <body>
     <div id="top">
+       <div id="included">
+            <link rel="stylesheet" href="css/Top.css" />
+            <script type="text/javascript" src="js/Top.js"></script>
 
+            <!-- Divider, This is the first (top) portion of the main page-->
+            <div id="top">
+                <a href="Main_Page.html"><img src="images/logo-welcome-page.png" alt="Logo" class="logo"></a>
+
+                <!-- Address at top of screen -->
+                <span class="topAddress">
+                    <input type="text" id="deliveryAddress" onchange="addressChange();" />
+                    <img src="images/locationIcon.png" />
+                </span>
+
+                <div id="shoppingCart">
+                    <a onclick="openCart();"><img src="images/cart.png" class="package"></a>                
+                </div>
+
+            </div>
+            <!--
+                Failed attempt at clicking off / closing cart
+            <div id="invis" onclick="closeCart();"></div>
+            -->
+
+            <!-- The pop up window displayed when clicking on the cart-->
+            <div id="cartPopUp">
+                <span id="closeWindow" onclick="closeCart();">X</span>
+                <span id="details">Order Details</span>
+                <div id="allOrders">
+                    <!-- 
+                        The orders for the cart 
+                        Here is an example of what it will look like once generated for an item
+                    
+                        <div class="order">
+                        Banana Soup
+                            <span class="price">$15</span>
+                            <span class="count">x6</span>
+
+                            <div id="addRemove">
+                                <span class="bar">[</span>
+                                <button id="addToCart">+</button>
+                                <button id="removeFromCart">-</button>
+                                <span class="bar">]</span>
+                            </div>
+                        </div>
+                     -->
+                    <span>You have not made an order!</span>
+                </div>
+                <div id="totalsSection">
+                    <span id="subtotal">Food and beverage subtotal.. <span class="price">$0.00</span></span>
+                    <hr class="cartDividor"/>
+                    <span id="GST">GST............................ <span class="price">$0.00</span></span><br />
+                    <span id="PST">PST............................. <span class="price">$0.00</span></span><br />
+                    <hr class="cartDividor"/>
+                    <span id="Total">Total ........................... <span class="price">$0.00</span></span>
+                </div>
+                <button id="makeOrder" onclick="makeOrder();">Place Order</button>
+            </div>
+
+            <hr class="dividers" />
+
+            <script>
+                    displayAddress();
+            </script>
+        </div>
     </div>
 
     <span class="searchBar">
