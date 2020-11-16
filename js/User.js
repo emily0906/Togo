@@ -5,8 +5,11 @@
 var address = "123 fake street";
 var userLocation = 100;
 
-const ADDRESS_COOKIE_KEY = "userAddress";
-const FOOD_COOKIE_KEY = "foodOrder"
+//const ADDRESS_COOKIE_KEY = "userAddress";
+//const FOOD_COOKIE_KEY = "foodOrder"
+
+const ADDRESS_STORAGE_KEY = "userAddress";
+const FOOD_STORAGE_KEY = "foodOrder";
 
 // Adds food to the cart
 // To do this, we will append the new food items name to the cookie storing the users order
@@ -24,16 +27,18 @@ function addFoodToCartCookieByName(FoodName) {
     var foodItems = getFoodCookies();
 
     // No cookies found, so we create the cookie with the food items name
-    if (foodItems == "")
+    if (foodItems == "" || foodItems == null)
         foodItems = FoodName;
     else // Cookie was found, append the new food item to the cookie
         foodItems = foodItems + "," + FoodName;
 
     // Update the cookie
-    document.cookie = FOOD_COOKIE_KEY + "=" + foodItems;
+    //document.cookie = FOOD_COOKIE_KEY + "=" + foodItems;
+    window.localStorage.setItem(FOOD_STORAGE_KEY, foodItems);
 
     return foodItems;
 }
+
 
 // Accepts a string to be removed from the cookies list
 function removeFoodCartCookie(FoodName) {
@@ -43,7 +48,7 @@ function removeFoodCartCookie(FoodName) {
     var foodItems = getFoodCookies();
 
     // No cookies found, so there's nothing to remove
-    if (foodItems == "")
+    if (foodItems == "" || foodItems == null)
         return;
     else // Cookie was found, remove an element of the name FoodName
     {
@@ -63,13 +68,14 @@ function removeFoodCartCookie(FoodName) {
     }
 
     // Update the cookie
-    document.cookie = FOOD_COOKIE_KEY + "=" + foodItems;
+    //document.cookie = FOOD_COOKIE_KEY + "=" + foodItems;
+    window.localStorage.setItem(FOOD_STORAGE_KEY, foodItems);
 
     return foodItems;
 }
 
 function getFoodCookies() {
-    var foodItems = "";
+    /* var foodItems = "";
 
     // First, we get the current food items, then append our new food item to the cart
     var cookies = document.cookie.split(";");
@@ -82,6 +88,8 @@ function getFoodCookies() {
     }
 
     return foodItems;
+    */
+    return window.localStorage.getItem(FOOD_STORAGE_KEY);
 }
 
 // Gets the cookies storing the users current order
@@ -90,6 +98,7 @@ function getCurrentOrder() {
 }
 
 function getUserAddress() {
+    /*
     var cookies = document.cookie.split(";");
 
     for (var i = 0; i < cookies.length; i++) {
@@ -100,11 +109,14 @@ function getUserAddress() {
 
     // No cookies found, so we use default address instead
     return address;
+    */
+    return window.localStorage.getItem(ADDRESS_STORAGE_KEY);
 }
 
 function setUserAddress(newAddress) {
     var d = new Date();
     d.setTime(d.getTime() + (7 * 24 * 60 * 60 * 1000));
 
-    document.cookie = ADDRESS_COOKIE_KEY + '=' + newAddress + ";expires=" + d.toUTCString() + ";path=/";
+    //document.cookie = ADDRESS_COOKIE_KEY + '=' + newAddress + ";expires=" + d.toUTCString() + ";path=/";
+    window.localStorage.setItem(ADDRESS_STORAGE_KEY, newAddress);
 }

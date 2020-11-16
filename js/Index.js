@@ -8,6 +8,8 @@ function keyPressed(val) {
 }
 
 function submitAddress() {
+    // Remove prior memory [if any]
+    window.localStorage.clear();
 
     var address = document.getElementById("search-field").value.trim();
 

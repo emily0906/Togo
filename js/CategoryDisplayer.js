@@ -4,7 +4,7 @@ var HISTORY_DIVIDER = "/";
 // In order for this file to work, there must be an element with an id called 'historyText'
 function changeHistoryText() {
     var elements = document.getElementsByClassName("historyT");
-    var userLocation = getSpecificCookieValue(HISTORY_COOKIE);
+    var userLocation = getSpecificStorageValue(HISTORY_COOKIE);
 
     if (userLocation != null) {
         var tabNames = userLocation.split(HISTORY_DIVIDER);
@@ -59,19 +59,8 @@ function getArrElementByName(array, name) {
     return null;
 }
 
-// Get a cookies value given its key
+// Get a storage value given its key
 // Returns null if none was found
-function getSpecificCookieValue(cookieKey) {
-    var cookies = document.cookie;
-
-    var cookieSplit = cookies.split(";");
-
-    for(var i = 0; i < cookieSplit.length; i++)
-    {
-        var keyValue = cookieSplit[i].split("=");
-        if (keyValue[0].trim() == cookieKey)
-            return keyValue[1];
-    }
-
-    return null;
+function getSpecificStorageValue(storageKey) {
+    return window.localStorage.getItem(storageKey);
 }

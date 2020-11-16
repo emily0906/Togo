@@ -83,7 +83,7 @@ function updateCart(allFoodNamesCookieKey) {
     var dupeCount = []; // The number of elements, cooresponds to the index of nonDupes
 
     for (var i = 0; i < food.length; i++) {
-        if (food[i] == "") // Remove any Empty split
+        if (food[i] == "" || food[i] == null) // Remove any Empty split
             continue;
 
         var index = nonDupes.indexOf(food[i]);

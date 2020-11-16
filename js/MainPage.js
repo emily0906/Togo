@@ -222,15 +222,16 @@ function redirectToMenuPage(event) {
         if ("DIV" == event.childNodes[i].tagName)
             locationName = event.childNodes[i].textContent;
     }
-
-    document.cookie = "history=" + locationName;
+    window.localStorage.setItem("history", locationName);
+    //document.cookie = "history=" + locationName;
 
     // Redirect the user to another page
     window.location = "FoodItemDisplayer.html";
 }
 
 function redirectToRestaurantByName(restaurantName) {
-    document.cookie = "history=" + restaurantName;
+    //document.cookie = "history=" + restaurantName;
+    window.localStorage.setItem("history", restaurantName);
 
     // Redirect the user to another page
     window.location = "FoodItemDisplayer.html";
