@@ -1,11 +1,11 @@
 body {
-    color: #fff;
-    background-color: #cccccc;
+    /* color: #fff; */
+    background-color: #f0f0ef;
     background-position: center;
     background-repeat: repeat;
     background-size: cover;
     position: relative;
-    font-family: Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin:0;
 }
 
@@ -16,19 +16,27 @@ body {
     user-select: none;
 }
 
+#bottom {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
 /*
-    This is the lines that divide the portions of the screens
+This is the lines that divide the portions of the screens
 */
 .dividers{
+    position: relative;
+    top: 100px;
     opacity:0.3;
 }
 
 /*
-    slides for coupons
+slides for coupons
 */
 
 #mid .slide {
-    left:20%;
+    left:33%;
+    /* display: flex; */
     display: none;
     position: relative;
     margin: auto;
@@ -36,16 +44,15 @@ body {
 }
 
 #mid .slide img {
-    display:block;
+    display: block;
     top: 50%;
-    height: 250px;
+    height: auto;
     width:480px;
     max-width:480px;
 
     transition: 0.5s ease;
   	-o-transition: 0.5s ease;
   	-webkit-transition: 0.5s ease;
-
 }
 
 #mid .slide:hover img{
@@ -75,12 +82,12 @@ body {
 
 #mid .slide .addTo span {
     visibility:hidden;
-    font: bold 20px/20px 'Open Sans', sans-serif;
+    /* font: bold 20px/20px 'Open Sans', sans-serif; */
     color:black;
-    font-weight:500;
+    font-weight:50;
     padding-top: 110px;
-	font-size: 50px;
-	display: inline-block;
+	font-size: 25px;
+	/* display: inline-block; */
 
     z-index:1;
     display:inline-block;
@@ -93,7 +100,7 @@ body {
     top: 26%;
     margin:auto;
 	position: absolute;
-	border: 5px solid #fff;
+	/* border: 5px solid #fff; */
     text-align:center;
 }
 
@@ -111,21 +118,21 @@ body {
   position: relative;
   width: auto;
   padding: 16px;
-  color: white;
+  /* color: white; */
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  /* border-radius: 0 3px 3px 0; */
   user-select: none;
 }
 
 #mid .rightRotate{
-  left: 25%;
-  border-radius: 3px 0 0 3px;
+    left: 35%;
+    border-radius: 0 3px 3px 0;
 }
 
 #mid .leftRotate {
-    right: 37.5%;
+    right: 10%;
     border-radius: 3px 0 0 3px;
 }
 
@@ -179,27 +186,34 @@ body {
 }
 
 #bottom #search {
-    padding:7px;
+    padding:10px;
     padding-left:0px;
     display:inline-block;
     position:relative;
 }
 
 #bottom #search input {
-    background: #fff;
-    box-sizing: border-box;
-    width: 250px;
-    height:20px;
     position: relative;
+    background: #fff;
+    border: none;
+    /* box-sizing: border-box; */
+    width: 270px;
+    height: 25px;
+    padding: 5px;
+    box-shadow: 1px 1px 3px 3px rgb(221, 220, 220);
+    border-radius: 3px;
+
+    font-size: 18px;
+    text-indent: 30px;
 }
 
 #bottom #search img {
     position:relative;
-    width: 18px;
-    height: 18px;
-    right: 25px;
+    width: 20px;
+    height: 20px;
+    right: 275px;
     top:5px;
-    border-radius: 25px;
+    /* border-radius: 25px; */
 }
 
 /* The suggested search individual elements */
@@ -224,11 +238,6 @@ body {
     top:83%;
     left:0;
     right:0;
-
-    /*
-    padding-left:5px;
-    height:16px;
-        */
 }
 
 #bottom #restaurantsFromSearch div:hover {
@@ -237,9 +246,9 @@ body {
 
 #bottom .titleText {
     position: relative;
-    text-decoration: underline;
-    font-weight: bold;
-    font-size: 16px;
+    /* text-decoration: underline; */
+    font-weight: 530;
+    font-size: 18px;
     padding: 5px;
 }
 
@@ -250,17 +259,19 @@ body {
 /* Food package pictures user clicks on */
 #bottom #packageIcons .col, #bottom #restaurantsNearYouIcons .col, #bottom #Foods .col {
     float: left;
-    border-radius: 25px;
+    /* border-radius: 3px; */
     padding-left: 25px;
     padding-top: 15px;
     flex: 33.33%;
 }
 
 #bottom #packageIcons .col img, #bottom #restaurantsNearYouIcons .col img, #bottom #Foods .col img {
-    width:100px;
-    height:100px;
-    background: white;
-    border-radius: 25px;
+    width: 160px;
+    height: 120px;
+    /* overflow: hidden; */
+    object-fit: cover;
+    /* background: white; */
+    border-radius: 3px;
 }
 
 #bottom #packageIcons .row::after,
@@ -278,19 +289,20 @@ body {
 #bottom #Foods .row .col .centerText {
     position:relative;
     text-align:center;
-    border-radius: 25px;
-    background-color: #3e4444;
-    color: white;
-    font-size:12px;
-    font-weight:600;
+    width: 160px;
+    /* border-radius: 3px; */
+    /* background-color: #3e4444; */
+    color: black;
+    font-size:16px;
+    font-weight: 500;
     top: 5px;
 }
-.footer {
-   position: relative;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: linear-gradient(rgb(51, 51, 51), black, black, rgb(51, 51, 51));
-   color: white;
-   text-align: center;
+
+footer {
+    text-align: center;
+    position: relative;
+    top: 10px;
+    padding: 3px;
+    color: white;
+    background-color: rgb(78, 78, 78);
 }
