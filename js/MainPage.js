@@ -235,3 +235,10 @@ function redirectToRestaurantByObject(obj) {
     // Redirect the user to another page
     window.location = "FoodItemDisplayer.html";
 }
+
+function redirectToRestaurantByName(restaurantName) {
+    window.localStorage.setItem("history", restaurantName);
+
+    // Redirect the user to another page
+    window.location = "FoodItemDisplayer.html";
+}
