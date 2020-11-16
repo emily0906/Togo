@@ -1,6 +1,5 @@
 body {
     color: #fff;
-    background-image: url("../images/MainPage.jpg");
     background-color: #cccccc;
     background-position: center;
     background-repeat: repeat;
@@ -212,7 +211,7 @@ body {
     width:220px;
 }
 
-/* Obtained from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_autocomplete 
+/* Obtained from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_autocomplete
    This is the element for the suggested restaurant list
 */
 #bottom #restaurantsFromSearch {
