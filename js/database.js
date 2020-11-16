@@ -7,31 +7,31 @@ var foodItems = [
         "Cashew creamy Banana soup, ew wtf", "Banana, mushrooms", 2.50, 4),
     new FoodItem("Mac & Cheeze", "images/FoodItems/mushroomSoup.jpg", "Roughage Eatery",
         "Mac and cheese mmmm", "mac and 10% cheese", 5, 5),
-    new FoodItem("Chicken Burger", "images/Foo - Chicken Burger.jpg", "Bobby's Buffalo Shack", 
+    new FoodItem("Chicken Burger", "images/food/Food - Chicken Burger.jpg", "Bobby's Buffalo Shack", 
         "Organic Chicken Burger", "Letuce, Tomatoes, Bread, Chicken", 16.99, 3.8), 
-    new FoodItem("Sushi", "images/Food - Sushi.jpg", "Ume Japanese",
+    new FoodItem("Sushi", "images/food/Food - Sushi.jpg", "Ume Japanese",
         "Sushi", "Rice, Salmon", 12.00, 4.1), 
-    new FoodItem("Crepe", "images/Food - Crepe.jpg", "Roughage Eatery", 
+    new FoodItem("Crepe", "images/food/Food - Crepe.jpg", "Roughage Eatery", 
         "Traditional Crepe", "Egg, Milk, Fruit", 8.99, 4.2), 
-    new FoodItem("Asparagus Starter", "images/Food - Asparagus Green Starter.jpg", "Bobby's Buffalo Shack",
+    new FoodItem("Asparagus Starter", "images/food/Food - Asparagus Green Starter.jpg", "Bobby's Buffalo Shack",
         "A Green Salad Starter", "Asparagus", 9.99, 3), 
-    new FoodItem("Tacos", "images/Food - Tacos.jpg", "Roughage Eatery",
+    new FoodItem("Tacos", "images/food/Food - Tacos.jpg", "Roughage Eatery",
         "Basic Tacos", "Groundbeef, Tomatoes, Letuce, Corn", 4.99, 3.8),  
-    new FoodItem("Vegetable Skewer", "images/Food/Food - Vegetable Skewer.jpg", "Bobby's Buffalo Shack",
+    new FoodItem("Vegetable Skewer", "images/food/Food - Vegetable Skewer.jpg", "Bobby's Buffalo Shack",
         "A Skewer of Vegetables", "Vegtables", 9.99, 3.7),   
-    new FoodItem("Potato Soup", "images/Food - Potato Soup.jpg", "Roughage Eatery",
+    new FoodItem("Potato Soup", "images/food/Food - Potato Soup.jpg", "Roughage Eatery",
         "Warm Potato Soup", "Potatoes", 12.99, 4.1 ),  
-    new FoodItem("Cupcake", "image/Food - Cupcakes.jpg", "Roughage Eatery",
+    new FoodItem("Cupcake", "image/food/Food - Cupcakes.jpg", "Roughage Eatery",
          "Chocolate Cupcakes", "Chocolate", 3.99, 4.6), 
-    new FoodItem("Fried Spring Rolls", "images/Food - Fried Spring Rolls.jpg", "Roughage Eatery", 
+    new FoodItem("Fried Spring Rolls", "images/food/Food - Fried Spring Rolls.jpg", "Roughage Eatery", 
         "Fried Spring Rolls", "Been sprouts, Carro", 8.99, 4.3),
-    new FoodItem("Chicken Wings", "images/Food - Buffalo Wings.jpg", "Bobby's Buffalo Shack", 
+    new FoodItem("Chicken Wings", "images/food/Food - Buffalo Wings.jpg", "Bobby's Buffalo Shack", 
         "Spicey Chicken Wings", "Chicken", 7.99, 3.8), 
-    new FoodItem("Edamame", "images/Food - Edamame.jpg", "Ume Japanese", 
+    new FoodItem("Edamame", "images/food/Food - Edamame.jpg", "Ume Japanese", 
         "Edamame Soybeans", "Soybeans", 3.59, 3.6), 
-    new FoodItem("Salmon Sushi", "images/Food - Shushi2.jpg", "Ume Japanese", 
+    new FoodItem("Salmon Sushi", "images/food/Food - Sushi2.jpg", "Ume Japanese", 
         "Sushi Wrapped in Salmon", "Rice, Salmon", 11.99, 3.6), 
-    new FoodItem("Kale Sushi", "images/Food - Sushi3.jpg", "Ume Japanese", 
+    new FoodItem("Kale Sushi", "images/food/Food - Sushi3.jpg", "Ume Japanese", 
         "Kale Sushi", "Kale, Rice", 12.99, 3.5)
 ]
 
@@ -61,7 +61,7 @@ var restaurants = [
             }
         ),
         210),
-    new Restaurant(1, "Bobby's Buffalo Shack", "images/Restaurant - Bobby's Buffalo Shack.jpg", 
+    new Restaurant(1, "Bobby's Buffalo Shack", "images/restaurants/Restaurant - Bobby's Buffalo Shack.jpg", 
         new Menu(
             {
                 starters: 
@@ -79,7 +79,7 @@ var restaurants = [
             }
         ), 
         175),
-    new Restaurant(2, "Ume Japanese", "images/restaurants/Earls.jpg", 
+    new Restaurant(2, "Ume Japanese", "images/Resto/Restaurant - Chef making sushi.jpg", 
         new Menu(
             {
                 starters:
