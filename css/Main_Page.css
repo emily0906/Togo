@@ -24,9 +24,9 @@ body {
 /*
 This is the lines that divide the portions of the screens
 */
-.dividers{
+.mid-bottom-divider {
     position: relative;
-    top: 100px;
+    top: 10px;
     opacity:0.3;
 }
 
@@ -35,7 +35,7 @@ slides for coupons
 */
 
 #mid .slide {
-    left:33%;
+    left:32%;
     /* display: flex; */
     display: none;
     position: relative;
@@ -47,8 +47,7 @@ slides for coupons
     display: block;
     top: 50%;
     height: auto;
-    width:480px;
-    max-width:480px;
+    max-width:500px;
 
     transition: 0.5s ease;
   	-o-transition: 0.5s ease;
@@ -83,7 +82,8 @@ slides for coupons
 #mid .slide .addTo span {
     visibility:hidden;
     /* font: bold 20px/20px 'Open Sans', sans-serif; */
-    color:black;
+    color:rgb(53, 53, 53);
+    font-family: 'Gill Sans', sans-serif;
     font-weight:50;
     padding-top: 110px;
 	font-size: 25px;
@@ -118,11 +118,9 @@ slides for coupons
   position: relative;
   width: auto;
   padding: 16px;
-  /* color: white; */
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  /* border-radius: 0 3px 3px 0; */
   user-select: none;
 }
 
@@ -132,7 +130,7 @@ slides for coupons
 }
 
 #mid .leftRotate {
-    right: 10%;
+    right: 15%;
     border-radius: 3px 0 0 3px;
 }
 
@@ -151,6 +149,8 @@ slides for coupons
 /* Having the circles under the coupons look like circles */
 #mid .circles {
   cursor: pointer;
+  /* position: relative;
+  left: -2%; */
   height: 15px;
   width: 15px;
   margin: 0 2px;
@@ -185,6 +185,12 @@ slides for coupons
   .leftRotate, .rightRotate {font-size: 11px}
 }
 
+#bottom {
+    font-family: Gill Sans, sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+}
+
 #bottom #search {
     padding:10px;
     padding-left:0px;
@@ -194,35 +200,59 @@ slides for coupons
 
 #bottom #search input {
     position: relative;
-    background: #fff;
+    left: 20px;
+    top: 20px;
+    background: rgba(255, 255, 255, 0.685);
     border: none;
     /* box-sizing: border-box; */
-    width: 270px;
+    width: 470px;
     height: 25px;
     padding: 5px;
     box-shadow: 1px 1px 3px 3px rgb(221, 220, 220);
     border-radius: 3px;
 
+    font-family: Gill Sans, sans-serif;
     font-size: 18px;
     text-indent: 30px;
+    color: rgb(63, 63, 63);
 }
 
 #bottom #search img {
     position:relative;
     width: 20px;
     height: 20px;
-    right: 275px;
-    top:5px;
-    /* border-radius: 25px; */
+    right: 455px;
+    top:23px;
+}
+#bottom .famous-food {
+    margin-top: 25px;
+}
+
+#bottom .packages {
+    margin-top: 20px;
+}
+
+#bottom .near-you {
+    margin-top: 25px;
 }
 
 /* The suggested search individual elements */
-#bottom #restaurantsFromSearch div {
+#bottom #restaurantsFromSearch div{
     cursor:pointer;
-    background-color:white;
-    border-bottom:1px solid #d4d4d4;
-    color:black;
-    width:220px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    top: 20px;
+    left: 20px;
+
+    width: 470px;
+    height: 25px;
+    padding: 5px;
+    box-shadow: 1px 1px 3px 3px rgb(221, 220, 220);
+    border-radius: 1px;
+    font-family: Gill Sans, sans-serif;
+    font-size: 18px;
+    text-indent: 30px;
+    color: rgb(63, 63, 63);
 }
 
 /* Obtained from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_autocomplete
@@ -241,14 +271,14 @@ slides for coupons
 }
 
 #bottom #restaurantsFromSearch div:hover {
-    background-color:dimgrey;
+    background-color:rgb(255, 203, 124);
 }
 
 #bottom .titleText {
     position: relative;
-    /* text-decoration: underline; */
     font-weight: 530;
-    font-size: 18px;
+    font-size: 22px;
+    left: 20px;
     padding: 5px;
 }
 
@@ -259,18 +289,15 @@ slides for coupons
 /* Food package pictures user clicks on */
 #bottom #packageIcons .col, #bottom #restaurantsNearYouIcons .col, #bottom #Foods .col {
     float: left;
-    /* border-radius: 3px; */
     padding-left: 25px;
     padding-top: 15px;
     flex: 33.33%;
 }
 
 #bottom #packageIcons .col img, #bottom #restaurantsNearYouIcons .col img, #bottom #Foods .col img {
-    width: 160px;
+    width: 220px;
     height: 120px;
-    /* overflow: hidden; */
     object-fit: cover;
-    /* background: white; */
     border-radius: 3px;
 }
 
@@ -288,12 +315,10 @@ slides for coupons
 #bottom #packageIcons .row .col .centerText,
 #bottom #Foods .row .col .centerText {
     position:relative;
-    text-align:center;
-    width: 160px;
-    /* border-radius: 3px; */
-    /* background-color: #3e4444; */
-    color: black;
-    font-size:16px;
+    text-align: center;
+    width: 220px;
+    color: rgb(77, 77, 77);
+    font-size:18px;
     font-weight: 500;
     top: 5px;
 }
@@ -301,8 +326,11 @@ slides for coupons
 footer {
     text-align: center;
     position: relative;
-    top: 10px;
+    top: 50px;
     padding: 3px;
+    font-family: "Gills Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 200;
     color: white;
     background-color: rgb(78, 78, 78);
 }
