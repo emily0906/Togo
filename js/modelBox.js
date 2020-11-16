@@ -39,7 +39,7 @@ function setupModal(obj, isDynamic) {
     else
         nodes = obj.childNodes;
 
-    var foodName = null;
+    foodName = null;
 
     // For non-dynamic elements, we will grab the first 'div' element
     if (!isDynamic)
