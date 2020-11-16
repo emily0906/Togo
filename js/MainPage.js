@@ -224,15 +224,13 @@ function redirectToMenuPage(event) {
             locationName = event.childNodes[i].textContent;
     }
     window.localStorage.setItem("history", locationName);
-    //document.cookie = "history=" + locationName;
 
     // Redirect the user to another page
     window.location = "FoodItemDisplayer.html";
 }
 
-function redirectToRestaurantByName(restaurantName) {
-    //document.cookie = "history=" + restaurantName;
-    window.localStorage.setItem("history", restaurantName);
+function redirectToRestaurantByObject(obj) {
+    window.localStorage.setItem("history", obj.textContent);
 
     // Redirect the user to another page
     window.location = "FoodItemDisplayer.html";
