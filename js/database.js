@@ -36,7 +36,7 @@ var foodItems = [
     new FoodItem(16, "Brussels Sprouts", "images/food/Food - Brussel Sprouts.jpg", "Stellas",
         "Charred brussel sprouts with a garlic spicy-sweet asian glaze", "Brussel Sprouts, garlic, secret sauce (GF, Vegan)", 10.95, 5),
     new FoodItem(17, "Vietnamese Rice Noodles", "images/food/Food - Rice Noodles.jpg", "Pho Kim Tuong",
-        "Noodles spiced so well it will bring you to new season", "Spicy Rice Noodles, Pork, Avacado", 13.15, 5),
+        "Noodles spiced so well it will bring you to a new season", "Spicy Rice Noodles, Pork, Avacado", 13.15, 5),
     new FoodItem(18, "Seafood Sushi", "images/food/Food - Sushi.jpg", "Ume Japanese",
         "A finely pieced seafood suschi dish", "Seasoned Rice, Smoked Salmon, Noodles, Sweet and Sour Sauce", 10.35, 5)
 ]
