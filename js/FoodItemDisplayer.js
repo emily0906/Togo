@@ -101,6 +101,14 @@ function createFoodItem(foodItem, includeLocation, header) {
     child.appendChild(location);
     child.appendChild(description);
     child.appendChild(ingrediants);
-
+    child.onclick = function () { setupModal(this, true); openModal(); }
     header.appendChild(child);
+}
+
+function redirectToRestaurantByName(restaurantName) {
+    //document.cookie = "history=" + restaurantName;
+    window.localStorage.setItem("history", restaurantName);
+
+    // Redirect the user to another page
+    window.location = "FoodItemDisplayer.html";
 }

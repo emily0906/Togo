@@ -113,6 +113,23 @@
 
     <hr class="dividers" />
 
+     <div id="modal">
+        <div id="container">
+            <p id="modalTitle" onclick="redirectToRestaurantByName('Stellas')">Stellas</p>
+            <img id="modal-content" src="images/empty.png">
+            <div>
+                <b id="foodName">Chow Mein</b>
+                <div id="foodPrice">$5.00</div>
+            </div>
+            <p id="dishDescription"> Something about the dishes </p>
+            <p id="dishIngrediants"> Contained milk </p>
+            <input type="text" id="instructions" placeholder="Add special instructions">
+            <br />
+            <button a href="#" onclick="addingToCart ();" id="addButton">Add To Cart</a></button>
+            <button a href="#" onclick="closeModal()" id="closeButton">Close Window</a></button>
+        </div>
+    </div>
+
     <!-- This is the bottom section of the main page (Packages / Restaurants) -->
     <div id="bottom">
         <div id="search">
@@ -126,39 +143,26 @@
             Famous Foods
         </span>
 
-        <div id="modal">
-            <div id="container">
-                <img id="modal-content">
-                <h4><b>Chow Mein</b></h4>
-                <p> Something about the dishes </p>
-                <input type="text" id="customize" placeholder="Add special instruction">
-                <br />
-                <p></p>
-                <button a href="#" onclick="redirectToMenuPage (this);">Add To Cart</a></button>
-                <button a href="#" onclick="closeModal()">Close</a></button>
-            </div>
-        </div>
-
         <div id="Foods">
             <div class="row">
                 <div class="col">
-                  <img src="images/food/Food - Brussel Sprouts.jpg" onclick="setupModal(this); openModal();" class="package">
+                  <img src="images/food/Food - Brussel Sprouts.jpg" onclick="setupModal(this, false); openModal();" class="package">
                   <div class="centerText">Brussels Sprouts</div>
                 </div>
                 <div class="col">
-                  <img src="images/food/Food - Tacos.jpg" onclick="setupModal(this); openModal();" class="package">
+                  <img src="images/food/Food - Tacos.jpg" onclick="setupModal(this, false); openModal();" class="package">
                   <div class="centerText">Stuffed Tacos</div>
                 </div>
                 <div class="col">
-                  <img src="images/food/Food - Mac&Cheese.jpg" onclick="setupModal(this); openModal();" class="package">
+                  <img src="images/food/Food - Mac&Cheese.jpg" onclick="setupModal(this, false); openModal();" class="package">
                   <div class="centerText">Baked Mac & Cheese</div>
                 </div>
                 <div class="col">
-                  <img src="images/food/Food - Rice Noodles.jpg" onclick="setupModal(this); openModal();" class="package">
+                  <img src="images/food/Food - Rice Noodles.jpg" onclick="setupModal(this, false); openModal();" class="package">
                   <div class="centerText">Vietnamese Rice Noodles</div>
                 </div>
                 <div class="col">
-                  <img src="images/food/Food - Sushi.jpg" onclick="setupModal(this); openModal();" class="package">
+                  <img src="images/food/Food - Sushi.jpg" onclick="setupModal(this, false); openModal();" class="package">
                   <div class="centerText">Seafood Sushi</div>
                 </div>
             </div>

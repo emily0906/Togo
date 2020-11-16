@@ -4,8 +4,12 @@
   cursor: pointer;
   transition: 0.3s;
 }
-
 #myImg:hover {opacity: 0.7;}
+
+#modal #modalTitle {
+    text-align:center;
+}
+
 
 /* The Modal (background) */
 #modal {
@@ -16,8 +20,8 @@
   
   /* Center image*/
   left:50%;
-  top:50%;
-  transform:translate(-50%, -50%);
+  top:60%;
+  transform:translate(-50%, -45%);
 
   width: 100%; /* Full width */
   height: 100%; /* Full height */
@@ -30,10 +34,10 @@
 #modal-content {
   margin: auto;
   display: block;
-  width: 20%;
+  width: 200px;
   max-width: 700px;
   max-height:250px;
-  height:20%;
+  height:125px;
   min-height:100px;
   background-color:white;
   border-radius:15px;
@@ -97,9 +101,7 @@
 #container {
   padding: 2px 16px;
   text-align: center;
-}
-#container p{
-  text-align: left;
+  color: white; /* Text color */
 }
 #container button {
   color: white; /* Text color */
@@ -107,13 +109,28 @@
   border: 2px solid white; /* Border thickness, line style, and color */
   border-radius: 5px; /* Adds curve to border corners */
   text-transform: uppercase; /* Make letters uppercase */
+  width:150px;
+  height:40px;
+  margin-right:35px;
+  margin-top:20px;
+  cursor:pointer;
 }
 #container button:hover {
   opacity: 0.7;
 }
-#customize{
+
+#container #closeButton {
+  border-color:yellowgreen;
+}
+
+#container #closeButton:hover {
+  border-color:grey;
+}
+
+/* The special instructions */
+#modal #instructions{
   width: 650px;
-  height: 70px;
+  height: 55px;
   margin-top: 10px;
   border: none;
   border-radius: 5px;
@@ -121,4 +138,16 @@
   font-size: 10px;
   font-family: Gill Sans, sans-serif;
   text-indent: .5cm;
+}
+
+#modal #foodPrice {
+    position:absolute;
+    color:red;
+    display:inline-block;
+    margin-left:25px;
+}
+
+#modal #modalTitle {
+    cursor:pointer;
+    text-align:center;
 }

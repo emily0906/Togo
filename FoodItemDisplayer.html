@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="css/FoodItemDisplayer.css" />
     <link rel="stylesheet" href="css/Top.css" />
+    <link rel="stylesheet" href="css/modelbox.css" />
 
     <!-- Include the top portion of the page. NOTE: Should be last AND requires Jquery -->
     <script type="text/javascript" src="js/database.js"></script>
@@ -14,6 +15,7 @@
     <script type="text/javascript" src="js/User.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="js/Top.js"></script>
+    <script type="text/javascript" src="js/modelBox.js"></script>
 
 </head>
 <body>
@@ -79,6 +81,23 @@
             <script>
                     displayAddress();
             </script>
+        </div>
+    </div>
+
+     <div id="modal">
+        <div id="container">
+            <p id="modalTitle" onclick="redirectToRestaurantByName('Stellas')">Stellas</p>
+            <img id="modal-content" src="images/empty.png">
+            <div>
+                <b id="foodName">Chow Mein</b>
+                <div id="foodPrice">$5.00</div>
+            </div>
+            <p id="dishDescription"> Something about the dishes </p>
+            <p id="dishIngrediants"> Contained milk </p>
+            <input type="text" id="instructions" placeholder="Add special instructions">
+            <br />
+            <button a href="#" onclick="addingToCart ();" id="addButton">Add To Cart</a></button>
+            <button a href="#" onclick="closeModal()" id="closeButton">Close Window</a></button>
         </div>
     </div>
 

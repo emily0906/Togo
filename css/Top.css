@@ -23,6 +23,7 @@ div #top {
     left: 20px;
     top: 6px;
     bottom: 10px;
+    z-index:100;
 }
 
 /*
@@ -60,6 +61,7 @@ The location image should be placed inside the textfield
 #top #included #top #shoppingCart {
     /* Always clickable */
     z-index:299;
+    cursor:pointer;
 }
 
 #shoppingCart img {

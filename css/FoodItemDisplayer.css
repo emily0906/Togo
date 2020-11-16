@@ -26,6 +26,7 @@
 /* The body components contains the display of food items */
 #bodyComponents {
     position:relative;
+    top: 40px;
 }
 
 #bodyComponents .foodItem {
