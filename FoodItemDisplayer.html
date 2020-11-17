@@ -109,18 +109,18 @@
 
     <div id="historyText">
         <a class="historyT">
-            <span class ="text" id="text1">
-                123
+            <span class ="text" id="text1" onclick="sendToMainPage();">
+                Home
             </span>
         </a>
         <a class="historyT">
             <span id="divider">
-                <<
+                >
             </span>
         </a>
         <a class="historyT">
             <span class="text" id="text2">
-                abc
+                Vegan
             </span>
         </a>
     </div>
@@ -136,26 +136,29 @@
             Here's an example of what it will look like when it's created
             --------------------------------------------------------------
 
-        <span class="header">
-            Starters
-        </span>
-        <div class="foodItem">
-            <img src="images/coupon4.jpg" />
-            <span id="title">Mac and Cheese </span>
-            <span id="price">$15.00 </span>
-            <span id="location"> Stellas </span>
-            <span id="description">MMHMMMM you AINT NEVA HAD SO MUCH CHEESE </span>
-            <span id="ingrediants">Cheese, noodles, more cheese, dairy free cheese, carrots, rice, screw it you'll eat it anyway </span>
-        </div>
+        <span class="section">
+            <div class="block">
+                Starters
+            </div>
 
-        <div class="foodItem">
-            <img src="images/coupon4.jpg" />
-            <span id="title">Mac and Cheese </span>
-            <span id="price">$15.00 </span>
-            <span id="location"> Stellas </span>
-            <span id="description">MMHMMMM you AINT NEVA HAD SO MUCH CHEESE </span>
-            <span id="ingrediants">Cheese, noodles, more cheese, dairy free cheese, carrots, rice, screw it you'll eat it anyway </span>
-        </div>
+            <div class="foodItem" onclick="setupModal(this, true); openModal();">
+                <img src="images/coupon4.jpg" />
+                <span id="title">Mac and Cheese </span>
+                <span id="price">$15.00 </span>
+                <span id="location"> Stellas </span>
+                <span id="description">MMHMMMM you AINT NEVA HAD SO MUCH CHEESE </span>
+                <span id="ingrediants">Cheese, noodles, more cheese, dairy free cheese, carrots, rice, screw it you'll eat it anyway </span>
+            </div>
+
+            <div class="foodItem" onclick="setupModal(this, true); openModal();">
+                <img src="images/coupon4.jpg" />
+                <span id="title">Mac and Cheese </span>
+                <span id="price">$15.00 </span>
+                <span id="location"> Stellas </span>
+                <span id="description">MMHMMMM you AINT NEVA HAD SO MUCH CHEESE </span>
+                <span id="ingrediants">Cheese, noodles, more cheese, dairy free cheese, carrots, rice, screw it you'll eat it anyway </span>
+            </div>
+        </span>
         -->
     </div>
 </body>

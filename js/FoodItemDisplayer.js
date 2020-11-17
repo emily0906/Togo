@@ -1,4 +1,5 @@
 ﻿var itemsSection;
+var HISTORY_COOKIE = "history";
 
 window.onload = function () {
     document.getElementById("restaurantAddress").value = "Search for a restaurant";
@@ -8,6 +9,7 @@ window.onload = function () {
 
 // Dynamically display the food items
 function displayFoodItems() {
+    var itemsSection = getSpecificStorageValue(HISTORY_COOKIE);
     var restaurant = getRestaurantByName(itemsSection);
 
     if (restaurant != null) {
@@ -15,12 +17,15 @@ function displayFoodItems() {
     }
     else {
         // Check if they instead clicked on a food package
-        var package = getPackageByName(itemsSection);
-
-        if (package == null)
-            alert("Sorry, the selection you have made is empty. Please try another options in the home page.");
+        if (itemsSection != null) {
+            var package = getPackageByName(itemsSection);
+            if (package == null)
+                alert("Sorry, the selection you have made is empty. Please try another options in the home page.");
+            else
+                createPackageMenu(package.GetMenu());
+        }
         else {
-            createPackageMenu(package.GetMenu());
+            alert("Sorry, the selection you have made is empty. Please try another options in the home page.");
         }
     }
 }
@@ -53,8 +58,12 @@ function createHeader(name) {
     var elem = document.getElementById("bodyComponents");
 
     var child = document.createElement("span");
-    child.innerHTML = name;
-    child.className = "header";
+    var text = document.createElement("div");
+
+    text.innerHTML = name;
+    child.className = "section";
+    text.className = "block";
+    child.appendChild(text);
     elem.appendChild(child);
 
     return child;
@@ -103,4 +112,11 @@ function createFoodItem(foodItem, includeLocation, header) {
     child.appendChild(ingrediants);
     child.onclick = function () { setupModal(this, true); openModal(); }
     header.appendChild(child);
+}
+
+function sendToMainPage() {
+    window.localStorage.removeItem(HISTORY_COOKIE);
+
+    // Redirect the user to another page
+    window.location = "Main_Page.html";
 }

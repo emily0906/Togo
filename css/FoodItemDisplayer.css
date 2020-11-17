@@ -9,6 +9,20 @@
     margin-left: 10%;
 }
 
+/* The text displaying the users location. IE: Home > myPage */
+#historyText {
+    top:40px;
+    position:relative;
+    margin:25px;
+    margin-bottom:35px;
+}
+
+/* The home text */
+#historyText #text1 {
+    cursor:pointer;
+    color:darkblue;
+}
+
 .searchBar {
     /* Main position for the bottom search bar */
     left: 50px;
@@ -35,6 +49,30 @@
 #bodyComponents {
     position:relative;
     top: 40px;
+}
+
+/* This is all components that are dynamic (the entire sections) */
+#bodyComponents .section {
+    margin-left:100px;
+}
+
+/* The text showing the category of food: For example, Starters, Mains, Drinks, etc.. */
+#bodyComponents .block {
+    font-weight:300;
+    font-size:27px;
+    margin-bottom:0px;
+    border-top:0;
+    border-left:0;
+    border-right:0;
+    border-bottom:2px;
+    border-style:solid;
+    border-color:darkgrey;
+    width:250px;
+    padding-left:40px;
+    margin-left:75px;
+
+    /* Cut the border so that only a portion is displayed (lower right) */
+    clip-path: polygon(0 0, 0% 0%, 65% 25%, 100% 25%, 100% 100%, 0 100%);
 }
 
 #bodyComponents .foodItem {
@@ -75,7 +113,8 @@
 
 #bodyComponents #price {
     position:absolute;
-    left:550px;
+    left:100%;
+    float:right;
     top:50px;
     font-size:20px;
     /* font-weight:bold; */

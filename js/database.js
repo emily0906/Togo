@@ -55,12 +55,12 @@ var restaurants = [
     new Restaurant(0, "Roughage Eatery", "images/restaurants/Stellas.jpg",
         new Menu(
             {
-                starters:
+                Starters:
                 [
                     foodItems[0],
                     foodItems[1]
                 ],
-                mains:
+                Mains:
                 [
                     foodItems[2],
                     foodItems[7]
@@ -71,12 +71,12 @@ var restaurants = [
     new Restaurant(1, "Bobby's Buffalo Shack", "images/Restaurant - Bobby's Buffalo Shack.jpg",
         new Menu(
             {
-                starters:
+                Starters:
                 [
                     foodItems[8],
                     foodItems[6]
                 ],
-                mains:
+                Mains:
                 [
                     foodItems[3],
                     foodItems[12]
@@ -89,11 +89,11 @@ var restaurants = [
     new Restaurant(2, "Ume Japanese", "images/restaurants/Earls.jpg",
         new Menu(
             {
-                starters:
+                Starters:
                 [
                     foodItems[13]
                 ],
-                mains:
+                Mains:
                 [
                     foodItems[14],
                     foodItems[15],
@@ -110,7 +110,7 @@ var restaurants = [
     new Restaurant(7, "Pho Kim Tuong", "images/restaurants/Stellas.jpg",
         new Menu(
             {
-                mains:
+                Mains:
                     [
                         foodItems[17],
                     ]
@@ -120,7 +120,7 @@ var restaurants = [
     new Restaurant(8, "Stellas", "images/restaurants/Stellas.jpg",
         new Menu(
             {
-                mains:
+                Mains:
                     [
                         foodItems[16],
                     ]
