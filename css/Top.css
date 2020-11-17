@@ -121,90 +121,115 @@ The location image should be placed inside the textfield
 #cartPopUp {
     z-index:199;
     position:fixed;
-    right:7%;
-    top:10%;
-    width:270px;
+    right: 5%;
+    top:80px;
+    width:300px;
 
-    /*
-        The default height will be 'min-height'
-    */
-    min-height:350px;
+    /*The default height will be 'min-height'*/
+    min-height:430px;
     box-sizing:border-box;
     height:auto;
 
-    background-color:rgb(78, 78, 78);; /* Fallback color */
-    background-color: rgb(78, 78, 78,0.9); /* Black w/ opacity */
-    border-color:rgb(78, 78, 78);;
-    border-width:5px;
-    border-style:solid;
-    border-radius:30px;
-    display:none;
+    background-color: rgba(32, 31, 31, 0.726); /* Black w/ opacity */
+    border: solid rgb(78, 78, 78,0.9) 1px;
+    border-radius: 4px;
+    display: none;
+    font-family: Gill Sans, san-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size:18px;
+    /* font-weight: 200; */
 }
 
 #cartPopUp #closeWindow {
     position:relative;
-    left:230px;
+    top: 5px;
+    left:270px;
     color: #f1f1f1;
-    font-size: 15px;
-    font-weight: bold;
-    transition: 0.3s;
-    width:10px;
-    height:10px;
+    font-weight: 400;
+    font-size: 16px;
+}
+#cartPopUp #details {
+    position:relative;
+    font-size: 20px;
+    /* font-weight:300; */
+    color: white;
+    /* font-weight: bolder; */
+    top: 5px;
 }
 
-#allOrders {
+#cartPopUp #closeWindow:hover {
+    color: rgb(255, 115, 34);
+}
+
+#cartPopUp #allOrders {
     /*
         If the user has lots of orders, there will be a scroll bar for the items
         Rather than the items being continually displayed
     */
     overflow-y:auto;
-    height:150px;
+    height:200px;
+    margin-top: 10px;
+    /* margin-left: 10px; */
 
     /* Different color so its noticeable*/
     background-color:#f0f0f0;
-    color:black;
+    color:rgb(48, 48, 48);
+    text-indent: 15px;
 }
 
-#details {
-    position:relative;
-    left:31%;
-    font-weight:200;
-    font-size:15px;
-    color: white;
+#cartPopUp #allOrders #empty-message {
+    position: relative;
+    top: 20px;
+    left: 25%;
+    /* text-align: center; */
 }
 
 #totalsSection {
     position:relative;
     width:auto;
-    height:100px;
-    padding:5px;
-    margin-top:20px;
+    /* height:100px; */
+    left: 20px;
+    /* padding:20px; */
+    top: 10px;
+    margin-bottom: 30px;
     display:inline-block;
     color:white;
 }
 
 .order {
     position:relative;
-    margin-top:10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     padding:5px;
     top:10px;
 }
 
-.cartDividor {
-    width:97%;
-    right:10px;
+.cartDividor{
+    opacity: 0.5;
+    position: relative;
+    right: 20px;
+    width: 240px;
 }
 
-#makeOrder {
-    position:relative;
+
+#cartPopUp #makeOrder {
+    position: absolute;;
     padding:10px;
     left:31%;
+    top: 380px;
+    margin-bottom: 10px;
+    /* top: 50px; */
     color: white; /* Text color */
     background-color: transparent; /* Remove background color */
-    border: 2px solid white; /* Border thickness, line style, and color */
+    border: 1.5px solid white; /* Border thickness, line style, and color */
     border-radius: 5px; /* Adds curve to border corners */
     text-transform: uppercase; /* Make letters uppercase */
     cursor:pointer;
+}
+
+#cartPopUp #makeOrder:hover {
+    background-color: rgba(255, 244, 225, 0.877);
+    color: rgb(248, 99, 31);
 }
 
 .count {
@@ -223,7 +248,6 @@ The location image should be placed inside the textfield
     font-weight:400;
     color:red;
 }
-
 
 /*
 This is the lines that divide the portions of the screens
