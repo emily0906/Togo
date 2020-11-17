@@ -1,5 +1,13 @@
-﻿/* body {
-} */
+﻿body {
+    background-color: #f0f0ef;
+    /* background-position: center; */
+    /* background-repeat: repeat; */
+    background-size: cover;
+    /* position: relative; */
+    font-family: Gill Sans, sans-serif;
+    font-weight: 400;
+    margin-left: 10%;
+}
 
 .searchBar {
     /* Main position for the bottom search bar */
@@ -30,13 +38,21 @@
 }
 
 #bodyComponents .foodItem {
+    cursor: pointer;
     position:relative;
-    left:45px;
-    width:70%;
+    left:20%;
+    width:50%;
     height:130px;
     margin-top:15px;
-    border:1px solid black;
-    border-radius:25px; /* rounding edges */
+    /* border: 2px solid white; */
+    border: none;
+    background-color: white;
+    border-radius:10px;
+    box-shadow: 1px 1px 3px 3px rgb(233, 233, 233);
+}
+
+#bodyComponents .foodItem:hover {
+    background-color: rgb(255, 247, 233);
 }
 
 #bodyComponents img {
@@ -46,45 +62,61 @@
     padding:5px;
     padding-top:10px;
     padding-left:7px;
-    border-radius:20px;
+    border-radius:4px;
 }
 
 #bodyComponents #title {
-    left:180px;
+    position:absolute;
+    left:150px;
     top:10px;
-    position:relative;
-    font-size:25px;
-    font-weight:bold;
+    font-size:22px;
+    font-weight: normal;
 }
 
 #bodyComponents #price {
-    position:relative;
-    left:225px;
-    top:10px;
-    font-size:25px;
-    font-weight:bold;
-    color:red;
+    position:absolute;
+    left:550px;
+    top:50px;
+    font-size:20px;
+    /* font-weight:bold; */
+    color:rgb(255, 101, 40);
 }
 
 #bodyComponents #location {
-    position:relative;
-    left:-20px;
-    top:30px;
-    font-size:20px;
+    position:absolute;
+    left: 150px;
+    top: 35px;
+    font-size:18px;
+    color: grey;
 }
 
 #bodyComponents #description {
-    position:relative;
-    left:-150px;
-    top:50px;
+    position:absolute;
+    left: 150px;
+    top: 65px;
     font-size:15px;
+    color: grey;
 }
 
 #bodyComponents #ingrediants {
-    position:relative;
-    top:50px;
-    left:150px;
+    position:absolute;
+    top: 85px;
+    left: 150px;
     font-size:15px;
     text-overflow:"";
     overflow:hidden;
+    color: grey;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 3px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 200;
+    color: white;
+    background-color: rgb(78, 78, 78);
 }
