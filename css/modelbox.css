@@ -6,9 +6,9 @@
 }
 #myImg:hover {opacity: 0.7;}
 
-#modal #modalTitle {
+/* #modal #modalTitle {
     text-align:center;
-}
+} */
 
 
 /* The Modal (background) */
@@ -20,50 +20,60 @@
 
   /* Center image*/
   left:50%;
-  top:60%;
+  top:62%;
   transform:translate(-50%, -45%);
 
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
+  /* background-color: rgb(0,0,0); Fallback color */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  font-size: 18px;
+}
+
+#container {
+  margin: auto;
+  width: 50%;
+  color: white;
 }
 
 /* Modal Content (image) */
 #modal-content {
-  margin: auto;
-  display: block;
-  width: 200px;
-  max-width: 700px;
-  max-height:250px;
-  height:125px;
-  min-height:100px;
-  background-color:white;
-  border-radius:15px;
+  float: left;
+  width: 220px;
+  height: 220px;  
+  margin-right: 20px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+#container #menu-details {
+  text-align: left;
 }
 
 /* Caption of Modal Image */
 #caption {
   margin: auto;
+  float: left;
   display: block;
   width: 80%;
   max-width: 700px;
-  text-align: center;
+  text-align: left;
   color: #ccc;
   padding: 10px 0;
   height: 150px;
 }
 
 /* Add Animation */
-#modal-content, #caption {
+/* #modal-content, #caption {
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
   animation-duration: 0.6s;
-}
+} */
 
-@-webkit-keyframes zoom {
+/* @-webkit-keyframes zoom {
   from {-webkit-transform:scale(0)}
   to {-webkit-transform:scale(1)}
 }
@@ -71,6 +81,11 @@
 @keyframes zoom {
   from {transform:scale(0)}
   to {transform:scale(1)}
+} */
+
+#buttons {
+  margin: auto;
+  width: 60%;
 }
 
 /* The Close Button */
@@ -79,23 +94,14 @@
   top: 15px;
   right: 35px;
   color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
 }
 
 #close:hover,
 #close:focus {
   color: #bbb;
-  text-decoration: none;
   cursor: pointer;
 }
 
-#container {
-  padding: 2px 16px;
-  text-align: center;
-  color: white; /* Text color */
-}
 #container button {
   color: white; /* Text color */
   background-color: transparent; /* Remove background color */
@@ -127,23 +133,16 @@
   max-width:100%;
   min-width:10%;
   height: 55px;
-  margin-top: 10px;
+
   border: none;
   border-radius: 5px;
   outline: none;
-  font-size: 10px;
+  font-size: 18px;
   font-family: Gill Sans, sans-serif;
   text-indent: .5cm;
 }
 
 #modal #foodPrice {
-    position:absolute;
-    color:red;
-    display:inline-block;
-    margin-left:25px;
-}
-
-#modal #modalTitle {
-    cursor:pointer;
-    text-align:center;
+    color:rgb(255, 111, 44);
+    font-weight: bold;
 }

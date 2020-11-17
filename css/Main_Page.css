@@ -297,6 +297,7 @@ slides for coupons
     height: 120px;
     object-fit: cover;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 #bottom #packageIcons .row::after,
