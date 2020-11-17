@@ -3,7 +3,7 @@ var HISTORY_COOKIE = "history";
 
 window.onload = function () {
     document.getElementById("restaurantAddress").value = "Search for a restaurant";
-    changeHistoryText();
+    // changeHistoryText(); OBSELETE
     displayFoodItems();
 }
 
@@ -11,14 +11,17 @@ window.onload = function () {
 function displayFoodItems() {
     var itemsSection = getSpecificStorageValue(HISTORY_COOKIE);
     var restaurant = getRestaurantByName(itemsSection);
+    var menuText = document.getElementById("text1");
 
     if (restaurant != null) {
-        createRestaurantMenu(restaurant.GetMenu ());
+        createRestaurantMenu(restaurant.GetMenu());
+        menuText.textContent = itemsSection + " Menu";
     }
     else {
         // Check if they instead clicked on a food package
         if (itemsSection != null) {
             var package = getPackageByName(itemsSection);
+            menuText.textContent = itemsSection + " Food Package";
             if (package == null)
                 alert("Sorry, the selection you have made is empty. Please try another options in the home page.");
             else
@@ -119,4 +122,10 @@ function sendToMainPage() {
 
     // Redirect the user to another page
     window.location = "Main_Page.html";
+}
+
+// Get a storage value given its key
+// Returns null if none was found
+function getSpecificStorageValue(storageKey) {
+    return window.localStorage.getItem(storageKey);
 }

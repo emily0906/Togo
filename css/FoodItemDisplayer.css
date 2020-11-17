@@ -11,16 +11,17 @@
 
 /* The text displaying the users location. IE: Home > myPage */
 #historyText {
-    top:40px;
+    top:50px;
     position:relative;
-    margin:25px;
+    margin:22px;
     margin-bottom:35px;
+    margin-left:75px;
 }
 
 /* The home text */
 #historyText #text1 {
-    cursor:pointer;
-    color:darkblue;
+    color:green;
+    font-size:35px;
 }
 
 .searchBar {
