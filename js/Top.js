@@ -186,7 +186,8 @@ function updateCart(allFoodNamesCookieKey) {
 // Adds the item to the cart
 // Assumption: The text contained the items name followed by a '$'
 function addCartItem(event) {
-    var foodName = itemNameFromWholeText(event.target.parentNode.parentNode.innerHTML).trim();
+    var foodName = event.target.parentNode.parentNode.textContent.trim();
+    foodName = foodName.substring(0, foodName.indexOf('$'));
 
     // Update cart once added
     updateCart(addFoodToCartCookieByName(foodName));
@@ -195,8 +196,9 @@ function addCartItem(event) {
 // Removes the item to the cart
 // Assumption: The text contained the items name followed by a '$'
 function removeCartItem(event) {
-    var foodName = itemNameFromWholeText(event.target.parentNode.parentNode.innerHTML).trim();
-    
+    var foodName = event.target.parentNode.parentNode.textContent.trim();
+    foodName = foodName.substring(0, foodName.indexOf('$'));
+
     // Update cart once removed
     updateCart(removeFoodCartCookie(foodName));
 }
