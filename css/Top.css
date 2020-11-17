@@ -78,11 +78,11 @@ The location image should be placed inside the textfield
 }
 
 #top .topAddress img {
-    position: absolute;
+    position: relative;
     width: auto;
     height: 30px;
-    top: 11px;
-    left: 480px;
+    top: 26px;
+    left: 0.1%;
     /* left: 50%; */
 }
 
