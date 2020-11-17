@@ -125,13 +125,13 @@ The location image should be placed inside the textfield
     top:10%;
     width:270px;
 
-    /* 
+    /*
         The default height will be 'min-height'
     */
     min-height:350px;
     box-sizing:border-box;
     height:auto;
-    
+
     background-color:white;
     border-color:black;
     border-width:5px;
@@ -152,7 +152,7 @@ The location image should be placed inside the textfield
 }
 
 #allOrders {
-    /* 
+    /*
         If the user has lots of orders, there will be a scroll bar for the items
         Rather than the items being continually displayed
     */
