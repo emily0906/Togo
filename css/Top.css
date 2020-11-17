@@ -132,8 +132,9 @@ The location image should be placed inside the textfield
     box-sizing:border-box;
     height:auto;
 
-    background-color:white;
-    border-color:black;
+    background-color:rgb(78, 78, 78);; /* Fallback color */
+    background-color: rgb(78, 78, 78,0.9); /* Black w/ opacity */
+    border-color:rgb(78, 78, 78);;
     border-width:5px;
     border-style:solid;
     border-radius:30px;
@@ -143,10 +144,10 @@ The location image should be placed inside the textfield
 #cartPopUp #closeWindow {
     position:relative;
     left:230px;
-    font-size:20px;
-    font-weight:200;
-    background-color:red;
-    color:black;
+    color: #f1f1f1;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
     width:10px;
     height:10px;
 }
@@ -160,7 +161,7 @@ The location image should be placed inside the textfield
     height:150px;
 
     /* Different color so its noticeable*/
-    background-color:lightgrey;
+    background-color:#f0f0f0;
     color:black;
 }
 
@@ -168,7 +169,8 @@ The location image should be placed inside the textfield
     position:relative;
     left:31%;
     font-weight:200;
-    font-size:19px;
+    font-size:15px;
+    color: white;
 }
 
 #totalsSection {
@@ -178,7 +180,7 @@ The location image should be placed inside the textfield
     padding:5px;
     margin-top:20px;
     display:inline-block;
-    color:black;
+    color:white;
 }
 
 .order {
@@ -197,8 +199,12 @@ The location image should be placed inside the textfield
     position:relative;
     padding:10px;
     left:31%;
-    background-color:aqua;
-    font-weight:900;
+    color: white; /* Text color */
+    background-color: transparent; /* Remove background color */
+    border: 2px solid white; /* Border thickness, line style, and color */
+    border-radius: 5px; /* Adds curve to border corners */
+    text-transform: uppercase; /* Make letters uppercase */
+    cursor:pointer;
 }
 
 .count {
