@@ -3,8 +3,16 @@
 <head>
     <!-- Importing all necessary files -->
     <link rel="stylesheet" href="css/Main_Page.css" />
+    <link rel="stylesheet" href="css/Top.css" />
+
+    <!-- include all the js files -->
     <script type="text/javascript" src="js/database.js"></script>
     <script type="text/javascript" src="js/User.js"></script>
+    <script type="text/javascript" src="js/Top.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/Top.js"></script>
+    <script type="text/javascript" src="js/modelBox.js"></script>
+    <script type="text/javascript" src="js/MainPage.js"></script>
 
     <meta charset="utf-8" />
     <title>TO GO online delivery</title>
@@ -12,11 +20,69 @@
 <body>
     <!-- Divider, This is the first (top) portion of the main page-->
     <div id="top">
-        <a href="Main_Page.html"><img src="images/logo.png" alt="Logo" class="logo"></a>
+        <div id="included">
+            <!-- Divider, This is the first (top) portion of the main page-->
+            <div id="top">
+                <a href="Main_Page.html"><img src="images/logo-welcome-page.png" alt="Logo" class="logo"></a>
 
-    
+                <!-- Address at top of screen -->
+                <span class="topAddress">
+                    <input type="text" id="deliveryAddress" onchange="addressChange();" />
+                    <a onclick="submitAddress();"><button class="loc-btn" type="button"> Confirm </button></a>
+                    <img src="images/locationIcon.png" />
+                </span>
 
+                <div id="shoppingCart">
+                    <a onclick="openCart();"><img src="images/cart.png" class="package"></a>
+                </div>
+            </div>
+
+            <!-- The pop up window displayed when clicking on the cart-->
+            <div id="cartPopUp">
+                <span id="closeWindow" onclick="closeCart();">X</span>
+                <span id="details">Order Details</span>
+                <div id="allOrders">
+                    <!--
+                        The orders for the cart
+                        Here is an example of what it will look like once generated for an item
+
+                        <div class="order">
+                        Banana Soup
+                            <span class="price">$15</span>
+                            <span class="count">x6</span>
+
+                            <div id="addRemove">
+                                <span class="bar">[</span>
+                                <button id="addToCart">+</button>
+                                <button id="removeFromCart">-</button>
+                                <span class="bar">]</span>
+                            </div>
+                        </div>
+                     -->
+                    <span>You have not made an order!</span>
+                </div>
+                <div id="totalsSection">
+                    <span id="subtotal">Food and beverage subtotal.. <span class="price">$0.00</span></span>
+                    <hr class="cartDividor"/>
+                    <span id="GST">GST............................ <span class="price">$0.00</span></span><br />
+                    <span id="PST">PST............................. <span class="price">$0.00</span></span><br />
+                    <hr class="cartDividor"/>
+                    <span id="Total">Total ........................... <span class="price">$0.00</span></span>
+                </div>
+                <button id="makeOrder" onclick="makeOrder();">Place Order</button>
+            </div>
+
+            <hr class="dividers" />
+
+            <script>
+                    displayAddress();
+            </script>
+        </div>
     </div>
+    <hr class="dividers" />
+
+    <!-- the body of checkout page-->
+
 
 </body>
 </html>
