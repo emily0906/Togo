@@ -15,7 +15,7 @@ function displayFoodItems() {
 
     if (restaurant != null) {
         createRestaurantMenu(restaurant.GetMenu());
-        menuText.textContent = itemsSection + " Menu";
+        menuText.textContent = itemsSection + "'s Menu";
     }
     else {
         // Check if they instead clicked on a food package
