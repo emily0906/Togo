@@ -23,6 +23,7 @@ div #top {
     left: 15%;
     top: 6px;
     bottom: 10px;
+    z-index:200;
 }
 
 /*
