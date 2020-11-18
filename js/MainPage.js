@@ -9,6 +9,12 @@ window.onload = function () {
     restaurantsNearYouSetup();
     rotateCouponSection(0);
     document.getElementById("restaurantAddress").value = "";
+
+    // Load currently added coupon (if any)
+    var coupon = window.localStorage.getItem("coupon");
+
+    if (coupon != null)
+        addCoupon(null, parseInt(coupon));
 }
 
 $(document).click(function (event) {
