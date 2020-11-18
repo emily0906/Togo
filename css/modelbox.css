@@ -29,12 +29,12 @@
   overflow: auto; /* Enable scroll if needed */
   /* background-color: rgb(0,0,0); Fallback color */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-  font-size: 18px;
+
 }
 
 #container {
   margin: auto;
-  width: 50%;
+  width: 650px;
   color: white;
 }
 
@@ -51,6 +51,28 @@
 
 #container #menu-details {
   text-align: left;
+  font-size: 19px;
+  font-weight: 300;
+}
+
+#container #menu-details #foodName {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+#container #menu-details #foodPrice {
+  color:rgb(255, 111, 44);
+  font-size: 22px;
+  font-weight: 600;
+  position: relative;
+  top: -15px;
+}
+
+/* restaurant name */
+#container #menu-details #modalTitle, #dishDescription, #dishIngrediants {
+  color: rgb(219, 219, 219);
+  position: relative;
+  top: -10px;
 }
 
 /* Caption of Modal Image */
@@ -86,16 +108,9 @@
 
 #buttons {
   margin: auto;
-  width: 60%;
+  width: 70%;
 }
 
-/* The Close Button */
-#close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-}
 
 #close:hover,
 #close:focus {
@@ -111,7 +126,7 @@
   text-transform: uppercase; /* Make letters uppercase */
   width:150px;
   height:40px;
-  margin-right:35px;
+  margin-left:40px;
   margin-top:20px;
   cursor:pointer;
 }
@@ -119,13 +134,10 @@
   opacity: 0.7;
 }
 
-#container #closeButton {
-  border-color:yellowgreen;
-  border-style:dashed;
-}
-
-#container #closeButton:hover {
-  border-color:grey;
+#container #addButton {
+  border-color:rgb(255, 122, 45);
+  color:rgb(255, 122, 45);
+  font-weight: bolder;
 }
 
 /* The special instructions */
@@ -143,7 +155,3 @@
   text-indent: .5cm;
 }
 
-#modal #foodPrice {
-    color:rgb(255, 111, 44);
-    font-weight: bold;
-}
