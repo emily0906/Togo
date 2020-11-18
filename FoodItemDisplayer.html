@@ -87,18 +87,24 @@
 
     <div id="modal">
         <div id="container">
-            <p id="modalTitle" onclick="closeModal()">Stellas</p>
+
             <img id="modal-content" src="images/empty.png">
-            <div>
+            <div id="menu-details">
                 <b id="foodName">Chow Mein</b>
                 <div id="foodPrice">$5.00</div>
+                <p id="modalTitle" onclick="redirectToRestaurantByObject(this)">Stellas</p>
+                <p id="dishDescription"> Something about the dishes </p>
+                <p id="dishIngrediants"> Contained milk </p>
             </div>
-            <p id="dishDescription"> Something about the dishes </p>
-            <p id="dishIngrediants"> Contained milk </p>
+
             <input type="text" id="instructions" placeholder="Add special instructions">
             <br />
-            <button a href="#" onclick="addingToCart ();" id="addButton">Add To Cart</a></button>
-            <button a href="#" onclick="closeModal()" id="closeButton">Close</a></button>
+
+            <div id="buttons">
+                <button a href="#" onclick="addingToCart ();" id="addButton">Add To Cart</a></button>
+                <button a href="#" onclick="closeModal()" id="closeButton">Close</a></button>
+            </div>
+
         </div>
     </div>
 
