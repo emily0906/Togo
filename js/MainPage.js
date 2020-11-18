@@ -205,7 +205,14 @@ function addCoupon(obj, index) {
         // So, here I just modify opacity and let CSS handle visibility for the warnings
         // And for the overlay, I only modify opacity and let CSS handle visibility
         if (i == index) {
-            elem.textContent = "Added to your cart";
+
+            // Different text if the user comes back to the page
+            // This way 'added to your cart' is the action of doing it from that page
+            if (obj != null)
+                elem.textContent = "Added to your cart";
+            else
+                elem.textContent = "Currently in your cart";
+
             elem.style.color = "red";
             elem.style.fontWeight = "700";
             elem.style.opacity = "0.9";
