@@ -63,11 +63,16 @@ slides for coupons
     opacity:0.5;
 }
 
-#mid .slide:hover .addTo span {
-    visibility:visible;
+#mid .slide:hover .addTo .addOverlay {
+    visibility:visible !important; /* !important will override JS removing the hover event */
+}
+
+#mid .slide:hover .addTo .addWarning {
+    visibility:visible !important; /* !important will override JS removing the hover event */
 }
 
 #mid .slide .addTo{
+    cursor:pointer;
     z-index:1;
     display:inline-block;
     -moz-box-sizing: border-box;
@@ -79,32 +84,47 @@ slides for coupons
     text-align:center;
 }
 
-#mid .slide .addTo span {
+#mid .slide .addTo .addOverlay {
     visibility:hidden;
     /* font: bold 20px/20px 'Open Sans', sans-serif; */
     color:rgb(53, 53, 53);
     font-family: 'Gill Sans', sans-serif;
-    font-weight:50;
-    padding-top: 110px;
-	font-size: 25px;
+    font-weight:300;
+    padding-top: 90px;
+	font-size: 28px;
 	/* display: inline-block; */
-
     z-index:1;
     display:inline-block;
-    height: 250px;
+    height: 200px;
     width:480px;
-
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    top: 26%;
     margin:auto;
 	position: absolute;
 	/* border: 5px solid #fff; */
     text-align:center;
+
+    transform:translateX(-125px);
 }
 
-#mid .slide:hover .addTo{
+#mid .slide .addTo .addWarning {
+    opacity:0;
+    visibility:hidden;
+    position:relative;
+    display:block;
+    color:red;
+    visibility:hidden;
+    text-align:left;
+    top:120px;
+    left:-250px;
+
+    overflow:auto;
+    word-wrap:break-word;
+    max-width:250px;
+}
+
+#mid .slide:hover .addTo img {
   color: #4f4f4f;
   background-color: white;
 }

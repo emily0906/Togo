@@ -184,6 +184,50 @@ function restaurantsNearYouSetup() {
     }
 }
 
+function addCoupon(obj, index) {
+    var addedToCartOverlays = document.getElementsByClassName("addOverlay");
+    var addWarnings = document.getElementsByClassName("addWarning");
+
+    if (addedToCartOverlays.length != addWarnings.length)
+        alert("Sorry, a problem has occurred. Please try something else. /0")
+
+    for (var i = 0; i < addedToCartOverlays.length; i++) {
+        var elem = addedToCartOverlays[i];
+
+        // The coupon that is added
+        // Note that changing visibility dynamically breaks the :hover in css
+        // So, here I just modify opacity and let CSS handle visibility for the warnings
+        // And for the overlay, I only modify opacity and let CSS handle visibility
+        if (i == index) {
+            elem.textContent = "Added to your cart";
+            elem.style.color = "red";
+            elem.style.fontWeight = "700";
+            elem.style.opacity = "0.9";
+            elem.style.visibility = "visible";
+            addWarnings[i].style.opacity = "0";
+
+            // Saving the current coupon
+            window.localStorage.setItem("coupon", index);
+        }
+        else {
+            // All other coupons
+            // Set back to defaults
+            elem.textContent = "Add to cart";
+            elem.style.color = "rgb(53, 53, 53)";
+            elem.style.fontWeight = "300";
+            elem.style.visibility = "hidden";
+
+            // Add a warning for other coupons. This will remove the current coupon
+            addWarnings[i].style.opacity = "1.0";
+
+            // To retain CSS's hover attributes, we will redefine the className
+            elem.className = "addOverlay";
+        }
+    }
+
+
+}
+
 // Move the coupon section to a specific coupon
 function rotateCouponToIndex(index) {
     rotateCouponSection(index - curCouponSection);
