@@ -70,6 +70,10 @@
   top: -10px; */
 }
 
+#container #modalTitle {
+    cursor:pointer;
+}
+
 /* Caption of Modal Image */
 #caption {
   margin: auto;
