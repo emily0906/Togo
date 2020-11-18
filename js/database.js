@@ -1,4 +1,4 @@
-﻿// List of all Food Items and their information
+﻿// List of all Food Items, and their information
 
 var foodItems = [
     new FoodItem(0, "Mushroom Soup", "images/food/mushroomSoup.jpg", "Roughage Eatery",
@@ -50,7 +50,7 @@ var foodPackages = [
         ))
 ];
 
-// List of all restaurants and their information
+// List of all restaurants, and their information
 var restaurants = [
     new Restaurant(0, "Roughage Eatery", "images/restaurants/Stellas.jpg",
         new Menu(
@@ -128,6 +128,11 @@ var restaurants = [
         ),
         63)
 ];
+
+// List of all coupons, and their information
+// This only contains the description of each coupon
+// For the purposes of the project, the coupons are 'hard coded'
+var coupons = ["Buy 1 get 1 Free", "5% off", "$5 off", "$10 an order over $100"];
 
 // A food package menu is the list of food items cooresponding with the package
 function FoodPackage(name, image, menu) {
