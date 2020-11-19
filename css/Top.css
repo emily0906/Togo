@@ -45,7 +45,7 @@ The location image should be placed inside the textfield
     /* font-family: Arial, Helvetica, sans-serif; */
     font-family: Gill Sans, sans-serif;
     font-size: 18px;
-    top: 18px;
+    top: 27px;
     /* left: 200px; */
     left: 33%;
     border: solid white 0.5px;
@@ -63,7 +63,7 @@ The location image should be placed inside the textfield
     /* font-family: Arial, Helvetica, sans-serif; */
     font-family: Gill Sans, sans-serif;
     font-size: 18px;
-    top: 19px;
+    top: 27px;
     /* left: 350px; */
     left: 32.6%;
     border: solid white 0.5px;
@@ -81,7 +81,7 @@ The location image should be placed inside the textfield
     position: relative;
     width: auto;
     height: 30px;
-    top: 26px;
+    top: 35px;
     left: 0.1%;
     /* left: 50%; */
 }
@@ -94,7 +94,7 @@ The location image should be placed inside the textfield
 #shoppingCart img {
     position: absolute;
     right: 20%;
-    top: 22px;
+    top: 41px;
     height: 35px;
     width: auto;
     z-index:299;
