@@ -15,7 +15,7 @@
 
   /* Center image*/
   left:50%;
-  top:62%;
+  top:65%;
   transform:translate(-50%, -45%);
 
   width: 100%; /* Full width */
@@ -129,9 +129,15 @@
   opacity: 0.7;
 }
 
-#container #addButton {
+/* #container #addButton {
   border-color:rgb(255, 122, 45);
   color:rgb(255, 122, 45);
+  font-weight: bolder;
+} */
+
+#container #closeButton {
+  border-color:rgb(255, 76, 45);
+  color:rgb(255, 76, 45);
   font-weight: bolder;
 }
 
