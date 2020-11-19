@@ -85,13 +85,13 @@ function couponFour(currentPrice) {
 function getCouponNote(couponIndex) {
     switch (couponIndex) {
         case 0:
-            return "In order to receive a free item from your coupon, you must order 2 of the same items. The most expensive item with 2 orders is free. Taxes still applies."
+            return "In order to receive a free item you must order 2 of the same items. The most expensive item ordered twice or more will be free. Taxes still applies."
         case 1:
-            return "In order to receive 5% off your order from your coupon, your order must exceed $0.05";
+            return "In order to receive 5% off your order your order must exceed $0.05";
         case 2:
-            return "In order to receive $5 off your order from your coupon, your order must exceed $0.00."
+            return "In order to receive $5 off your order your order must exceed $0.00."
         case 3:
-            return "In order to receive $10 off your order from your coupon, the order must have a total price of $100 or more."
+            return "In order to receive $10 off your order the order must have a total price of $100.00 or more."
     }
 
     return "Coupon not applied due to an error. Please try again later. Sorry for the inconvenience.";
