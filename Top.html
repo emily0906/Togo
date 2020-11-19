@@ -28,7 +28,12 @@
             <!-- Address at top of screen -->
             <span class="topAddress">
                 <input type="text" id="deliveryAddress" onchange="addressChange();" />
-                <a onclick="submitAddress();"><button class="loc-btn" type="button"> Confirm </button></a>
+                <!-- 
+                        Do we need this button? The address already auto changes 
+                        Maybe we can provide feedback instead
+
+                    <button class="loc-btn" type="button" onclick="submitAddress();"> Confirm </button> 
+                -->
                 <img src="images/locationIcon.png" />
             </span>
 

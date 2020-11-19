@@ -132,7 +132,7 @@ var restaurants = [
 // List of all coupons, and their information
 // This only contains the description of each coupon
 // For the purposes of the project, the coupons are 'hard coded'
-var coupons = ["Buy 1 get 1 Free", "5% off", "$5 off", "$10 an order over $100"];
+var coupons = ["Buy 1 get 1 Free", "5% off any order", "$5 off any order", "$10 off over $100"];
 
 // A food package menu is the list of food items cooresponding with the package
 function FoodPackage(name, image, menu) {

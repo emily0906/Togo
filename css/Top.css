@@ -128,11 +128,11 @@ The location image should be placed inside the textfield
     /*The default height will be 'min-height'*/
     min-height:430px;
     box-sizing:border-box;
-    height:auto;
+    height:480px;
 
     background-color: rgba(32, 31, 31, 0.726); /* Black w/ opacity */
-    border: solid rgb(78, 78, 78,0.9) 1px;
-    border-radius: 4px;
+    border: solid rgba(78, 78, 78, 0.9) 1px;
+    border-radius: 15px;
     display: none;
     font-family: Gill Sans, san-serif;
     /* font-family: Arial, Helvetica, sans-serif; */
@@ -180,7 +180,7 @@ The location image should be placed inside the textfield
 #cartPopUp #allOrders #empty-message {
     position: relative;
     top: 20px;
-    left: 25%;
+    /*left: 25%;*/
     /* text-align: center; */
 }
 
@@ -213,10 +213,10 @@ The location image should be placed inside the textfield
 
 
 #cartPopUp #makeOrder {
-    position: absolute;;
+    position: absolute;
     padding:10px;
     left:31%;
-    top: 380px;
+    top: 413px;
     margin-bottom: 10px;
     /* top: 50px; */
     color: white; /* Text color */
@@ -246,7 +246,53 @@ The location image should be placed inside the textfield
 #addRemove .removeFromCart {
     margin:2px;
     font-weight:400;
+}
+
+#cartPopUp #totalAfterCoupon {
+    visibility:hidden;
+    text-decoration:none !important; /* remove strike-through */
+    padding-left:22px;
     color:red;
+}
+
+#cartPopUp #CouponTitle {
+    position:relative;
+    visibility:hidden;
+    color:white;
+    padding-left:22px;
+    top:-63px !important;
+}
+
+#cartPopUp #CouponTitle #Coupon {
+    color:lightgreen;
+}
+
+#cartPopUp #tipSection {
+    visibility: hidden;
+    position:relative;
+    width:200px;
+    border-radius:15px;
+    height:240px;
+    left:-208px;
+    bottom:234px;
+    background-color:white;
+    border: 1px solid black;
+    text-align:left;
+    padding:3px;
+}
+
+#cartPopUp #tipTitle {
+    text-align:center;
+    background-color:red;
+    border-radius:20px;
+    font-size:20px;
+    font-weight:400;
+    height:auto;
+    font-family:Impact;
+}
+
+#cartPopUp #tipText {
+    padding-left:2px;
 }
 
 /*

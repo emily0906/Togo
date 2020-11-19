@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="css/modelbox.css" />
 
     <!-- Include the top portion of the page. NOTE: Should be last AND requires Jquery -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="js/database.js"></script>
     <script type="text/javascript" src="js/FoodItemDisplayer.js"></script>
-    <script type="text/javascript" src="js/CategoryDisplayer.js"></script>
+    <script type="text/javascript" src="js/Coupons.js"></script>
     <script type="text/javascript" src="js/User.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="js/Top.js"></script>
     <script type="text/javascript" src="js/modelBox.js"></script>
 
@@ -28,7 +28,7 @@
                 <!-- Address at top of screen -->
                 <span class="topAddress">
                     <input type="text" id="deliveryAddress" onchange="addressChange();" />
-                    <a onclick="submitAddress();"><button class="loc-btn" type="button"> Confirm </button></a>
+                    <button class="loc-btn" type="button" onclick="submitAddress();"> Confirm </button>
                     <img src="images/locationIcon.png" />
                 </span>
 
@@ -47,10 +47,10 @@
                 <span id="closeWindow" onclick="closeCart();">X</span>
                 <span id="details">Order Details</span>
                 <div id="allOrders">
-                    <!-- 
-                        The orders for the cart 
+                    <!--
+                        The orders for the cart
                         Here is an example of what it will look like once generated for an item
-                    
+
                         <div class="order">
                         Banana Soup
                             <span class="price">$15</span>
@@ -64,7 +64,7 @@
                             </div>
                         </div>
                      -->
-                     <span id="empty-message">Make an order!</span>
+                     <span id="empty-message">No items in your cart. Make an order!</span>
                 </div>
                 <div id="totalsSection">
                     <span id="subtotal">Subtotal∙∙∙∙∙∙∙∙∙∙∙ <span class="price">$0.00</span></span>
@@ -72,9 +72,15 @@
                     <span id="GST">GST∙∙∙∙∙∙∙∙∙∙∙∙∙∙ <span class="price">$0.00</span></span><br />
                     <span id="PST">PST∙∙∙∙∙∙∙∙∙∙∙∙∙∙ <span class="price">$0.00</span></span><br />
                     <hr class="cartDividor"/>
-                    <span id="Total">Total ∙∙∙∙∙∙∙∙∙∙∙∙∙ <span class="price">$0.00</span></span>
+                    <span id="Total">Total ∙∙∙∙∙∙∙∙∙∙∙∙∙ <span class="price">$0.00</span><span id="totalAfterCoupon">$0.00</span></span>
+                    <hr class="cartDividor" />
                 </div>
+                <div id="CouponTitle">Applying Coupon: <span id="Coupon">None</span></div>
                 <button id="makeOrder" onclick="makeOrder();">Checkout</button>
+                <div id="tipSection">
+                    <div id="tipTitle">!Important!</div>
+                    <div id="tipText">In order for your coupon to work..</div>
+                </div>
             </div>
 
             <hr class="dividers" />

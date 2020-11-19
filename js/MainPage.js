@@ -11,6 +11,7 @@ window.onload = function () {
     document.getElementById("restaurantAddress").value = "";
 
     // Load currently added coupon (if any)
+    // This is encase the user refreshes the page or goes back to the main menu but only has a coupon and no cart
     var coupon = window.localStorage.getItem("coupon");
 
     if (coupon != null)
@@ -221,6 +222,9 @@ function addCoupon(obj, index) {
 
             // Saving the current coupon
             window.localStorage.setItem("coupon", index);
+
+            // Update the cart so that the new coupon is displayed
+            updateCart(getFoodCookies());
         }
         else {
             // All other coupons

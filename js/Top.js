@@ -69,6 +69,13 @@ function updateCart(allFoodNamesCookieKey) {
         if (elem != null)
             elem.style.display = "none";
 
+        // If we have a coupon, then we'll reset the display back to the first state
+        var coupon = window.localStorage.getItem("coupon");
+
+        if (coupon != null) {
+            displayCouponInformation(total);
+        }
+
         return;
     }
 
@@ -176,10 +183,93 @@ function updateCart(allFoodNamesCookieKey) {
         getPriceChild(document.getElementById("PST")).textContent = "$" + PST;
         // Total
         getPriceChild(document.getElementById("Total")).textContent = "$" + total;
+
+
+        var coupon = window.localStorage.getItem("coupon");
+
+        if (coupon != null) {
+            displayCouponInformation(total);
+        }
     }
     catch (err) {
         alert(err + " " + err.lineNumber);
         alert("Sorry, a problem has occurred. Please try again. \0 User.js required.");
+    }
+}
+
+// Displaying coupon information
+// This includes a new total price [If any]
+// As well as a description of the coupon
+function displayCouponInformation(currentTotal) {
+    var couponIndex = parseInt(window.localStorage.getItem("coupon"));
+
+    // Do not display the actual total if it is negative, in that case there's nothing in the cart
+    if (currentTotal >= 0) {
+        var totalPriceObj = getPriceChild(document.getElementById("Total"));
+
+        if (totalPriceObj  == null) {
+            alert("Sorry, a problem has occurred as we were not able to calculate your total price. Please try again later.");
+            return;
+        }
+
+        var priceAfterCoupon = GetTotalCouponPrice(couponIndex, currentTotal);
+
+        // If there was no price change, then that means the coupon did not apply.
+        // Lets tell the user why!
+        if (priceAfterCoupon == currentTotal) {
+            document.getElementById("tipSection").style.visibility = "visible";
+            document.getElementById("tipText").textContent = getCouponNote(couponIndex);
+
+            // Removing information if it was previously shown
+            totalPriceObj.style.textDecoration = "none";
+
+            // Actual Total
+            // This is only calculated if the user has a coupon that will be applied to the cart
+            var actualTotalObj = document.getElementById("totalAfterCoupon");
+            actualTotalObj.style.visibility = "hidden";
+        }
+        else {
+            document.getElementById("tipSection").style.visibility = "hidden";
+
+            // Grabbing new total
+            totalPriceObj.style.textDecoration = "line-through";
+
+            // Actual Total
+            // This is only calculated if the user has a coupon that will be applied to the cart
+            var actualTotalObj = document.getElementById("totalAfterCoupon");
+            var priceAfterCoupon = GetTotalCouponPrice(couponIndex, currentTotal);
+            actualTotalObj.textContent = "$" + formatter.format(priceAfterCoupon);
+            actualTotalObj.style.visibility = "visible";
+        }
+
+        // Modify coupon
+        modifyCoupons(couponIndex);
+    }
+    else {
+
+        // Showing the user their coupon [ONLY]
+        modifyCoupons(couponIndex);
+    }
+}
+
+function modifyCoupons(couponIndex) {
+    // Showing the user their coupon [ONLY]
+    var showCouponObj = document.getElementById("Coupon");
+    showCouponObj.textContent = coupons[couponIndex];
+    var title = document.getElementById("CouponTitle");
+    title.style.visibility = "visible";
+
+    var foodItems = getFoodCookies();
+
+    // Makes the display of the coupon in the middle of the cart
+    // FIXME if you ever change the height of the pop up cart or adjust sizes, you may need to adjust this as well
+    if (foodItems == null || foodItems == "")
+    {
+        document.getElementById("CouponTitle").style.marginTop = "147px";
+    }
+    else {
+        // If we have made an order, then we move the coupon's title slightly
+        document.getElementById("CouponTitle").style.marginTop = "78px";
     }
 }
 

@@ -7,6 +7,15 @@ window.onload = function () {
     displayFoodItems();
 }
 
+$(document).click(function (event) {
+    var $target = $(event.target);
+
+    if (!$target.closest('#top').length &&
+        $('#cartPopUp').is(":visible")) {
+        closeCart();
+    }
+});
+
 // Dynamically display the food items
 function displayFoodItems() {
     var itemsSection = getSpecificStorageValue(HISTORY_COOKIE);
