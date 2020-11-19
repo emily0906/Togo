@@ -6,6 +6,10 @@
     /* position: relative; */
     font-family: Gill Sans, sans-serif;
     font-weight: 400;
+    margin: 0;
+}
+
+#bodyComponents {
     margin-left: 10%;
 }
 
@@ -149,14 +153,14 @@
 }
 
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    padding: 3px;
-    width: 100%;
     text-align: center;
+    position: relative;
+    top: 50px;
+    padding: 3px;
+    font-family: "Gills Sans", sans-serif;
     font-size: 18px;
     font-weight: 200;
     color: white;
     background-color: rgb(78, 78, 78);
+    margin-left:-10%;
 }
