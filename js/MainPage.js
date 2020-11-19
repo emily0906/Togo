@@ -118,6 +118,16 @@ function addressChange(input) {
     setUserAddress(document.getElementById("deliveryAddress").value);
     setAddressLocation(); // The user has a new address location, get its location
     restaurantsNearYouSetup();
+
+    addressFeedbackAnimation();
+}
+
+function addressFeedbackAnimation() {
+    $("#changeFeedback").fadeIn("slow", function () {
+        $("#changeFeedback").fadeOut(5500, function () {
+            // Do nothing once complete
+        });
+    });
 }
 
 // This grabs the location of the user
@@ -309,4 +319,10 @@ function redirectToRestaurantByName(restaurantName) {
 
     // Redirect the user to another page
     window.location = "FoodItemDisplayer.html";
+}
+
+function addressKeyPress(elem) {
+    if (event.key === 'Enter') {
+        addressChange();
+    }
 }

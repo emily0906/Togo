@@ -86,6 +86,17 @@ The location image should be placed inside the textfield
     /* left: 50%; */
 }
 
+#top .topAddress #changeFeedback {
+    position:fixed;
+    left:37%;
+    width:300px;
+    margin-top:5px;
+
+    color:black;
+    font-weight:300;
+    display:none;
+}
+
 #top #included #top #shoppingCart {
     /* Always clickable */
     z-index:299;

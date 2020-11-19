@@ -28,8 +28,9 @@
 
                 <!-- Address at top of screen -->
                 <span class="topAddress">
-                    <input type="text" id="deliveryAddress" onchange="addressChange();" />
-                    <button class="loc-btn" type="button" onclick="submitAddress();"> Confirm </button>
+                    <span id="changeFeedback">You have changed your address!</span>
+                    <input type="text" id="deliveryAddress" onkeydown="addressKeyPress(this);" />
+                    <button class="loc-btn" type="button" onclick="addressChange();"> Confirm </button>
                     <img src="images/locationIcon.png" />
                 </span>
 
