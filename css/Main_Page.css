@@ -273,6 +273,7 @@ slides for coupons
     font-size: 18px;
     text-indent: 30px;
     color: rgb(63, 63, 63);
+    overflow:hidden; /* Helps prevent the page from going downwards when you search for restaurants */
 }
 
 /* Obtained from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_autocomplete

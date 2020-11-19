@@ -1,4 +1,5 @@
 const NUM_COUPON_SECTIONS = 4;
+const MAX_SUGGESTED_RESTAURANTS = 5; // The maximum number of restaurants that can be suggested in a search at one time
 var circles = []; // Circles.length = NUM_COUPON_SECTIONS
 var couponSection = 1;
 var curCouponSection = 0;
@@ -60,18 +61,24 @@ function displayRelatedRestaurants(obj, event) {
             text = text + String.fromCharCode(event.keyCode);
         }
 
+        // TODO remove the commented code if this is not a feature we would like to have
         // Do not display any form of empty text
         // Note that without this, all restaurants will display
-        if (text.trim() == "")
-            return;
+        //if (text.trim() == "")
+         //   return;
     }
-    else if (text == "")
-        return; // Do not display empty text without a backspace character
+    //else if (text == "")
+    //    return; // Do not display empty text without a backspace character
 
     // Find the suggested restaurants based on the users input
     var candidateRestaurants = [];
 
     for (var i = 0; i < restaurants.length; i++) {
+
+        // Cannot exceed max suggested searches
+        if (candidateRestaurants.length >= MAX_SUGGESTED_RESTAURANTS)
+            break;
+
         if (restaurants[i].name.toLowerCase().startsWith(text.trim().toLowerCase())) {
             candidateRestaurants.push(restaurants[i].name);
         }
