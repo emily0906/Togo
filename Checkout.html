@@ -26,62 +26,17 @@
                 <a href="Main_Page.html"><img src="images/logo-welcome-page.png" alt="Logo" class="logo"></a>
 
                 <!-- Address at top of screen -->
-                <span class="topAddress">
+                <!-- <span class="topAddress">
                     <input type="text" id="deliveryAddress" onchange="addressChange();" />
                     <a onclick="submitAddress();"><button class="loc-btn" type="button"> Confirm </button></a>
                     <img src="images/locationIcon.png" />
-                </span>
-
-                <div id="shoppingCart">
-                    <a onclick="openCart();"><img src="images/cart.png" class="package"></a>
-                </div>
+                </span> -->
             </div>
-
-            <!-- The pop up window displayed when clicking on the cart-->
-            <div id="cartPopUp">
-                <span id="closeWindow" onclick="closeCart();">X</span>
-                <span id="details">Order Details</span>
-                <div id="allOrders">
-                    <!--
-                        The orders for the cart
-                        Here is an example of what it will look like once generated for an item
-
-                        <div class="order">
-                        Banana Soup
-                            <span class="price">$15</span>
-                            <span class="count">x6</span>
-
-                            <div id="addRemove">
-                                <span class="bar">[</span>
-                                <button id="addToCart">+</button>
-                                <button id="removeFromCart">-</button>
-                                <span class="bar">]</span>
-                            </div>
-                        </div>
-                     -->
-                     <span id="empty-message">Make an order!</span>
-                </div>
-                <div id="totalsSection">
-                    <span id="subtotal">Subtotal∙∙∙∙∙∙∙∙∙∙∙ <span class="price">$0.00</span></span>
-                    <hr class="cartDividor"/>
-                    <span id="GST">GST∙∙∙∙∙∙∙∙∙∙∙∙∙∙ <span class="price">$0.00</span></span><br />
-                    <span id="PST">PST∙∙∙∙∙∙∙∙∙∙∙∙∙∙ <span class="price">$0.00</span></span><br />
-                    <hr class="cartDividor"/>
-                    <span id="Total">Total ∙∙∙∙∙∙∙∙∙∙∙∙∙ <span class="price">$0.00</span></span>
-                </div>
-                <button id="makeOrder" onclick="makeOrder();">Checkout</button>
-            </div>
-
-            <hr class="dividers" />
-
-            <script>
-                    displayAddress();
-            </script>
         </div>
     </div>
     <hr class="dividers" />
-
     <!-- the body of checkout page-->
+    
 
 
 </body>
