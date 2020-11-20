@@ -130,12 +130,15 @@ The location image should be placed inside the textfield
     -webkit-text-stroke-color:black;
     visibility:hidden;
 
-    -webkit-animation-name: swing;
-    animation: swing 5s infinite;
+    -webkit-animation-name: turnAnim;
+    animation: turnAnim 5s infinite;
 }
 
-/* Swinging animation https://www.tutorialspoint.com/css/css_animation_swing.htm */
-         @-webkit-keyframes swing { 
+/* 
+    Swinging animation obtained from https://www.tutorialspoint.com/css/css_animation_swing.htm 
+    This provides the back and forth movement on the notification icon
+*/
+         @-webkit-keyframes turnAnim { 
             20%, 40%, 60%, 80%, 100% { -webkit-transform-origin: top center; } 
             20% { -webkit-transform: rotate(19deg); } 
             40% { -webkit-transform: rotate(-14deg); } 
@@ -144,7 +147,7 @@ The location image should be placed inside the textfield
             100% { -webkit-transform: rotate(0deg); } 
          }
          
-         @keyframes swing { 
+         @keyframes turnAnim { 
             20% { transform: rotate(19deg); } 
             40% { transform: rotate(-14deg); } 
             60% { transform: rotate(8deg); } 

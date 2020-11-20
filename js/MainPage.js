@@ -250,7 +250,7 @@ function addCoupon(obj, index) {
 
             // When you add to the cart, the notification appears
             // This is only if you haven't already had that coupon
-            if (!cartOpen && prev != null && parseInt(prev) != index) {
+            if (!cartOpen && ((prev != null && parseInt(prev) != index) || prev == null)) {
                 document.getElementById('cartNotification').style.visibility = 'visible';
                 window.localStorage.setItem('notification', 'true');
             }
