@@ -11,25 +11,25 @@
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 100; /* Sit on top */
-  padding-top: 150px; /* Location of the box */
+  top:485px;
 
   /* Center image*/
   left:50%;
-  top:65%;
   transform:translate(-50%, -45%);
 
   width: 100%; /* Full width */
-  height: 100%; /* Full height */
+  height: 900px; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   /* background-color: rgb(0,0,0); Fallback color */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-
 }
 
 #container {
-  margin: auto;
-  width: 650px;
-  color: white;
+    margin: auto;
+    width: 650px;
+    color: white;
+    position: relative;
+    top: 17%;
 }
 
 /* Modal Content (image) */
