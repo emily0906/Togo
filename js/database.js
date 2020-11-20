@@ -103,16 +103,54 @@ var restaurants = [
             }
         ),
         105),
-    new Restaurant(3, "Gong Cha", "images/restaurants/Stellas.jpg", null, 21),
-    new Restaurant(4, "Jolibee", "images/restaurants/Stellas.jpg", null, 80),
+ 
+    new Restaurant(3, "Gong Cha", "images/restaurants/Stellas.jpg", null,21),
+    new Restaurant(4, "Jolibee", "images/restaurants/Stellas.jpg",
+        new Menu(
+            {
+                //pengyu's adding
+                Mains:
+                    [
+
+                        foodItems[2],//baked hburger
+                        foodItems[3],//chicken burger
+                        foodItems[7],//stuffed tacos
+                        foodItems[11],//fried spring rolls
+                        foodItems[12],//chicken wings!!! my fav!!!
+                        foodItems[16]//brussel sprouts
+                    ]
+            }
+        )
+        , 80),
     new Restaurant(5, "Fion", "images/restaurants/Earls.jpg", "", 100),
-    new Restaurant(6, "Smittys", "images/restaurants/Stellas.jpg", null, 50),
+    new Restaurant(6, "Smittys", "images/restaurants/Stellas.jpg", 
+        new Menu(
+            {
+                //pengyu's adding
+                Starters:
+                    [
+                        foodItems[6],//asparagus
+
+                    ]
+                    
+            }
+        )
+        , 50),
+  
     new Restaurant(7, "Pho Kim Tuong", "images/restaurants/Stellas.jpg",
         new Menu(
             {
+                //pengyu's adding
+                //viet restaurants
+                Starters:
+                    [
+                        foodItems[0],//mushroom soup
+                        foodItem[1],//banana soup
+                        foodItems[9]//potato soup
+                    ],
                 Mains:
                     [
-                        foodItems[17],
+                        foodItems[17],//viet rice noodles
                     ]
             }
         ),
@@ -120,13 +158,18 @@ var restaurants = [
     new Restaurant(8, "Stellas", "images/restaurants/Stellas.jpg",
         new Menu(
             {
+                //pengyu's adding
+                //breakfast restaurant
                 Mains:
                     [
-                        foodItems[16],
+                        foodItems[16],//brussels sprouts
+                        foodItems[12],//chicken wings
+                        foodItems[10],//cupcake
                     ]
             },
         ),
         63)
+    //new Restaurant(9,"Golden Loong","images/restaurants/GoldenLoong.jpg",null,10),
 ];
 
 // List of all coupons, and their information
