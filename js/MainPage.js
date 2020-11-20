@@ -231,9 +231,9 @@ function addCoupon(obj, index) {
             else
                 elem.textContent = "Currently in your cart";
 
-            elem.style.color = "red";
-            elem.style.fontWeight = "700";
-            elem.style.opacity = "0.9";
+            elem.style.color = "green";
+            elem.style.fontWeight = "500";
+            // elem.style.opacity = "0.9";
             elem.style.visibility = "visible";
             addWarnings[i].style.opacity = "0";
 
@@ -248,7 +248,7 @@ function addCoupon(obj, index) {
             // Set back to defaults
             elem.textContent = "Add to cart";
             elem.style.color = "rgb(53, 53, 53)";
-            elem.style.fontWeight = "300";
+            elem.style.fontWeight = "350";
             elem.style.visibility = "hidden";
 
             // Add a warning for other coupons. This will remove the current coupon

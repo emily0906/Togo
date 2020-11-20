@@ -48,6 +48,7 @@ slides for coupons
     top: 50%;
     height: auto;
     max-width:500px;
+    border-radius: 5px;
 
     transition: 0.5s ease;
   	-o-transition: 0.5s ease;
@@ -55,12 +56,7 @@ slides for coupons
 }
 
 #mid .slide:hover img{
-    -webkit-filter: blur(1px);
-	-moz-filter: blur(1px);
-	-ms-filter: blur(1px);
-	filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
-	filter: blur(1px);
-    opacity:0.5;
+    opacity:0.2;
 }
 
 #mid .slide:hover .addTo .addOverlay {
@@ -80,19 +76,23 @@ slides for coupons
     box-sizing: border-box;
     top: 26%;
     margin:auto;
-	position: absolute;
+    position: absolute;
     text-align:center;
+
 }
 
 #mid .slide .addTo .addOverlay {
     visibility:hidden;
-    /* font: bold 20px/20px 'Open Sans', sans-serif; */
-    color:rgb(53, 53, 53);
-    font-family: 'Gill Sans', sans-serif;
-    font-weight:300;
     padding-top: 90px;
-	font-size: 28px;
-	/* display: inline-block; */
+    font-size: 30px;
+    /* font-weight: 350; */
+    color: rgb(61, 61, 61);
+    text-shadow: -1.5px 1.5px 0 white,
+                1.5px 1.5px 0 white,
+                1.5px -1.5px 0 white,
+                -1.5px -1.5px 0 white;
+    /* color: rgb(233, 50, 4); */
+
     z-index:1;
     display:inline-block;
     height: 200px;
@@ -102,7 +102,6 @@ slides for coupons
     box-sizing: border-box;
     margin:auto;
 	position: absolute;
-	/* border: 5px solid #fff; */
     text-align:center;
 
     transform:translateX(-125px);
@@ -113,26 +112,26 @@ slides for coupons
     visibility:hidden;
     position:relative;
     display:block;
-    color:red;
+    color:rgb(54, 54, 54);
     visibility:hidden;
     text-align:left;
-    top:120px;
-    left:-250px;
+    top:140px;
+    left: 10px;
 
     overflow:auto;
     word-wrap:break-word;
     max-width:250px;
 }
 
-#mid .slide:hover .addTo img {
+/* #mid .slide:hover .addTo img {
   color: #4f4f4f;
   background-color: white;
-}
+} */
 
 #mid .rightRotate,
 #mid .leftRotate {
   display:inline-block;
-  bottom:110px;
+  bottom:90px;
 
   cursor: pointer;
   position: relative;
@@ -319,6 +318,7 @@ slides for coupons
     object-fit: cover;
     border-radius: 3px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 #bottom #packageIcons .row::after,
@@ -340,7 +340,7 @@ slides for coupons
     color: rgb(77, 77, 77);
     font-size:18px;
     font-weight: 500;
-    top: 5px;
+    top: 3px;
 }
 
 footer {
