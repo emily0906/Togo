@@ -50,6 +50,21 @@ function createPackageMenu(packageMenu) {
     }
 }
 
+function addressChange(input) {
+    // Recall this function when the users location is changed
+    setUserAddress(document.getElementById("deliveryAddress").value);
+
+    addressFeedbackAnimation();
+}
+
+function addressFeedbackAnimation() {
+    $("#changeFeedback").fadeIn("slow", function () {
+        $("#changeFeedback").fadeOut(5500, function () {
+            // Do nothing once complete
+        });
+    });
+}
+
 // Dynamically create the menu of a restaurant
 function createRestaurantMenu(restaurantMenu) {
     var headers = Object.keys(restaurantMenu);
@@ -137,4 +152,10 @@ function sendToMainPage() {
 // Returns null if none was found
 function getSpecificStorageValue(storageKey) {
     return window.localStorage.getItem(storageKey);
+}
+
+function addressKeyPress(elem) {
+    if (event.key === 'Enter') {
+        addressChange();
+    }
 }

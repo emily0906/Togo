@@ -88,7 +88,7 @@ The location image should be placed inside the textfield
     position:fixed;
     left:37%;
     width:300px;
-    margin-top:5px;
+    margin-top:-0.5px;
 
     color:black;
     font-weight:300;
