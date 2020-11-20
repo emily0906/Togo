@@ -98,6 +98,7 @@ The location image should be placed inside the textfield
 #top #included #top #shoppingCart {
     /* Always clickable */
     z-index:299;
+    cursor:pointer;
 }
 
 #shoppingCart img {
@@ -156,6 +157,7 @@ The location image should be placed inside the textfield
     color: #f1f1f1;
     font-weight: 400;
     font-size: 16px;
+    cursor:pointer;
 }
 #cartPopUp #details {
     position:relative;
@@ -249,12 +251,13 @@ The location image should be placed inside the textfield
 #addRemove .addToCart {
     margin:2px;
     font-weight:400;
-    color:red;
+    cursor:pointer;
 }
 
 #addRemove .removeFromCart {
     margin:2px;
     font-weight:400;
+    cursor:pointer;
 }
 
 #cartPopUp #totalAfterCoupon {

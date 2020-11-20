@@ -144,6 +144,8 @@ function updateCart(allFoodNamesCookieKey) {
             order.className = "order";
             count.className = "count";
             addRemoveSection.id = "addRemove";
+            add.className = "addToCart";
+            remove.className = "removeFromCart";
             add.id = "addToCart";
             remove.id = "removeFromCart";
             leftBar.className = "bar";
