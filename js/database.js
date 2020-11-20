@@ -145,7 +145,7 @@ var restaurants = [
                 Starters:
                     [
                         foodItems[0],//mushroom soup
-                        foodItem[1],//banana soup
+                        foodItems[1],//banana soup
                         foodItems[9]//potato soup
                     ],
                 Mains:
