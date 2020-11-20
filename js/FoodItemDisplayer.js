@@ -3,8 +3,8 @@ var HISTORY_COOKIE = "history";
 
 window.onload = function () {
     document.getElementById("restaurantAddress").value = "Search for a restaurant";
-    // changeHistoryText(); OBSELETE
     displayFoodItems();
+    openNotification();
 }
 
 $(document).click(function (event) {
@@ -15,6 +15,13 @@ $(document).click(function (event) {
         closeCart();
     }
 });
+
+function openNotification() {
+    var notification = window.localStorage.getItem('notification');
+
+    if (notification == 'true')
+        document.getElementById('cartNotification').style.visibility = 'visible';
+}
 
 // Dynamically display the food items
 function displayFoodItems() {

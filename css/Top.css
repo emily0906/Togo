@@ -116,6 +116,42 @@ The location image should be placed inside the textfield
     padding: 3px;
 }
 
+#shoppingCart #cartNotification {
+    position:absolute;
+    color:red;
+    right:18%;
+    top:9%;
+    z-index:350;
+    font-weight:300;
+    font-size:49px;
+
+    -webkit-text-fill-color:white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color:black;
+    visibility:hidden;
+
+    -webkit-animation-name: swing;
+    animation: swing 5s infinite;
+}
+
+/* Swinging animation https://www.tutorialspoint.com/css/css_animation_swing.htm */
+         @-webkit-keyframes swing { 
+            20%, 40%, 60%, 80%, 100% { -webkit-transform-origin: top center; } 
+            20% { -webkit-transform: rotate(19deg); } 
+            40% { -webkit-transform: rotate(-14deg); } 
+            60% { -webkit-transform: rotate(8deg); } 
+            80% { -webkit-transform: rotate(-8deg); } 
+            100% { -webkit-transform: rotate(0deg); } 
+         }
+         
+         @keyframes swing { 
+            20% { transform: rotate(19deg); } 
+            40% { transform: rotate(-14deg); } 
+            60% { transform: rotate(8deg); } 
+            80% { transform: rotate(-8deg); } 
+            100% { transform: rotate(0deg); } 
+         }
+
 #invis {
     z-index:-1;
     background-color:black;

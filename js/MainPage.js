@@ -10,6 +10,7 @@ window.onload = function () {
     restaurantsNearYouSetup();
     rotateCouponSection(0);
     document.getElementById("restaurantAddress").value = "";
+    openNotification();
 
     // Load currently added coupon (if any)
     // This is encase the user refreshes the page or goes back to the main menu but only has a coupon and no cart
@@ -32,7 +33,12 @@ $(document).click(function (event) {
     }
 });
 
+function openNotification() {
+    var notification = window.localStorage.getItem('notification');
 
+    if (notification == 'true')
+        document.getElementById('cartNotification').style.visibility = 'visible';
+}
 
 // Sets up the 3 circles so that the currently selected one will be more opague
 function circleSetup() {
@@ -218,6 +224,8 @@ function addCoupon(obj, index) {
     for (var i = 0; i < addedToCartOverlays.length; i++) {
         var elem = addedToCartOverlays[i];
 
+        var prev = window.localStorage.getItem('coupon');
+
         // The coupon that is added
         // Note that changing visibility dynamically breaks the :hover in css
         // So, here I just modify opacity and let CSS handle visibility for the warnings
@@ -226,7 +234,7 @@ function addCoupon(obj, index) {
 
             // Different text if the user comes back to the page
             // This way 'added to your cart' is the action of doing it from that page
-            if (obj != null)
+            if (obj != null && (prev == null || parseInt(prev) != index))
                 elem.textContent = "Added to your cart";
             else
                 elem.textContent = "Currently in your cart";
@@ -239,6 +247,13 @@ function addCoupon(obj, index) {
 
             // Saving the current coupon
             window.localStorage.setItem("coupon", index);
+
+            // When you add to the cart, the notification appears
+            // This is only if you haven't already had that coupon
+            if (!cartOpen && prev != null && parseInt(prev) != index) {
+                document.getElementById('cartNotification').style.visibility = 'visible';
+                window.localStorage.setItem('notification', 'true');
+            }
 
             // Update the cart so that the new coupon is displayed
             updateCart(getFoodCookies());

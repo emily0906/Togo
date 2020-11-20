@@ -48,6 +48,12 @@ function modifyAddress(input) {
     Updates the cart accordingly
 */
 function addContentsToCart(foodName) {
+    // When you add to the cart, the notification appears
+    if (!cartOpen) {
+        document.getElementById('cartNotification').style.visibility = 'visible';
+        window.localStorage.setItem('notification', 'true');
+    }
+
     updateCart(addFoodToCartCookie(getFoodItemByName (foodName)));
 }
 
@@ -323,6 +329,8 @@ function openCart() {
     cartOpen = true;
 
     var cart = document.getElementById("cartPopUp");
+    document.getElementById('cartNotification').style.visibility = 'hidden';
+    window.localStorage.setItem('notification', 'false');
     cart.style.display = "inline-block";
 
     return true;
