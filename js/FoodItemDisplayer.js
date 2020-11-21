@@ -166,3 +166,11 @@ function addressKeyPress(elem) {
         addressChange();
     }
 }
+
+// For food packages
+function redirectToRestaurantByObject(obj) {
+    window.localStorage.setItem("history", obj.textContent);
+
+    // Redirect the user to another page
+    window.location = "FoodItemDisplayer.html";
+}

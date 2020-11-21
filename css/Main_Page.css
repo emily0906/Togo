@@ -343,6 +343,10 @@ slides for coupons
     top: 3px;
 }
 
+.linkText {
+    text-decoration:none; /* Remove the underline on the restaurants and packages */
+}
+
 footer {
     text-align: center;
     position: relative;
