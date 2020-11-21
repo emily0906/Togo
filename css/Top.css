@@ -86,13 +86,30 @@ The location image should be placed inside the textfield
 
 #top .topAddress #changeFeedback {
     position:fixed;
-    left:37%;
-    width:300px;
-    margin-top:-0.5px;
+    left:44%;
+    top:75px;
 
-    color:black;
-    font-weight:300;
+    background-color: rgba(0, 0, 0, 0.582);
+    padding: 5px;
+    border-radius: 5px;
+
+    color:white;
+    font-weight:normal;
     display:none;
+}
+
+#top .topAddress #changeFeedback:after {
+    content: '';
+    position: absolute;
+    margin-left: -10px;
+	margin-top: -10px;
+	top: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-bottom-color:rgba(0, 0, 0, 0.445);
+	border-top: 0;
 }
 
 #top #included #top #shoppingCart {
@@ -112,22 +129,24 @@ The location image should be placed inside the textfield
 
 #shoppingCart img:hover {
     border-radius: 10px;
-    border: solid rgba(255, 233, 161, 0.555) 1px;
+    /* border: solid rgba(255, 233, 161, 0.555) 1px; */
+    opacity: 0.6;
     padding: 3px;
 }
 
 #shoppingCart #cartNotification {
     position:absolute;
-    color:red;
-    right:18%;
-    top:9%;
+    color:rgb(248, 14, 14); 
+    right:19%;
+    top:12%;
     z-index:350;
-    font-weight:300;
-    font-size:49px;
+    font-weight:550;
+    font-size:40px;
 
-    -webkit-text-fill-color:white;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color:black;
+    /* -webkit-text-fill-color:rgb(253, 73, 28); */
+    -webkit-text-stroke-width: 10px;
+    -webkit-text-stroke: 1.5px;
+    -webkit-text-stroke-color:rgb(255, 255, 255);
     visibility:hidden;
 
     -webkit-animation-name: turnAnim;
