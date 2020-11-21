@@ -103,6 +103,13 @@ function createHeader(name) {
     return child;
 }
 
+// Obtained from https://stackoverflow.com/questions/1726630/formatting-a-number-with-exactly-two-decimals-in-javascript
+// Formatting a number to an exact 2 decimals following currency
+var formatter = new Intl.NumberFormat('en-US', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+});
+
 // Create a food item to be displayed on the page
 // Pass a boolean includeLocation to include the location or not
 // Pass a header, which is the id of the element everything will be appended under
@@ -129,7 +136,7 @@ function createFoodItem(foodItem, includeLocation, header) {
     // Setting the values of the elements
     img.src = foodItem.image;
     title.innerHTML = foodItem.name;
-    price.innerHTML = "$" + foodItem.price;
+    price.innerHTML = "$" + formatter.format(foodItem.price);
 
     if (includeLocation)
         location.innerHTML = foodItem.restaurant;
