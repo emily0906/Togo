@@ -1,6 +1,41 @@
-Brussel Sprouts description based off of https://www.stellas.ca/menu/stellas-pembina/
-Obtained 'Food - Brussel Sprouts' from https://www.delish.com/cooking/recipe-ideas/a22566331/best-sauteed-brussel-sprouts-recipe/ 
+Bibliography / References
+
+Coupon images customly created with PhotoShop.
+Programming references are directly referred to from within the programs source code, at locations where they are defined.
+Not all images were obtained online. Some photos are taken of foods directly at home.
+
+------------------------
+Image References obtained from other sources
+
+Brussel Sprouts description based off of the real restaurant Stellas https://www.stellas.ca/menu/stellas-pembina/
+
+Obtained 'Food - Brussel Sprouts' image from https://www.delish.com/cooking/recipe-ideas/a22566331/best-sauteed-brussel-sprouts-recipe/ 
 
 Mac&Cheese image obtained from https://www.recipetineats.com/baked-mac-and-cheese/
 
 Rice Noodles image obtained from https://www.cnn.com/travel/article/vietnam-street-food/index.html
+
+gluten free image obtained from https://www.123rf.com/photo_25833633_no-gluten-free-sign-icon-no-gluten-symbol-red-prohibition-sign-stop-symbol-.html
+[Standard License, educational purposes]
+
+protein package image obtained from https://www.dreamstime.com/high-protein-food-fish-meat-poultry-nuts-eggs-vegetables-healthy-eating-diet-concept-high-protein-food-fish-meat-poultry-image111509114
+
+Halal package image obtained from https://www.spoon.guru/the-halal-diet-fact-sheet/
+
+Locally made package image obtained from https://www.gettyimages.ca/photos/corsica-food?mediatype=photography&phrase=corsica%20food&sort=mostpopular
+
+Cocher package image obtained from https://pixabay.com/photos/sandwich-kosher-food-5151721/
+
+Veggie sushi image obtained from https://www.foodnetwork.com/recipes/masaharu-morimoto/vegetable-sushi-recipe-2124407
+
+Mushroom soup image obtained from https://commons.wikimedia.org/wiki/File:Mushroom_Soup.jpg
+
+Donuts image obtained from https://commons.wikimedia.org/wiki/File:Krispy_Kreme_glazed_donuts_2.JPG
+
+Kosher bagel obtained from https://www.pikrepo.com/search?q=Kosher
+
+Pasta obtained from https://commons.wikimedia.org/wiki/File:Pasta-2802156_1920.jpg
+
+Erk soos obtained from https://www.pinterest.ca/pin/448248969138065174/
+
+oysters obtained from https://commons.wikimedia.org/wiki/File:Pacific_oysters.jpg
