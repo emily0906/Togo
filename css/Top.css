@@ -42,7 +42,7 @@ The location image should be placed inside the textfield
     padding: 12px;
     border-radius: 4px 0 0 4px;
     text-indent: 30px;
-    font-family: "Roboto", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     top: 20%;
     left: 33%;
@@ -58,9 +58,9 @@ The location image should be placed inside the textfield
     height: 46px;
     padding: 10px;
     border-radius: 0 4px 4px 0;
-    font-family: "Roboto", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    top: 18%;
+    top: 19%;
     /* left: 350px; */
     left: 32.6%;
     border: solid white 0.5px;
@@ -202,7 +202,7 @@ The location image should be placed inside the textfield
     border: solid rgba(78, 78, 78, 0.9) 1px;
     border-radius: 15px;
     display: none;
-    font-family: "Roboto", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size:16.5px;
     /* font-weight: 200; */
 }
@@ -255,8 +255,8 @@ The location image should be placed inside the textfield
     /* height:100px; */
     left: 20px;
     /* padding:20px; */
-    top: 10px;
-    margin-bottom: 30px;
+    top: 12px;
+
     display:inline-block;
     color:white;
 }
@@ -270,10 +270,12 @@ The location image should be placed inside the textfield
 }
 
 .cartDividor{
-    opacity: 0.5;
+    opacity: 0.3;
     position: relative;
     right: 20px;
     width: 240px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 
@@ -327,7 +329,7 @@ The location image should be placed inside the textfield
     color:white;
     padding-left: 20px;
     font-size: 16.5px;
-    top:-63px !important;
+    top:-55px !important;
 }
 
 #cartPopUp #CouponTitle #Coupon {
@@ -359,8 +361,6 @@ The location image should be placed inside the textfield
     font-size:18px;
     padding: 3px;
     font-weight: 700;
-    /* height:auto; */
-    /* font-family:Impact; */
 }
 
 #cartPopUp #tipText {
@@ -405,7 +405,7 @@ This is the lines that divide the portions of the screens
         padding: 10px;
         border-radius: 4px 0 0 4px;
         text-indent: 30px;
-        font-family: "Roboto", sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
         font-size: 18px;
         top: 20%;
         left: 33%;
@@ -422,7 +422,7 @@ This is the lines that divide the portions of the screens
         padding: 8px;
         border-radius: 0 4px 4px 0;
 
-        font-family: "Roboto", sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
         font-size: 16px;
         top: 19%;
         /* left: 350px; */
