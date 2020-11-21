@@ -1,24 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
-/*Just the background stuff */
-span.s1 {
-  position: absolute;
-  top: 0;
-  font-size: 15rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #3C4447;
-}
-
-span.s2 {
-  font-weight: 800;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  font-size: 15rem;
-  text-transform: uppercase;
-  color: #3C4447;
-}
-
 /*My hum... body.. yeah.. */
 body {
   background-color: #353B3F;
@@ -137,5 +117,5 @@ li {
   top: 10px;
   margin-bottom: 30px;
   display:inline-block;
-  color:black;
+  color:#4B4B4B;
 }
