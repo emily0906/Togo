@@ -89,14 +89,6 @@ p {
   color: #4B4B4B;
 }
 
-/* DATE of release */
-h5 {
-  position: absolute;
-  left: 30px;
-  bottom: -120px;
-  font-size: 6rem;
-  color: #C3C3C3;
-}
 
 h6 {
   position: absolute;
