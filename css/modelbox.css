@@ -29,13 +29,13 @@
     width: 650px;
     color: white;
     position: relative;
-    top: 17%;
+    top: 15%;
 }
 
 /* Modal Content (image) */
 #modal-content {
   float: left;
-  width: 220px;
+  width: 260px;
   height: 220px;  
   margin-right: 20px;
   margin-bottom: 20px;
@@ -45,6 +45,9 @@
 
 #container #menu-details {
   text-align: left;
+  /* width: 400px; */
+  /* float: right; */
+  margin-right: 10px;
   /* font-size: 19px; */
   font-weight: 300;
 }

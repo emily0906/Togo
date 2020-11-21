@@ -19,12 +19,12 @@
     position:relative;
     margin:22px;
     margin-bottom:35px;
-    margin-left:75px;
+    margin-left:15%;
 }
 
 /* The home text */
 #historyText #text1 {
-    color:green;
+    color:rgb(41, 41, 41);
     font-size:35px;
 }
 
@@ -54,16 +54,18 @@
 #bodyComponents {
     position:relative;
     top: 40px;
+
 }
 
 /* This is all components that are dynamic (the entire sections) */
 #bodyComponents .section {
-    margin-left:100px;
+    margin-left:15%;
+
 }
 
 /* The text showing the category of food: For example, Starters, Mains, Drinks, etc.. */
 #bodyComponents .block {
-    font-weight:300;
+    font-weight: normal;
     font-size:27px;
     margin-bottom:0px;
     border-top:0;
@@ -71,8 +73,9 @@
     border-right:0;
     border-bottom:2px;
     border-style:solid;
-    border-color:darkgrey;
-    width:250px;
+    border-color:rgba(204, 204, 204, 0.582);
+    color: rgb(63, 63, 63);
+    width:300px;
     padding-left:40px;
     margin-left:75px;
 
@@ -98,37 +101,35 @@
     background-color: rgb(255, 247, 233);
 }
 
-#bodyComponents img {
-    position:absolute;
-    width:125px;
+#bodyComponents .foodItem img {
+    object-fit: cover;
+    overflow: hidden;
+    width:150px;
     height:110px;
-    padding:5px;
-    padding-top:10px;
-    padding-left:7px;
-    border-radius:4px;
+    padding:10px;
 }
 
 #bodyComponents #title {
     position:absolute;
-    left:150px;
+    left:180px;
     top:10px;
     font-size:22px;
+    color: rgb(29, 29, 29);
     font-weight: normal;
 }
 
 #bodyComponents #price {
     position:absolute;
-    left:105%;
+    left:88%;
     float:right;
-    top:50px;
+    top:15px;
     font-size:20px;
-    /* font-weight:bold; */
     color:rgb(255, 101, 40);
 }
 
 #bodyComponents #location {
     position:absolute;
-    left: 150px;
+    left: 180px;
     top: 35px;
     font-size:18px;
     color: grey;
@@ -136,7 +137,7 @@
 
 #bodyComponents #description {
     position:absolute;
-    left: 150px;
+    left: 180px;
     top: 65px;
     font-size:15px;
     color: grey;
@@ -145,7 +146,7 @@
 #bodyComponents #ingrediants {
     position:absolute;
     top: 85px;
-    left: 150px;
+    left: 180px;
     font-size:15px;
     text-overflow:"";
     overflow:hidden;
@@ -154,13 +155,15 @@
 
 footer {
     text-align: center;
+    margin: auto;
+    width: 100%;
     position: relative;
-    top: 50px;
+    top: 70px;
     padding: 3px;
     font-family: "Gills Sans", sans-serif;
     font-size: 18px;
     font-weight: 200;
     color: white;
     background-color: rgb(78, 78, 78);
-    margin-left:-10%;
+    /* margin-left:10%; */
 }
