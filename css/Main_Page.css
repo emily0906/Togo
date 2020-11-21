@@ -5,7 +5,7 @@ body {
     background-repeat: repeat;
     background-size: cover;
     position: relative;
-    font-family: Gill Sans, sans-serif;
+    font-family: "Roboto", sans-serif;
     margin:0;
 }
 
@@ -115,7 +115,7 @@ slides for coupons
     color:rgb(54, 54, 54);
     visibility:hidden;
     text-align:left;
-    top:140px;
+    top:145px;
     left: 10px;
 
     overflow:auto;
@@ -205,7 +205,8 @@ slides for coupons
 }
 
 #bottom {
-    font-family: Gill Sans, sans-serif;
+    /* font-family: Gill Sans, sans-serif; */
+    font-family: "Roboto", sans-serif;
     font-weight: 200;
     font-size: 20px;
 }
@@ -230,7 +231,8 @@ slides for coupons
     box-shadow: 1px 1px 3px 3px rgb(221, 220, 220);
     border-radius: 3px;
 
-    font-family: Gill Sans, sans-serif;
+    /* font-family: Gill Sans, sans-serif; */
+    font-family: "Roboto", sans-serif;
     font-size: 18px;
     text-indent: 30px;
     color: rgb(63, 63, 63);
@@ -268,7 +270,8 @@ slides for coupons
     padding: 5px;
     box-shadow: 1px 1px 3px 3px rgb(221, 220, 220);
     border-radius: 1px;
-    font-family: Gill Sans, sans-serif;
+    /* font-family: Gill Sans, sans-serif; */
+    font-family: "Roboto", sans-serif;
     font-size: 18px;
     text-indent: 30px;
     color: rgb(63, 63, 63);
