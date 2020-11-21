@@ -232,6 +232,7 @@ The location image should be placed inside the textfield
         If the user has lots of orders, there will be a scroll bar for the items
         Rather than the items being continually displayed
     */
+    overflow-x:hidden;
     overflow-y:auto;
     height:200px;
     margin-top: 10px;
@@ -308,6 +309,42 @@ The location image should be placed inside the textfield
     margin:2px;
     font-weight:400;
     cursor:pointer;
+}
+
+#cartPopUp #allOrders .price {
+    position:relative;
+    display:inline-block;
+    margin-left:6px;
+    margin-right:0;
+    text-align:right;
+}
+
+#cartPopUp #allOrders .count {
+    position:relative;
+    display:inline-block;
+    right:1220px;
+    width:40px; /* Also sets the offset of where the price will be*/
+}
+
+#cartPopUp #allOrders .itemName {
+    position:relative;
+    display:inline-block;
+    width:120px; /* This sets the offset of where the count will be */
+    overflow:hidden;
+    overflow-y:no-content;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    top:4px;
+    right:5%;
+}
+
+#cartPopUp #allOrders .order {
+    width:300px; /* Total width of the order */
+}
+
+#cartPopUp #allOrders .addToCart, #cartPopUp #allOrders .removeFromCart {
+    position:relative;
+    left:59.5%;
 }
 
 #addRemove .removeFromCart {

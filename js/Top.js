@@ -1,5 +1,6 @@
 var cartOpen = false; // True of false, if the carts popup window is open
 var originalCartState = null; // Saving the state or cart originally
+const MAX_CHARS_IN_CART_NAME = 15;
 
 // Obtained from https://stackoverflow.com/questions/1726630/formatting-a-number-with-exactly-two-decimals-in-javascript
 // Formatting a number to an exact 2 decimals following currency
@@ -96,8 +97,9 @@ function updateCart(allFoodNamesCookieKey) {
     var dupeCount = []; // The number of elements, cooresponds to the index of nonDupes
 
     for (var i = 0; i < food.length; i++) {
-        if (food[i] == "" || food[i] == null) // Remove any Empty split
+        if (food[i] == null || food[i].trim() == ',' || food[i].trim() == "") // Remove any Empty split
             continue;
+        food[i] = food[i].trim();
 
         var index = nonDupes.indexOf(food[i]);
         if (index != -1) {
@@ -108,7 +110,6 @@ function updateCart(allFoodNamesCookieKey) {
             dupeCount.push(1);
         }
     }
-
 
     var FoodItemObject = null;
 
@@ -129,21 +130,22 @@ function updateCart(allFoodNamesCookieKey) {
             var order = document.createElement("div");
             var price = document.createElement("span");
             var count = document.createElement("span");
+            var name = document.createElement("span");
             var addRemoveSection = document.createElement("div");
             var add = document.createElement("button");
             var remove = document.createElement("button");
-            var leftBar = document.createElement("span");
-            var rightBar = document.createElement("span");
+            //var leftBar = document.createElement("span");
+            //var rightBar = document.createElement("span");
 
             // Creating content for Add/Remove from cart for the specific item
-            leftBar.textContent = "[ ";
+            //leftBar.textContent = "[ ";
             add.textContent = "+"
-            rightBar.textContent = " ]";
+            //rightBar.textContent = " ]";
             remove.textContent = "-";
-            addRemoveSection.appendChild(leftBar);
+            //addRemoveSection.appendChild(leftBar);
             addRemoveSection.appendChild(add);
             addRemoveSection.appendChild(remove);
-            addRemoveSection.appendChild(rightBar);
+            //addRemoveSection.appendChild(rightBar);
 
 
             price.className = "price";
@@ -151,21 +153,35 @@ function updateCart(allFoodNamesCookieKey) {
             count.className = "count";
             addRemoveSection.id = "addRemove";
             add.className = "addToCart";
+            name.className = "itemName";
             remove.className = "removeFromCart";
             add.id = "addToCart";
             remove.id = "removeFromCart";
-            leftBar.className = "bar";
-            rightBar.className = "bar";
+            //leftBar.className = "bar";
+            //rightBar.className = "bar";
 
             // Settings content values
             price.textContent = "$" + formatter.format (FoodItemObject.price * dupeCount[i]);
             count.textContent = " x" + dupeCount[i];
-            order.textContent = FoodItemObject.name;
+
+            // Only allow a certain number of characters in the name
+            var nameUsed = FoodItemObject.name;
+
+            /*
+            // Breaks cart
+            if (nameUsed.length > MAX_CHARS_IN_CART_NAME) {
+                nameUsed = nameUsed.substring(0, MAX_CHARS_IN_CART_NAME) + '...';
+            }
+            */
+            name.textContent = nameUsed;
+
+            // order.textContent = nameUsed;
 
             // Appending children
+            order.appendChild(name);
+            order.appendChild(count);
             order.appendChild(price);
             orders.appendChild(order);
-            order.appendChild(count);
             order.appendChild(addRemoveSection);
 
             sumPrice = sumPrice + (FoodItemObject.price * dupeCount[i]);
@@ -285,7 +301,7 @@ function modifyCoupons(couponIndex) {
 // Assumption: The text contained the items name followed by a '$'
 function addCartItem(event) {
     var foodName = event.target.parentNode.parentNode.textContent.trim();
-    foodName = foodName.substring(0, foodName.indexOf('$'));
+    foodName = getFoodName(foodName); 
 
     // Update cart once added
     updateCart(addFoodToCartCookieByName(foodName));
@@ -295,10 +311,39 @@ function addCartItem(event) {
 // Assumption: The text contained the items name followed by a '$'
 function removeCartItem(event) {
     var foodName = event.target.parentNode.parentNode.textContent.trim();
-    foodName = foodName.substring(0, foodName.indexOf('$'));
+    foodName = getFoodName(foodName); // .substring(0, foodName.indexOf('$')); KEEP COMMENT IN CASE OF REVERSION
 
     // Update cart once removed
     updateCart(removeFoodCartCookie(foodName));
+}
+
+// Returns a food name given a string that contains the foodname xamount $price
+function getFoodName(string) {
+    var curString = "";
+    var xDetected = false;
+
+    for (var i = 0; i < string.length; i++) {
+        if (string[i] == 'x') {
+            // Test for number
+            xDetected = true;
+        } else if (xDetected) {
+            try {
+                parseInt(string[i]);
+                break;
+                // This was the end of the name
+
+            } catch (err) {
+                xDetected = false;
+                curString += string[i];
+                continue;
+            }
+        }
+        else {
+            curString += string[i];
+        }
+    }
+
+    return curString.trim();
 }
 
 // Given the entire innerHTML of an order in the cart
