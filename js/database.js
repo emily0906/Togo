@@ -118,7 +118,7 @@ var foodPackages = [
     )),
     new FoodPackage("Gluten Free", "images/package/glutenFree.jpg", new Menu(
         [
-            foodItems[0], foodItems[16], foodItems[1], foodItems[4], foodItems[6], foodItems[9], foodItems[15], foodItems[17]
+            foodItems[0], foodItems[16], foodItems[1], foodItems[4], foodItems[6], foodItems[9], foodItems[15], foodItems[29], foodItems[25]
         ]
     )),
     new FoodPackage("Vegetarian", "images/package/vegetarian.jpg", new Menu(
