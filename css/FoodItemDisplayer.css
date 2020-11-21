@@ -4,7 +4,8 @@
     /* background-repeat: repeat; */
     background-size: cover;
     /* position: relative; */
-    font-family: Gill Sans, sans-serif;
+    /* font-family: Gill Sans, sans-serif; */
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     margin: 0;
 }
@@ -130,7 +131,7 @@
 #bodyComponents #location {
     position:absolute;
     left: 180px;
-    top: 35px;
+    top: 38px;
     font-size:18px;
     color: grey;
 }
@@ -138,14 +139,14 @@
 #bodyComponents #description {
     position:absolute;
     left: 180px;
-    top: 65px;
+    top: 70px;
     font-size:15px;
     color: grey;
 }
 
 #bodyComponents #ingrediants {
     position:absolute;
-    top: 85px;
+    top: 90px;
     left: 180px;
     font-size:15px;
     text-overflow:"";

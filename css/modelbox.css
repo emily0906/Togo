@@ -53,24 +53,21 @@
 }
 
 #container #menu-details #foodName {
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 400;
 }
 
 #container #menu-details #foodPrice {
   color:rgb(255, 111, 44);
-  font-size: 22px;
-  font-weight: 600;
-  /* position: relative;
-  top: -15px; */
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 5px;
 }
 
 /* restaurant name */
 #container #menu-details #modalTitle, #dishDescription, #dishIngrediants {
   color: rgb(219, 219, 219);
-  font-size: 20px;
-  /* position: relative;
-  top: -10px; */
+  font-size: 18px;
 }
 
 #container #modalTitle {
@@ -159,7 +156,8 @@
   border-radius: 5px;
   outline: none;
   font-size: 18px;
-  font-family: Gill Sans, sans-serif;
+  /* font-family: Gill Sans, sans-serif; */
+  font-family: "Roboto", sans-serif;
   text-indent: .5cm;
 }
 

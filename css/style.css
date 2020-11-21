@@ -36,7 +36,8 @@ body {
   border-radius: 5px;
   outline: none;
   font-size: 20px;
-  font-family: Gill Sans, sans-serif;
+  /* font-family: Gill Sans, sans-serif; */
+  font-family: "Roboto", sans-serif;
   text-indent: .5cm;
 }
 .search-btn
@@ -49,7 +50,8 @@ body {
   border-radius: 5px;
   border: 2px solid #ffffff67;
   font-size: 18px;
-  font-family: Gill Sans, sans-serif;
+  /* font-family: Gill Sans, sans-serif; */
+  font-family: "Roboto", sans-serif;
 }
 .search-btn:hover{
   background: #fd6a16;
