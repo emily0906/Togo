@@ -4,6 +4,7 @@
     -ms-user-select: none;
     user-select: none;
     z-index:99;
+    font-size: 4vw;
 }
 
 div #top {
