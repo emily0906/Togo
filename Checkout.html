@@ -33,6 +33,9 @@
                     <img src="images/locationIcon.png" />
                 </span>
             </div>
+            <script>
+                    displayAddress();
+            </script>
         </div>
     </div>
     <hr class="dividers" />
@@ -42,10 +45,21 @@
   <div class="right">
     <h1>ORDER DETAILS</h1>
     <div class="separator"></div>
-    <p>Order details here</p>
-  </div>
+    <div id="allOrders">
+         <span id="empty-message">No items in your cart. Make an order!</span>
+    </div>
+    <div id="totalsSection">
+        <span id="subtotal">Subtotal∙∙∙∙∙∙∙∙∙∙∙ <span class="price">$0.00</span></span>
+        <hr class="cartDividor"/>
+        <span id="GST">GST∙∙∙∙∙∙∙∙∙∙∙∙∙∙ <span class="price">$0.00</span></span><br />
+        <span id="PST">PST∙∙∙∙∙∙∙∙∙∙∙∙∙∙ <span class="price">$0.00</span></span><br />
+        <hr class="cartDividor"/>
+        <span id="Total">Total ∙∙∙∙∙∙∙∙∙∙∙∙∙ <span class="price">$0.00</span><span id="totalAfterCoupon">$0.00</span></span>
+        <hr class="cartDividor" />
+    </div>
+    <div id="CouponTitle">Applying Coupon: <span id="Coupon">None</span></div>
   <h6>Expect the best</h6>
-  <div class="fab"><i a class="fa fa-arrow-down fa-3x">Checkout</i></div>
+  <div class="fab">Checkout</div>
 </div>
 
 
