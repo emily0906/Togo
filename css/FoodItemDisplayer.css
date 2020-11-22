@@ -113,6 +113,10 @@
     font-size:22px;
     color: rgb(29, 29, 29);
     font-weight: normal;
+    width:50%;
+    overflow: hidden; /* make sure it hides the content that overflows */
+    white-space: nowrap; /* don't break the line */
+    text-overflow: ellipsis; /* give the beautiful '...' effect */
 }
 
 #bodyComponents #price {
@@ -122,6 +126,10 @@
     top:15px;
     font-size:20px;
     color:rgb(255, 101, 40);
+    width:50%;
+    overflow: hidden; /* make sure it hides the content that overflows */
+    white-space: nowrap; /* don't break the line */
+    text-overflow: ellipsis; /* give the beautiful '...' effect */
 }
 
 #bodyComponents #location {
@@ -130,6 +138,10 @@
     top: 38px;
     font-size:18px;
     color: grey;
+    width:50%;
+    overflow: hidden; /* make sure it hides the content that overflows */
+    white-space: nowrap; /* don't break the line */
+    text-overflow: ellipsis; /* give the beautiful '...' effect */
 }
 
 #bodyComponents #description {
@@ -138,6 +150,10 @@
     top: 70px;
     font-size:15px;
     color: grey;
+    width:50%;
+    overflow: hidden; /* make sure it hides the content that overflows */
+    white-space: nowrap; /* don't break the line */
+    text-overflow: ellipsis; /* give the beautiful '...' effect */
 }
 
 #bodyComponents #ingrediants {
@@ -148,6 +164,10 @@
     text-overflow:"";
     overflow:hidden;
     color: grey;
+    width:50%;
+    overflow: hidden; /* make sure it hides the content that overflows */
+    white-space: nowrap; /* don't break the line */
+    text-overflow: ellipsis; /* give the beautiful '...' effect */
 }
 
 footer {
