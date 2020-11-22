@@ -207,6 +207,20 @@ The location image should be placed inside the textfield
     /* font-weight: 200; */
 }
 
+#cartPopUp:after {
+    content: '';
+    position: absolute;
+    margin-left: -10px;
+      margin-top: -10px;
+      top: 0;
+      left: 25%;
+      width: 0;
+      height: 0;
+      border: 10px solid transparent;
+      border-bottom-color:rgba(78, 78, 78, 0.9);
+      border-top: 0;
+}
+
 #cartPopUp #closeWindow {
     position:relative;
     top: 5px;
