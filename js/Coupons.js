@@ -32,16 +32,19 @@ function couponOne(currentPrice) {
     var nonDupes = [];
     var dupeCount = []; // The number of elements, cooresponds to the index of nonDupes
 
+    // The coupon does not include special instructions
+    // Only the names are concidered
     for (var i = 0; i < food.length; i++) {
-        if (food[i] == "" || food[i] == null) // Remove any Empty split
+        var foodName = food[i].split('/')[0].trim();
+        if (foodName == null || foodName == "") // Remove any Empty split
             continue;
 
-        var index = nonDupes.indexOf(food[i]);
+        var index = nonDupes.indexOf(foodName);
         if (index != -1) {
             dupeCount[index]++;
         }
         else {
-            nonDupes.push(food[i]);
+            nonDupes.push(foodName);
             dupeCount.push(1);
         }
     }

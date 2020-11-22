@@ -52,7 +52,7 @@ var foodItems = [
 
     new FoodItem(22, "Quiche", "images/food/Food - Quiche.jpg", "Fion",
         "An egg custard based pie with a soft crust", "Egg, Cheese, Strawberry Jam", 8.99, 4.5),
-    new FoodItem(23, "Friend Rice", "images/food/Food - friedrice.jpg", "Gong Cha",
+    new FoodItem(23, "Fried Rice", "images/food/Food - friedrice.jpg", "Gong Cha",
         "Fried rice with vegtables and shrimp", "Friend Rice, Shrimp, Green Peas", 10.05, 4.1),
     new FoodItem(24, "Falafel Burrito", "images/food/falafelBurrito.jpg", "Fion",
         "Perfectly wrapped falafel snug for delight", "Falafel, Whole Wheat Wrap, Spinach, Beats, Hummus", 13.05, 4),
@@ -409,6 +409,7 @@ function getRestaurantByName(name) {
 }
 
 function getFoodItemByName(name) {
+    name = name.split('/')[0]; // Ignore instructions
     for (var i = 0; i < foodItems.length; i++) {
         if (foodItems[i].name == name)
             return foodItems[i];

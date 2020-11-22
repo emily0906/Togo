@@ -72,12 +72,12 @@
                      <span id="empty-message">No items in your cart. Make an order!</span>
                 </div>
                 <div id="totalsSection">
-                    <span id="subtotal">Subtotal∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ <span class="price">$0.00</span></span>
+                    <span id="subtotal"><span class="text">Subtotal ______________</span><span class="price" id="subTextPrice">$0.00</span></span>
                     <hr class="cartDividor"/>
-                    <span id="GST">GST∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ <span class="price">$0.00</span></span><br />
-                    <span id="PST">PST∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ <span class="price">$0.00</span></span><br />
+                    <span id="GST"><span class="text">GST ______________</span> <span class="price">$0.00</span></span><br />
+                    <span id="PST"><span class="text">PST ______________</span> <span class="price">$0.00</span></span><br />
                     <hr class="cartDividor"/>
-                    <span id="Total">Total ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ <span class="price">$0.00</span><span id="totalAfterCoupon">$0.00</span></span>
+                    <span id="Total"><span class="text">Total ______________</span> <span class="price">$0.00</span><span id="totalAfterCoupon">$0.00</span></span>
                     <hr class="cartDividor" />
                 </div>
                 <div id="CouponTitle">Applying Coupon: <span id="Coupon">None</span></div>
@@ -85,6 +85,13 @@
                 <div id="tipSection">
                     <div id="tipTitle">! Important !</div>
                     <div id="tipText">In order for your coupon to work..</div>
+                </div>
+            </div>
+
+            <!-- Required for Adding / Removing animation -->
+            <div id="popUp">
+                <div id="popUpBox">
+                    <span id="popUpText">An item has been added to your cart!</span>
                 </div>
             </div>
 
@@ -107,15 +114,14 @@
                 <p id="dishDescription"> Something about the dishes </p>
                 <p id="dishIngrediants"> Contained milk </p>
             </div>
-
             <input type="text" id="instructions" placeholder="Add special instructions">
             <br />
 
             <div id="buttons">
-                <button a href="#" onclick="addingToCart ();" id="addButton">Add To Cart</a></button>
-                <button a href="#" onclick="closeModal()" id="closeButton">Close</a></button>
+                <button onclick="removeFromCart();" id="removeButton">Remove From Cart</button>
+                <button a href="#" onclick="addingToCart ();" id="addButton">Add To Cart</button>
+                <button a href="#" onclick="closeModal()" id="closeButton">Close</button>
             </div>
-
         </div>
     </div>
 

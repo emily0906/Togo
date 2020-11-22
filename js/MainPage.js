@@ -52,6 +52,14 @@ function flushSuggestedSearches() {
     }
 }
 
+// Go to the restuarant page (if its valid)
+function goToRestaurant(name) {
+    // Check if its valid
+    for (var i = 0; i < restaurants.length; i++)
+        if (restaurants[i].name.toLowerCase() == name.toLowerCase())
+            redirectToRestaurantByName(restaurants[i].name);
+}
+
 // This function displays restaurants that the user is searching for
 function displayRelatedRestaurants(obj, event) {
     // Remove any previous searches from list
@@ -60,6 +68,10 @@ function displayRelatedRestaurants(obj, event) {
     var text = obj.value;
 
     if (typeof event !== 'undefined') {
+        // If they pressed enter
+        if (event.keyCode == 13)
+            return goToRestaurant(text);
+
         // Check for backspace character
         if (event.keyCode == 8)
             text = text.substring(0, text.length - 1);
@@ -73,6 +85,7 @@ function displayRelatedRestaurants(obj, event) {
         //if (text.trim() == "")
          //   return;
     }
+
     //else if (text == "")
     //    return; // Do not display empty text without a backspace character
 

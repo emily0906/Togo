@@ -54,8 +54,9 @@ function addContentsToCart(foodName) {
         document.getElementById('cartNotification').style.visibility = 'visible';
         window.localStorage.setItem('notification', 'true');
     }
+    foodNameInstr = foodName.split('/');
 
-    updateCart(addFoodToCartCookie(getFoodItemByName (foodName)));
+    updateCart(addFoodToCartCookie(getFoodItemByName(foodNameInstr[0]), foodNameInstr[1]));
 }
 
 // Updates the cart visually to append all elements to the cart
@@ -69,7 +70,7 @@ function updateCart(allFoodNamesCookieKey) {
         originalCartState = orders.innerHTML;
 
     // No food has been ordered yet
-    if (allFoodNamesCookieKey == "" || allFoodNamesCookieKey == null) {
+    if (allFoodNamesCookieKey == "" || allFoodNamesCookieKey == null || allFoodNamesCookieKey == ',') {
         orders.innerHTML = originalCartState;
 
         // Erase totals display if it exists
@@ -97,9 +98,13 @@ function updateCart(allFoodNamesCookieKey) {
     var dupeCount = []; // The number of elements, cooresponds to the index of nonDupes
 
     for (var i = 0; i < food.length; i++) {
-        if (food[i] == null || food[i].trim() == ',' || food[i].trim() == "") // Remove any Empty split
+        if (food[i] == null)
             continue;
+
         food[i] = food[i].trim();
+
+        if (food[i] == ',/' || food[i] == "" || food[i] == ',' || food[i] == '/') // Remove any Empty split
+            continue;
 
         var index = nonDupes.indexOf(food[i]);
         if (index != -1) {
@@ -119,18 +124,21 @@ function updateCart(allFoodNamesCookieKey) {
         // Go through each non-duplicate food item in the order, then display it
         // This will also display the total prices of the order
         for (var i = 0; i < nonDupes.length; i++) {
-            FoodItemObject = getFoodItemByName(nonDupes[i].trim());
+            FoodItemObject = getFoodItemByName(nonDupes[i]);
 
             if (FoodItemObject == null) {
                 alert("Incorrect names for food items detected, please check the console encase of any errors.");
                 return;
             }
 
+            var instructions = nonDupes[i].split('/')[1].trim();
+                    
             // Create objects
             var order = document.createElement("div");
             var price = document.createElement("span");
             var count = document.createElement("span");
             var name = document.createElement("span");
+            var instructionsObj = document.createElement("span");
             var addRemoveSection = document.createElement("div");
             var add = document.createElement("button");
             var remove = document.createElement("button");
@@ -142,7 +150,11 @@ function updateCart(allFoodNamesCookieKey) {
             add.textContent = "+"
             //rightBar.textContent = " ]";
             remove.textContent = "-";
+
+            instructionsObj.textContent = instructions;
+
             //addRemoveSection.appendChild(leftBar);
+            addRemoveSection.appendChild(instructionsObj);
             addRemoveSection.appendChild(add);
             addRemoveSection.appendChild(remove);
             //addRemoveSection.appendChild(rightBar);
@@ -155,6 +167,7 @@ function updateCart(allFoodNamesCookieKey) {
             add.className = "addToCart";
             name.className = "itemName";
             remove.className = "removeFromCart";
+            instructionsObj.className = "specialInstructions";
             add.id = "addToCart";
             remove.id = "removeFromCart";
             //leftBar.className = "bar";
@@ -298,13 +311,16 @@ function modifyCoupons(couponIndex) {
 }
 
 // Adds the item to the cart
-// Assumption: The text contained the items name followed by a '$'
+// Assumption: The text contained the items name followed by a 'xn', for any numbers n
 function addCartItem(event) {
     var foodName = event.target.parentNode.parentNode.textContent.trim();
     foodName = getFoodName(foodName); 
 
+    // Grab special instructions
+    var instrObj = getInstructionsChild(event.target.parentNode);
+
     // Update cart once added
-    updateCart(addFoodToCartCookieByName(foodName));
+    updateCart(addFoodToCartCookieByName(foodName + '/' + instrObj.textContent));
 }
 
 // Removes the item to the cart
@@ -313,8 +329,31 @@ function removeCartItem(event) {
     var foodName = event.target.parentNode.parentNode.textContent.trim();
     foodName = getFoodName(foodName); // .substring(0, foodName.indexOf('$')); KEEP COMMENT IN CASE OF REVERSION
 
+    // Grab special instructions
+    var instrObj = getInstructionsChild(event.target.parentNode);
+
     // Update cart once removed
-    updateCart(removeFoodCartCookie(foodName));
+    updateCart(removeFoodCartCookie(foodName + '/' + instrObj.textContent));
+}
+
+// Removing a cart item with only its name
+// First it will check for special instructions, otherwise only name
+function removeCartItemByName(nameAndInstr) {
+    // Update cart once removed
+    updateCart(removeItemByNameInstrCheck(nameAndInstr));
+}
+
+// Returns the span element containing the special instructions
+function getInstructionsChild(orderObj) {
+    // First find the element named 'addRemove'
+    var child = orderObj.childNodes;
+
+    for (var i = 0; i < child.length; i++) {
+        if (child[i].className == 'specialInstructions')
+            return child[i];
+    }
+
+    return null; // Error
 }
 
 // Returns a food name given a string that contains the foodname xamount $price

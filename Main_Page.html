@@ -11,9 +11,17 @@
 
     <!-- Include the top portion of the page. NOTE: Should be last AND requires Jquery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- 
+        The below 3 scripts are purely to include JQuery onto GitHub Pages. 
+        They can be removed for the purposes of this assignment, optionally
+
+        By Eddcapone
+    -->
     <link href="https://raw.githubusercontent.com/Eddcapone/custom_jquery-ui-1.12.1/master/jquery-ui.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://raw.githubusercontent.com/Eddcapone/custom_jquery-ui-1.12.1/master/jquery-ui.js"></script>
+    
     <script type="text/javascript" src="js/Top.js"></script>
     <script type="text/javascript" src="js/modelBox.js"></script>
     <script type="text/javascript" src="js/MainPage.js"></script>
@@ -68,12 +76,12 @@
                      <span id="empty-message">No items in your cart. Make an order!</span>
                 </div>
                 <div id="totalsSection">
-                    <span id="subtotal">Subtotal∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ <span class="price">$0.00</span></span>
+                    <span id="subtotal"><span class="text">Subtotal ______________</span><span class="price" id="subTextPrice">$0.00</span></span>
                     <hr class="cartDividor"/>
-                    <span id="GST">GST∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ <span class="price">$0.00</span></span><br />
-                    <span id="PST">PST∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ <span class="price">$0.00</span></span><br />
+                    <span id="GST"><span class="text">GST ______________</span> <span class="price">$0.00</span></span><br />
+                    <span id="PST"><span class="text">PST ______________</span> <span class="price">$0.00</span></span><br />
                     <hr class="cartDividor"/>
-                    <span id="Total">Total ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ <span class="price">$0.00</span><span id="totalAfterCoupon">$0.00</span></span>
+                    <span id="Total"><span class="text">Total ______________</span> <span class="price">$0.00</span><span id="totalAfterCoupon">$0.00</span></span>
                     <hr class="cartDividor" />
                 </div>
                 <div id="CouponTitle">Applying Coupon: <span id="Coupon">None</span></div>
@@ -81,6 +89,13 @@
                 <div id="tipSection">
                     <div id="tipTitle">! Important !</div>
                     <div id="tipText">In order for your coupon to work..</div>
+                </div>
+            </div>
+            
+            <!-- Required for Adding / Removing animation -->
+            <div id="popUp">
+                <div id="popUpBox">
+                    <span id="popUpText">An item has been added to your cart!</span>
                 </div>
             </div>
 
@@ -149,15 +164,14 @@
                 <p id="dishDescription"> Something about the dishes </p>
                 <p id="dishIngrediants"> Contained milk </p>
             </div>
-
             <input type="text" id="instructions" placeholder="Add special instructions">
             <br />
 
             <div id="buttons">
-                <button a href="#" onclick="addingToCart ();" id="addButton">Add To Cart</a></button>
-                <button a href="#" onclick="closeModal()" id="closeButton">Close</a></button>
+                <button onclick="removeFromCart();" id="removeButton">Remove From Cart</button>
+                <button a href="#" onclick="addingToCart ();" id="addButton">Add To Cart</button>
+                <button a href="#" onclick="closeModal()" id="closeButton">Close</button>
             </div>
-
         </div>
     </div>
 

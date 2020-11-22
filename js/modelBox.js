@@ -10,6 +10,17 @@ var formatter = new Intl.NumberFormat('en-US', {
 // Open the Modal
 function openModal() {
     document.getElementById("modal").style.display = "block";
+
+    var itemInCart = hasFoodItem(foodName); // Check if they already have the item in their cart
+
+    if (itemInCart) {
+        document.getElementById("removeButton").style.display = "inline-block";
+        document.getElementById("buttons").style.width = "95%";
+    }
+    else {
+        document.getElementById("removeButton").style.display = "none";
+        document.getElementById("buttons").style.width = "65%";
+    }
 }
 
 // Close the Modal
@@ -18,12 +29,58 @@ function closeModal() {
     foodName = null;
 }
 
+// Removing item from the cart
+function removeFromCart() {
+    if (foodName == null || foodName == "")
+        alert("We're Sorry, a problem has occurred. Please try ordering a different product. /0");
+
+    // Check for special instructions
+    var instructions = document.getElementById("instructions").value;
+
+    if (instructions.trim() != "")
+        removeCartItemByName(foodName + '/' + instructions);
+    else
+        removeCartItemByName(foodName + '/');
+
+    addedToCartFeedbackAnimation(false);
+    closeModal();
+}
+
 function addingToCart() {
     if (foodName == null || foodName == "")
         alert("We're Sorry, a problem has occurred. Please try ordering a different product. /0");
 
-    addContentsToCart(foodName);
+    // Check for special instructions
+    var instructions = document.getElementById("instructions").value;
+
+    if (instructions.trim() != "")
+        addContentsToCart(foodName + '/' + instructions);
+    else
+        addContentsToCart(foodName + '/');
+
+    addedToCartFeedbackAnimation(true);
     closeModal();
+}
+
+// Creates the animation to display something to the cart
+// Accepts the parameter isAdding
+// If isAdding is true the text will show 'added to your cart'
+// Otherwise, the tetxt is 'removed from your cart'
+function addedToCartFeedbackAnimation(isAdding) {
+    var text = document.getElementById("popUpText");
+
+    if (window.getComputedStyle(text.parentNode).display === 'none') {
+        if (isAdding)
+            text.textContent = "An item has been added to your cart!";
+        else
+            text.textContent = "An item has been removed from your cart!";
+
+        $("#popUpBox").fadeIn("slow", function () {
+            $("#popUpBox").fadeOut(4500, function () {
+                // Do nothing once complete
+            });
+        });
+    }
 }
 
 /*
