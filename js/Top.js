@@ -161,7 +161,7 @@ function updateCart(allFoodNamesCookieKey) {
             //rightBar.className = "bar";
 
             // Settings content values
-            price.textContent = "$" + formatter.format (FoodItemObject.price * dupeCount[i]);
+            price.textContent = " $" + formatter.format (FoodItemObject.price * dupeCount[i]);
             count.textContent = " x" + dupeCount[i];
 
             // Only allow a certain number of characters in the name
