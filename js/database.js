@@ -39,6 +39,7 @@ var foodItems = [
         "Noodles spiced so well it will bring you to a new season", "Spicy Rice Noodles, Pork, Avacado", 13.15, 5),
     new FoodItem(18, "Seafood Sushi", "images/food/Food - Sushi.jpg", "Ume Japanese",
         "A finely pieced seafood sushi dish", "Seasoned Rice, Smoked Salmon, Noodles, Sweet and Sour Sauce", 10.35, 5),
+   
 
     // -----------------------------------------------------------
     // This is excess / Situational foods (Drinks, excess stuff)
@@ -97,10 +98,28 @@ var foodItems = [
     // This is a special / Drink food
     // ------------------------------
     new FoodItem(41, "Veggie Smoothie", "images/food/Food - Vegetable Smoothie.jpg", "Gong Cha",
-        "Freshin the day with a cold one", "Yogurt, Sugar, Flaxseeds, Kiwi, Celery", 4.99, 3.9)
+        "Freshin the day with a cold one", "Yogurt, Sugar, Flaxseeds, Kiwi, Celery", 4.99, 3.9),
     // ------------------------------
 
-
+    new FoodItem(42, "Salmon Dinner", "images/food/Food - Salmon Dinner.jpg", "Stellas", 
+        "A Salmon Dinner with salad", "Salmon, Letuce, Lemon", 14.99, 4.6),
+    new FoodItem(43, "Pancakes", "images/food/Food - Pancakes.jpg", "Stellas", 
+        "Fluffly Pancakes", "Egg, Milk, Fruit", 12.99, 4.4),
+    new FoodItem(44, "Chocolate Cake", "images/food/Food - Chocolate Cake.jpg", "Stellas", 
+        "A slice of chocolate cake covered with fresh fruit", "Egg, Milk, Fruit", 9.99, 4.9),
+    new FoodItem(45, "Avocado and Cucumber Sushi", "images/food/Food - Sushi4.jpg", "Ume Japanese", 
+        "Sushi with Avocado and Cucumber", "Seaweed, Avocoda, Cucumber, Rice", 8.99, 4.3),
+    new FoodItem(46, "Noodles and Shrimp", "images/food/Food - Noodles Shrimp.jpg", "Gong Cha", 
+        "Noodles with Shrimp", "Noodles, Shrimp", 11.99, 3.9),
+    new FoodItem(47, "Shirataki Noodles", "images/food/Food - Noodles Shirataki.jpg", "Pho Kim Tuong", 
+        "Noodles ", "Shirataki Noodles, vegetables", 13.99, 3.9),
+    new FoodItem(48, "Kimchi Rice", "images/food/Food - Kimchi Rice.jpg", "Pho Kim Tuong", 
+        "A Kimchi Rice dish garnished with an egg ", "Rice, vegetables, egg", 14.99, 4.2),
+    new FoodItem(49, "Canned Pop Drinks", "images/food/Food - Pop Drink.jpg", null, 
+        "Coke, Sprite, Pepsie, Dr Pepper, Cream Soda, Orage Crush", "", 2.99, 4.8), 
+    new FoodItem(50, "Fired Pork Dish", "images/food/Food - Fired Pork.jpg", "Pho Kim Tuong",
+        "A fried pork dish", "Pork, Vegetables", 12.95, 4.7)
+        
     /*  HAVE NOT YET USED THE IMAGES OF SALMON OR PIZZA ! */
 ]
 
@@ -108,53 +127,53 @@ var foodItems = [
 var foodPackages = [
     new FoodPackage("Protein", "images/package/protein.jpg", new Menu(
         [
-            foodItems[3], foodItems[7], foodItems[12], foodItems[25], foodItems[26], foodItems[21] // Let 21 be last!!
+            foodItems[3], foodItems[7], foodItems[12], foodItems[25], foodItems[26], foodItems[42], foodItems[21] // Let 21 be last!!
         ]
     )),
     new FoodPackage("Vegan", "images/package/vegan.jpg", new Menu(
         [
-            foodItems[24], foodItems[0], foodItems[4], foodItems[9], foodItems[13], foodItems[16], foodItems[20]
+            foodItems[24], foodItems[0], foodItems[4], foodItems[9], foodItems[13], foodItems[16], foodItems[20], foodItems[46]
         ]
     )),
     new FoodPackage("Gluten Free", "images/package/glutenFree.jpg", new Menu(
         [
-            foodItems[0], foodItems[16], foodItems[1], foodItems[4], foodItems[6], foodItems[9], foodItems[15], foodItems[29], foodItems[25]
+            foodItems[0], foodItems[16], foodItems[1], foodItems[4], foodItems[6], foodItems[9], foodItems[15], foodItems[29], foodItems[25], foodItems[45]
         ]
     )),
     new FoodPackage("Vegetarian", "images/package/vegetarian.jpg", new Menu(
         [
-            foodItems[6], foodItems[16], foodItems[24], foodItems[30], foodItems[6], foodItems[13], foodItems[34], foodItems[1], foodItems[0], foodItems[19]
+            foodItems[6], foodItems[16], foodItems[24], foodItems[30], foodItems[6], foodItems[13], foodItems[34], foodItems[1], foodItems[0], foodItems[19], foodItems[45]
         ]
     )),
     new FoodPackage("Low Calories", "images/package/weight_loss.jpg", new Menu(
         [
-            foodItems[4], foodItems[1], foodItems[0], foodItems[6], foodItems[8], foodItems[16], foodItems[34], foodItems[13], foodItems[15], foodItems[19]
+            foodItems[4], foodItems[1], foodItems[0], foodItems[6], foodItems[8], foodItems[16], foodItems[34], foodItems[13], foodItems[15], foodItems[19], foodItems[45], foodItems[46]
         ]
     )),
     new FoodPackage("Locally Made", "images/package/organic.jpg", new Menu(
         [
-            foodItems[1], foodItems[5], foodItems[6], foodItems[22], foodItems[24], foodItems[28], foodItems[10]
+            foodItems[1], foodItems[5], foodItems[6], foodItems[22], foodItems[24], foodItems[28], foodItems[10], foodItems[43]
         ]
     )),
     /* Removed Organic for Deserts */
     new FoodPackage("Deserts", "images/package/deserts.jpg", new Menu(
         [
-            foodItems[10], foodItems[22], foodItems[27], foodItems[29]
+            foodItems[10], foodItems[22], foodItems[27], foodItems[29], foodItems[44]
         ]
     )),
     new FoodPackage("Kosher", "images/package/cocher.jpg", new Menu(
         [
-            foodItems[28], foodItems[29], foodItems[0], foodItems[5], foodItems[8]
+            foodItems[28], foodItems[29], foodItems[0], foodItems[5], foodItems[8], foodItems[45], foodItems[46]
         ]
     )),
     new FoodPackage("Halal", "images/package/halal.png", new Menu(
         [
-            foodItems[13], foodItems[30], foodItems[0], foodItems[20], foodItems[31] // Leave 31 last on list
+            foodItems[13], foodItems[30], foodItems[0], foodItems[20], foodItems[46], foodItems[31] // Leave 31 last on list
         ]
     )),
     new FoodPackage("Keto", "images/package/keto.jpg", new Menu(
         [
-            foodItems[32], foodItems[40]
+            foodItems[32], foodItems[40], foodItems[45], foodItems[8], foodItems[46]
         ]
     ))
 ];
@@ -179,6 +198,11 @@ var restaurants = [
                 Desert:
                 [
                     foodItems[10]
+                ],
+                Drinks:
+                [
+                    foodItems[19], 
+                    foodItems[49]
                 ]
             }
         ),
@@ -204,7 +228,8 @@ var restaurants = [
                 Drinks:
                 [
                     foodItems[20],
-                    foodItems[19]
+                    foodItems[19],
+                    foodItems[49]
                 ]
             }
         ),
@@ -222,7 +247,13 @@ var restaurants = [
                     foodItems[14],
                     foodItems[15],
                     foodItems[4],
-                    foodItems[18]
+                    foodItems[18],
+                    foodItems[45]
+                ],
+                Drinks:
+                [
+                    foodItems[19], 
+                    foodItems[49]
                 ]
             }
         ), 105),
@@ -239,7 +270,13 @@ var restaurants = [
                 [
                     foodItems[23],
                     foodItems[11],
-                    foodItems[35]
+                    foodItems[35],
+                    foodItems[46]
+                ],
+                Drinks:
+                [
+                    foodItems[19], 
+                    foodItems[49]
                 ]
             }
             ), 21),
@@ -255,6 +292,11 @@ var restaurants = [
                     foodItems[37],
                     foodItems[38],
                     foodItems[39]
+                ],
+                Drinks:
+                [
+                    foodItems[19], 
+                    foodItems[49]
                 ]
             }
         )
@@ -277,7 +319,8 @@ var restaurants = [
                     [
                         foodItems[31],
                         foodItems[20],
-                        foodItems[19]
+                        foodItems[19],
+                        foodItems[49]
                     ]
             }
         )
@@ -298,6 +341,11 @@ var restaurants = [
                 Desert:
                     [
                         foodItems[27]
+                    ],
+                    Drinks:
+                    [
+                        foodItems[19], 
+                        foodItems[49]
                     ]
             }
         )
@@ -313,6 +361,14 @@ var restaurants = [
                 Mains:
                     [
                         foodItems[17],//viet rice noodles
+                        foodItems[47],
+                        foodItems[48],
+                        foodItemsp[50]
+                    ],
+                    Drinks:
+                    [
+                        foodItems[19], 
+                        foodItems[49]
                     ]
             }
         )
@@ -325,10 +381,24 @@ var restaurants = [
                     foodItems[16],
                     foodItems[34]
                 ],
+                Breakfast:
+                [
+                    foodItems[43]
+                ],
                 Mains:
                 [
                     foodItems[33],
-                    foodItems[36]
+                    foodItems[36],
+                    foodItems[42]
+                ], 
+                Dessert:
+                [
+                    foodItems[44]
+                ],
+                Drinks:
+                [
+                    foodItems[19], 
+                    foodItems[49]
                 ]
             }
         )
