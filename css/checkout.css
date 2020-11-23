@@ -161,6 +161,11 @@ li {
     text-align:right;
 }
 
+#totalsSection #subTextPrice {
+    /* The subTotal text was off a bit*/
+    left:4px;
+}
+
 #allOrders .count {
     position:relative;
     display:inline-block;
