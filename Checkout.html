@@ -43,6 +43,9 @@
             </script>
         </div>
     </div>
+
+    <div class="fab"><a href= "Main_Page.html" id="test" button onclick="myFunction()">Place order</a></div>
+
     <hr class="dividers" />
     <!-- the body of checkout page-->
     <p class="page-title">Checkout</p>
@@ -56,22 +59,21 @@
     <div id="allOrders">
          <span id="empty-message">No items in your cart. Make an order!</span>
     </div>
-    <div id="totalsSection">
-        <span id="subtotal">Subtotal∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ <span class="price"> $0.00</span></span>
-        <hr class="cartDividor"/>
-        <span id="GST">GST∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ <span class="price"> $0.00</span></span><br />
-        <span id="PST">PST∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ <span class="price"> $0.00</span></span><br />
-        <hr class="cartDividor"/>
-        <span id="Total">Total ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ <span class="price"> $0.00</span><span id="totalAfterCoupon">$0.00</span></span>
-        <hr class="cartDividor" />
-    </div>
+ <div id="totalsSection">
+    <span id="subtotal"><span class="text">Subtotal _______________________________</span><span class="price" id="subTextPrice">$0.00</span></span>
+    <hr class="cartDividor"/>
+    <span id="GST"><span class="text">GST ____________________________________________</span> <span class="price">$0.00</span></span><br />
+    <span id="PST"><span class="text">PST ____________________________________________</span> <span class="price">$0.00</span></span><br />
+    <hr class="cartDividor"/>
+    <span id="Total"><span class="text">Total __________________________________</span> <span class="price"></span><span id="totalAfterCoupon"></span></span>
+    <hr class="cartDividor" />
+</div>
     <div id="CouponTitle">Applying Coupon: <span id="Coupon">None</span></div>
     <div id="tipSection">
         <div id="tipTitle">! Important !</div>
         <div id="tipText">In order for your coupon to work..</div>
     </div>
   <h6>Expect the Best</h6>
-  <div class="fab"><a href= "Main_Page.html" button onclick="myFunction()">Place order</a></div>
 </div>
 <script>
 function myFunction() {

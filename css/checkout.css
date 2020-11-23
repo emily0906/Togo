@@ -29,6 +29,8 @@ body {
   border: none;
   border-radius:3px;
   box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+
+  overflow:hidden;
 }
 
 /* Image on the left side */
@@ -62,6 +64,7 @@ img.left {
   margin-right: 3px;
   overflow-y:auto;
   height: 500px;
+  overflow-x:hidden;
 }
 
 h1 {
@@ -108,9 +111,9 @@ li {
 
 /* Floating action button */
 .fab {
-  position: absolute;
-  right: 40px;
-  bottom: -40px;
+  position: fixed;
+  right: 8%;
+  bottom:110px;
   box-sizing: border-box;
   padding-top: 18px;
   background-color: rgb(253, 94, 46);
@@ -123,6 +126,11 @@ li {
   /* -webkit-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75); */
   box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+  z-index:10200;
+}
+
+.fab #test {
+    z-index:999999;
 }
 
 .card #totalsSection{
@@ -132,6 +140,68 @@ li {
   margin-bottom: 30px;
   display:inline-block;
   color:#4B4B4B;
+  left:6px;
+}
+
+#allOrders .itemName {
+    position:relative;
+    display:inline-block;
+    width:200px; /* This sets the offset of where the count will be */
+    overflow:hidden;
+    overflow-y:no-content;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+#allOrders .price {
+    position:relative;
+    display:inline-block;
+    margin-left:45px;
+    margin-right:0;
+    text-align:right;
+}
+
+#allOrders .count {
+    position:relative;
+    display:inline-block;
+    right:1220px;
+    width:40px; /* Also sets the offset of where the price will be*/
+}
+
+#totalsSection .text {
+    display:inline-block;
+    width:285px; /* Defines the position of the price element ('shoves it over')*/
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:clip;
+}
+
+#allOrders .addToCart, #allOrders .removeFromCart {
+    position:relative;
+    left:15px;
+}
+
+#totalsSection .price {
+    position:relative;
+    display:inline-block;
+}
+
+#allOrders .specialInstructions {
+    margin-left:15px;
+    right:5%;
+    display:inline-block;
+    color:darkgray;
+    width:150px;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    overflow-y:no-content;
+}
+
+#totalsSection #totalAfterCoupon {
+    display:inline-block;
+    margin-left:15px;
+    color:green;
 }
 
 .cartDividor {
@@ -151,6 +221,7 @@ a {
   /* margin-top:-20px; */
   margin-bottom: 20px;
   font-size: 16.5px;
+  visibility:hidden;
   color:#3a3a3a;
   /* top:-55px !important; */
 }
