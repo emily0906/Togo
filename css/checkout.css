@@ -62,9 +62,8 @@ img.left {
 .right {
   margin-left: 510px;
   margin-right: 3px;
-  overflow-y:auto;
-  height: 500px;
-  overflow-x:hidden;
+  height: 520px;
+  overflow:hidden;
 }
 
 h1 {
@@ -112,8 +111,8 @@ li {
 /* Floating action button */
 .fab {
   position: fixed;
-  right: 8%;
-  bottom:110px;
+  right: 5%;
+  bottom:10px;
   box-sizing: border-box;
   padding-top: 18px;
   background-color: rgb(253, 94, 46);
@@ -137,7 +136,6 @@ li {
   position:relative;
   width:auto;
   top: 20px;
-  margin-bottom: 30px;
   display:inline-block;
   color:#4B4B4B;
   left:6px;
@@ -151,6 +149,16 @@ li {
     overflow-y:no-content;
     text-overflow:ellipsis;
     white-space:nowrap;
+}
+
+#allOrders {
+    /*
+        If the user has lots of orders, there will be a scroll bar for the items
+        Rather than the items being continually displayed
+    */
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 200px;
 }
 
 #allOrders .price {
@@ -181,6 +189,10 @@ li {
     text-overflow:clip;
 }
 
+#allOrders .itemName {
+    top:5px; /* Remove offset*/
+}
+
 #allOrders .addToCart, #allOrders .removeFromCart {
     position:relative;
     left:15px;
@@ -200,7 +212,6 @@ li {
     white-space:nowrap;
     text-overflow:ellipsis;
     overflow:hidden;
-    overflow-y:no-content;
 }
 
 #totalsSection #totalAfterCoupon {
@@ -222,9 +233,10 @@ a {
 
 .card #CouponTitle {
   position:relative;
-  top: -40px;
+  top: -56px;
+  left:8px;
   /* margin-top:-20px; */
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-size: 16.5px;
   visibility:hidden;
   color:#3a3a3a;
