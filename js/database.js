@@ -363,7 +363,7 @@ var restaurants = [
                         foodItems[17],//viet rice noodles
                         foodItems[47],
                         foodItems[48],
-                        foodItemsp[50]
+                        foodItems[50]
                     ],
                     Drinks:
                     [
