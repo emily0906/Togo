@@ -30,24 +30,22 @@ body {
   border-radius:3px;
   box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
 
-  overflow:hidden;
 }
 
 /* Image on the left side */
-.thumbnail .left{
+img.left{
   float: left;
   position: absolute;
-  left: 220px;
-  top: 220px;
+  left: -30px;
+  top: 20px;
   height: 400px;
-  width: 500px;
+  width: 510px;
   object-fit: cover;
   border-radius: 3px;
-  box-shadow: 10px 10px 70px 0px rgba(90, 90, 90, 0.75);
-  /* overflow: hidden; */
+  box-shadow: 10px 10px 70px 0px rgba(61, 61, 61, 0.788);
 }
 
-img.left {
+/* img.left {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -56,7 +54,7 @@ img.left {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-}
+} */
 
 /* Right side of the card */
 .right {
@@ -111,7 +109,7 @@ li {
 /* Floating action button */
 .fab {
   position: fixed;
-  right: 5%;
+  right: 250px;
   bottom:10px;
   box-sizing: border-box;
   padding-top: 18px;
