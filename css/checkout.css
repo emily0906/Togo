@@ -29,23 +29,23 @@ body {
   border: none;
   border-radius:3px;
   box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
-
 }
 
 /* Image on the left side */
-img.left{
+.thumbnail .left{
   float: left;
   position: absolute;
-  left: -30px;
-  top: 20px;
+  left: 220px;
+  top: 220px;
   height: 400px;
-  width: 510px;
+  width: 500px;
   object-fit: cover;
   border-radius: 3px;
-  box-shadow: 10px 10px 70px 0px rgba(61, 61, 61, 0.788);
+  box-shadow: 10px 10px 70px 0px rgba(90, 90, 90, 0.75);
+  /* overflow: hidden; */
 }
 
-/* img.left {
+img.left {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -54,18 +54,17 @@ img.left{
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-} */
+}
 
 /* Right side of the card */
 .right {
   margin-left: 510px;
   margin-right: 3px;
   height: 520px;
-  overflow:hidden;
 }
 
 h1 {
-  padding-top: 15px;
+  padding-top: 20px;
   font-size: 1.3rem;
   color: #4B4B4B;
 }
@@ -109,7 +108,7 @@ li {
 /* Floating action button */
 .fab {
   position: fixed;
-  right: 250px;
+  right: 16%;
   bottom:10px;
   box-sizing: border-box;
   padding-top: 18px;
@@ -123,17 +122,13 @@ li {
   /* -webkit-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75); */
   box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
-  z-index:10200;
-}
-
-.fab #test {
-    z-index:999999;
+  z-index:10;
 }
 
 .card #totalsSection{
   position:relative;
   width:auto;
-  top: 20px;
+  top: 10px;
   display:inline-block;
   color:#4B4B4B;
   left:6px;
@@ -157,6 +152,8 @@ li {
     overflow-x: hidden;
     overflow-y: auto;
     height: 200px;
+    background-color: rgb(245, 245, 245);
+    margin-right: 25px;
 }
 
 #allOrders .price {
@@ -231,8 +228,8 @@ a {
 
 .card #CouponTitle {
   position:relative;
-  top: -56px;
-  left:8px;
+  top: -70px;
+  /* left:8px; */
   /* margin-top:-20px; */
   margin-bottom: 15px;
   font-size: 16.5px;
@@ -244,43 +241,47 @@ a {
 .card #CouponTitle #Coupon {
   color:rgb(47, 141, 47);
 }
+
 .card #tipSection {
   position: relative;
-  top: -40px;
+  bottom: 245px;
+  left: 510px;
   visibility: hidden;
   text-align:left;
-  /* padding:10px; */
-  background-color: rgba(29, 29, 29, 0.589); /* Black w/ opacity */
-  border: none;
+  /* padding:5px; */
+  background-color: rgba(29, 29, 29, 0.589);
+  /* border: none; */
+  border: solid rgba(92, 173, 54, 0.548) 2px;
   color: white;
   padding:10px;    
   font-weight: normal;
   border-radius:3px;
-  width: 400px;
+  width: 150px;
+  z-index: 200;
 }
 
 .card #tipSection #tipTitle {
   text-align:center;
-  width: 200px;
+  /* width: 150px; */
   /* margin: auto; */
   background-color:rgba(114, 194, 68, 0.753);
   border-radius:5px;
   font-size:18px;
-  padding: 3px;
+  padding: 2px;
   position: relative;
   /* top: 50px; */
 }
 
 .card #tipSection:after {
-  content: '';
+	content: '';
   position: absolute;
-  margin-left: -10px;
-	margin-top: -10px;
-	top: 0;
-	left: 20%;
+  margin-top: -10px;
+	margin-left: -10px;
+	left: 0;
+	top: 90%;
 	width: 0;
 	height: 0;
 	border: 10px solid transparent;
-	border-bottom-color:rgba(29, 29, 29, 0.589);
-	border-top: 0;
+	border-right-color:rgba(92, 173, 54, 0.548);
+	border-left: 0;
 }

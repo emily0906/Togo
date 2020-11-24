@@ -547,7 +547,7 @@ This is the lines that divide the portions of the screens
 
     color:white;
     font-weight:normal;
-    /* display:none; */
+    display:none;
     overflow: visible;
     z-index:100;
 }
@@ -579,7 +579,7 @@ This is the lines that divide the portions of the screens
     
         color:white;
         font-weight:normal;
-        /* display:none; */
+        display:none;
         overflow: visible;
         z-index:100;
     }
