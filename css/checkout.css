@@ -253,7 +253,7 @@ a {
   /* border: none; */
   border: solid rgba(92, 173, 54, 0.548) 2px;
   color: white;
-  padding:10px;    
+  padding:10px;
   font-weight: normal;
   border-radius:3px;
   width: 150px;
@@ -284,4 +284,55 @@ a {
 	border: 10px solid transparent;
 	border-right-color:rgba(92, 173, 54, 0.548);
 	border-left: 0;
+}
+
+.box {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+.confirmation {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .confirmation {
+    width: 100%;
+  }
+}
+
+.box button {
+  color: white; /* Text color */
+  background-color: transparent; /* Remove background color */
+  border: 2px solid white; /* Border thickness, line style, and color */
+  border-radius: 5px; /* Adds curve to border corners */
+  text-transform: uppercase; /* Make letters uppercase */
+  width:150px;
+  height:40px;
+  margin-left:40%;
+  margin-top:20px;
+  cursor:pointer;
+}
+.box button:hover {
+  opacity: 0.7;
 }

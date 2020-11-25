@@ -36,7 +36,7 @@
 #modal-content {
   float: left;
   width: 260px;
-  height: 220px;  
+  height: 220px;
   margin-right: 20px;
   margin-bottom: 20px;
   object-fit: cover;
@@ -166,4 +166,3 @@
   font-family: "Roboto", sans-serif;
   text-indent: .5cm;
 }
-

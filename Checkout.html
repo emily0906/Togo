@@ -47,7 +47,13 @@
         </div>
     </div>
 
-    <div class="fab"><a href="Main_Page.html" id="test" button onclick="myFunction()">Place Order</a></div>
+    <div class="fab"><div id="test" button onclick="openBox()">Place Order</div></div>
+    <div id ="myBox" class= "box">
+      <div class= "confirmation">
+        <h2>Order sucessful</h2>
+      </div>
+      <a href="index.html"><button onclick="closeBox()">Done</button></a>
+    </div>
 
     <hr class="dividers" />
     <!-- the body of checkout page-->
@@ -84,9 +90,14 @@
             <h6>Expect the Best</h6>
         </div><!-- .card -->
         <script>
-            function myFunction() {
-                confirm("Order sucessful");
-            }
+        function openBox() {
+          document.getElementById("myBox").style.display = "block";
+        }
+
+        // Close the Modal
+        function closeBox() {
+          document.getElementById("myBox").style.display = "none";
+        }
         </script>
 
 </body>
