@@ -3,17 +3,20 @@
 <head>
     <title>To Go | Welcome</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="js/User.js"></script>
     <script type="text/javascript" src="js/Index.js"></script>
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
 </head>
 
 <body>
     <div class="header">
-        <form>
+        <form id="form">
             <h1 class="welcome_text">Expect The Best From Wherever You Are</h1>
             <div class="form-box">
+                <div id="changeFeedback">An address must have a number followed by a word. For example, 110 edward</div>
                 <input type="text" id="search-field" placeholder="Please Enter Your Address Here" onkeydown="return keyPressed(this)">
-                <a onclick="submitAddress();"><button class="search-btn" type="button"> Confirm </button></a>
+                <a onclick="submitCheck();"><button class="search-btn" type="button"> Confirm </button></a>
             </div>
         </form>
     </div>

@@ -169,8 +169,11 @@ function getSpecificStorageValue(storageKey) {
 }
 
 function addressKeyPress(elem) {
-    if (event.key === 'Enter') {
-        addressChange();
+
+    if (correctFormat(elem.value)) {
+        if (event.key === 'Enter') {
+            addressChange();
+        }
     }
 }
 
@@ -180,4 +183,22 @@ function redirectToRestaurantByObject(obj) {
 
     // Redirect the user to another page
     window.location = "FoodItemDisplayer.html";
+}
+
+function addressKeyPress(elem) {
+
+    if (correctFormat(elem.value)) {
+        if (event.key === 'Enter') {
+            addressChange();
+        }
+    }
+}
+
+function addressSubmitCheck() {
+    if (correctFormat(document.getElementById("deliveryAddress").value)) {
+        validInput();
+        addressChange();
+    }
+    else
+        invalidInput();
 }

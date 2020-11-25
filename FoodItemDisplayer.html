@@ -30,9 +30,10 @@
 
                 <!-- Address at top of screen -->
                 <span class="topAddress">
+                    <span id="failedFeedback">Please enter an address.</span>
                     <span id="changeFeedback">Address Updated!</span>
                     <input type="text" id="deliveryAddress" onkeydown="addressKeyPress(this);" />
-                    <button class="loc-btn" type="button" onclick="addressChange();"> Confirm </button>
+                    <button class="loc-btn" type="button" onclick="addressSubmitCheck();"> Confirm </button>
                     <img src="images/locationIcon.png" />
                 </span>
 

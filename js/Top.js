@@ -437,3 +437,52 @@ function makeOrder() {
     alert("Order has been made!");
     alert("This page is not created yet");
 }
+
+function correctFormat(str) {
+    var hasNumber = false;
+    var hasWord = false;
+    str = str.trim();
+    if (str == "") {
+        validInput();
+        return false;
+    }
+
+    for (var i = 0; i < str.length; i++) {
+        if (!hasNumber && str.charAt(i) >= '0' && str.charAt(i) <= '9') {
+            hasNumber = true;
+        }
+        else if (!hasNumber && (str.charAt(i) < '0' || str.charAt(i) > '9')) {
+            invalidInput();
+            return false;
+        }
+
+        if (hasNumber && (str.charAt(i) >= 'a' && str.charAt(i) <= 'z') || (str.charAt(i) >= 'A' && str.charAt(i) <= 'Z') && !hasWord) {
+            hasWord = true;
+        }
+
+        // Can't have a number after the word
+        if (hasWord && str.charAt(i) >= '0' && str.charAt(i) <= '9') {
+            invalidInput();
+            return false;
+        }
+    }
+
+    // Show the user the problem after 4 numbers
+    if (hasNumber && !hasWord && str.length > 4)
+        invalidInput();
+
+    if (hasWord && hasNumber) {
+        validInput();
+        return true;
+    }
+
+    return false;
+}
+
+function invalidInput() {
+    document.getElementById("failedFeedback").style.display = "block";
+}
+
+function validInput() {
+    document.getElementById("failedFeedback").style.display = "none";
+}

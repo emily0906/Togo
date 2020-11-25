@@ -350,7 +350,19 @@ function redirectToRestaurantByName(restaurantName) {
 }
 
 function addressKeyPress(elem) {
-    if (event.key === 'Enter') {
+
+    if (correctFormat(elem.value)) {
+        if (event.key === 'Enter') {
+            addressChange();
+        }
+    }
+}
+
+function addressSubmitCheck() {
+    if (correctFormat(document.getElementById("deliveryAddress").value)) {
+        validInput();
         addressChange();
     }
+    else
+        invalidInput();
 }

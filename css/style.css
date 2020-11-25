@@ -16,6 +16,35 @@ body {
 
 }
 
+.header #changeFeedback {
+    position:fixed;
+
+    background-color: rgba(0, 0, 0, 0.582);
+    width:350px;
+    height:50px;
+    padding: 5px;
+    bottom:25%;
+    border-radius: 5px;
+
+    color:red;
+    font-weight:normal;
+    display:none;
+}
+
+.header #changeFeedback:after {
+    content: '';
+    position: absolute;
+    margin-left: -10px;
+	margin-top: -10px;
+	top: 0;
+	left: 8%;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-bottom-color:rgba(0, 0, 0, 0.445);
+	border-top: 0;
+}
+
 .welcome_text
 {
   color: rgb(255, 255, 255);
@@ -24,7 +53,7 @@ body {
   letter-spacing:2px;
   text-align: center;
   font-family: Gill Sans, sans-serif;
-  font-weight: 30;
+  font-weight: 300;
 }
 
 #search-field

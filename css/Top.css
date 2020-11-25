@@ -598,3 +598,32 @@ This is the lines that divide the portions of the screens
         border-top: 0;
     }
 }
+
+.topAddress #failedFeedback {
+    position:fixed;
+
+    background-color: rgba(0, 0, 0, 0.582);
+    width:179px;
+    height:20px;
+    padding: 5px;
+    bottom:25%;
+    border-radius: 5px;
+    top:77px;
+    left:35%;
+    color:red;
+    font-weight:normal;
+    display:none;
+}
+.topAddress #failedFeedback:after {
+    content: '';
+    position: absolute;
+    margin-left: -10px;
+	margin-top: -10px;
+	top: 0;
+	left: 8%;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-bottom-color:rgba(0, 0, 0, 0.445);
+	border-top: 0;
+}
