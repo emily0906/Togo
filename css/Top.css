@@ -538,11 +538,11 @@ This is the lines that divide the portions of the screens
 
 .popUp #popUpBox {
     position: fixed;
-    right:16%;
-    top:80px;
+    right:7.5%;
+    top:30px;
 
     background-color: rgba(0, 0, 0, 0.582);
-    padding: 5px;
+    padding: 6px;
     border-radius: 5px;
 
     color:white;
@@ -553,17 +553,29 @@ This is the lines that divide the portions of the screens
 }
 
 .popUp #popUpBox:after {
-    content: '';
+    /* content: '';
     position: absolute;
     margin-left: -10px;
 	margin-top: -10px;
-	top: 0;
-	left: 50%;
+	left: 0;
+	top: 50%;
 	width: 0;
 	height: 0;
 	border: 10px solid transparent;
-	border-bottom-color:rgba(0, 0, 0, 0.445);
-    border-top: 0;
+	border-bottom-color:rgba(0, 0, 0, 0.582);
+    border-left: 0; */
+
+    content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 5px solid transparent;
+	border-right-color: rgba(0, 0, 0, 0.582);
+	border-left: 0;
+	margin-top: -5px;
+	margin-left: -5px;
 }
 /* Small screens, the pop up still points at cart */
 /* FIXME does not work */
@@ -594,7 +606,7 @@ This is the lines that divide the portions of the screens
         width: 0;
         height: 0;
         border: 10px solid transparent;
-        border-bottom-color:rgba(0, 0, 0, 0.445);
+        border-bottom-color:rgba(0, 0, 0, 0.582);
         border-top: 0;
     }
 }

@@ -71,9 +71,9 @@ function addedToCartFeedbackAnimation(isAdding) {
 
     if (window.getComputedStyle(text.parentNode).display === 'none') {
         if (isAdding)
-            text.textContent = "An item is added!";
+            text.textContent = "Added to Cart!";
         else
-            text.textContent = "An item is removed!";
+            text.textContent = "Removed from Cart!";
 
         $("#popUpBox").fadeIn("slow", function () {
             $("#popUpBox").fadeOut(4500, function () {
