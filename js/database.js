@@ -118,7 +118,9 @@ var foodItems = [
     new FoodItem(49, "Canned Pop Drinks", "images/food/Food - Pop Drink.jpg", null, 
         "Coke, Sprite, Pepsie, Dr Pepper, Cream Soda, Orage Crush", "", 2.99, 4.8), 
     new FoodItem(50, "Fired Pork Dish", "images/food/Food - Fired Pork.jpg", "Pho Kim Tuong",
-        "A fried pork dish", "Pork, Vegetables", 12.95, 4.7)
+        "A fried pork dish", "Pork, Vegetables", 12.95, 4.7),
+    new FoodItem(51, "Cookies (GF&VGN)", "images/food/cookies.jpg", "Smittys",
+        "A special treat for the special occasion.", "Coconut Flour, Dair Free Chocolate Chips, Peanut Butter", 2.95, 5)
         
     /*  HAVE NOT YET USED THE IMAGES OF SALMON OR PIZZA ! */
 ]
@@ -132,12 +134,12 @@ var foodPackages = [
     )),
     new FoodPackage("Vegan", "images/package/vegan.jpg", new Menu(
         [
-            foodItems[24], foodItems[0], foodItems[4], foodItems[9], foodItems[13], foodItems[16], foodItems[20], foodItems[46]
+            foodItems[24], foodItems[0], foodItems[4], foodItems[9], foodItems[13], foodItems[16], foodItems[20], foodItems[51], foodItems[46]
         ]
     )),
     new FoodPackage("Gluten Free", "images/package/glutenFree.jpg", new Menu(
         [
-            foodItems[0], foodItems[16], foodItems[1], foodItems[4], foodItems[6], foodItems[9], foodItems[15], foodItems[29], foodItems[25], foodItems[45]
+            foodItems[0], foodItems[16], foodItems[1], foodItems[4], foodItems[6], foodItems[9], foodItems[15], foodItems[29], foodItems[51], foodItems[25], foodItems[45]
         ]
     )),
     new FoodPackage("Vegetarian", "images/package/vegetarian.jpg", new Menu(
@@ -158,7 +160,7 @@ var foodPackages = [
     /* Removed Organic for Deserts */
     new FoodPackage("Deserts", "images/package/deserts.jpg", new Menu(
         [
-            foodItems[10], foodItems[22], foodItems[27], foodItems[29], foodItems[44]
+            foodItems[10], foodItems[22], foodItems[27], foodItems[29], foodItems[44], foodItems[51]
         ]
     )),
     new FoodPackage("Kosher", "images/package/cocher.jpg", new Menu(
@@ -340,7 +342,8 @@ var restaurants = [
                     ],
                 Desert:
                     [
-                        foodItems[27]
+                        foodItems[27],
+                        foodItems[51]
                     ],
                     Drinks:
                     [
