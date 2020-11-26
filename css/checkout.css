@@ -310,6 +310,7 @@ a {
   color: #ccc;
   padding: 10px 0;
   height: 150px;
+  margin-top: 150px;
 
   animation-name: zoom;
   animation-duration: 0.6s;
@@ -330,10 +331,10 @@ a {
   text-transform: uppercase; /* Make letters uppercase */
   width:150px;
   height:40px;
-  margin-left:40%;
-  margin-top:20px;
+  /* margin-left:50%;
+  margin-top:20px; */
   cursor:pointer;
 }
 .box button:hover {
-  opacity: 0.7;
+  opacity: 0.5;
 }

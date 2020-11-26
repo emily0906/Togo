@@ -312,6 +312,7 @@ function rotateCouponSection(amount) {
     circles[curCouponSection].style.opacity = "0.2";
 }
 
+
 // Customized modulo to evaluate positive only numbers
 // Returns a % b, result is always positive
 function mod(a, b) {
