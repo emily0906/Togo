@@ -119,8 +119,8 @@ var foodItems = [
         "Coke, Sprite, Pepsie, Dr Pepper, Cream Soda, Orage Crush", "", 2.99, 4.8), 
     new FoodItem(50, "Fired Pork Dish", "images/food/Food - Fired Pork.jpg", "Pho Kim Tuong",
         "A fried pork dish", "Pork, Vegetables", 12.95, 4.7),
-    new FoodItem(51, "Cookies (GF&VGN)", "images/food/cookies.jpg", "Smittys",
-        "A special treat for the special occasion.", "Coconut Flour, Dair Free Chocolate Chips, Peanut Butter", 2.95, 5)
+    new FoodItem(51, "Cookie (GF&VGN)", "images/food/cookies.jpg", "Smittys",
+        "A special treat for the special occasion.", "Coconut Flour, Dairy Free Chocolate Chips, Peanut Butter", 2.95, 5)
         
     /*  HAVE NOT YET USED THE IMAGES OF SALMON OR PIZZA ! */
 ]
