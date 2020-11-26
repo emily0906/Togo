@@ -18,6 +18,44 @@ body {
                  -10px 20px 5px rgba(0,0,0,0.05);
 }
 
+#cannotCheckout {
+    position:fixed;
+    display:block;
+    width:350px;
+    height:20px;
+    right:16%;
+    transform:translate(135px, 0);
+    bottom:97px;
+    display:none;
+    z-index:100;
+    text-align:center;
+    padding: 5px;
+    border-radius: 5px;
+    border: solid white 2px; 
+    color:rgb(255, 255, 255);
+    font-weight:500;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    border: solid black 2px; 
+    background-color: rgba(145, 25, 25, 0.582);
+}
+
+#cannotCheckout:after {
+    content: '';
+    position: absolute;
+    margin-left: -10px;
+	margin-top: -10px;
+	top: 40px;
+	left: 51%;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-bottom-color:black;
+	border-top: 0;
+    transform:rotate(180deg);
+}
+
 /* The card */
 .card {
   position: relative;

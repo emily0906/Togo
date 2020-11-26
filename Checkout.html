@@ -47,7 +47,7 @@
         </div>
     </div>
 
-    <div class="fab"><div id="test" button onclick="openBox()">Place Order</div></div>
+    <div class="fab"><div id="test" button onclick="goCheckout();">Place Order</div></div>
     <div id ="myBox" class= "box">
       <div class= "confirmation">
         <h2>Order sucessful</h2>
@@ -56,6 +56,33 @@
       
     </div>
 
+    <script>
+        function goCheckout() {
+            var obj = document.getElementById("empty-message");
+
+            // We have an order
+            if (obj == null) {
+                // Redirect the user to checkout page
+                openBox();
+            }
+            else {
+                // No order, display error message
+                checkOutFeedbackAnimation();
+            }
+        }
+
+    function checkOutFeedbackAnimation() {
+        $("#cannotCheckout").fadeIn("slow", function () {
+            document.getElementById("cannotCheckout").style.opacity = "3.0"; // Slower fadeout
+            $("#cannotCheckout").fadeOut(8000, function () {
+                // Do nothing once complete
+            });
+        });
+    }
+
+    </script>
+
+    <span id="cannotCheckout">Cannot checkout. No items in cart.</span>
     <hr class="dividers" />
     <!-- the body of checkout page-->
     <p class="page-title">Checkout</p>
