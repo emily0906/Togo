@@ -17,13 +17,13 @@ body {
 }
 
 .header #changeFeedback {
-    position:fixed;
+    position:absolute;
 
     background-color: rgba(0, 0, 0, 0.582);
     width:350px;
-    height:50px;
+    height:40px;
+    margin-top:70px;
     padding: 5px;
-    bottom:25%;
     border-radius: 5px;
 
     color:red;
