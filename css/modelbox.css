@@ -149,6 +149,8 @@
 #container #removeButton {
     /* Only displayed if the item is already in the cart */
     display:none;
+    position: relative;
+    top: -7px;
 }
 
 /* The special instructions */
