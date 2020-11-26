@@ -1,4 +1,4 @@
-const NUM_COUPON_SECTIONS = 4;
+const NUM_COUPON_SECTIONS = 2;
 const MAX_SUGGESTED_RESTAURANTS = 5; // The maximum number of restaurants that can be suggested in a search at one time
 var circles = []; // Circles.length = NUM_COUPON_SECTIONS
 var couponSection = 1;

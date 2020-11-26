@@ -19,15 +19,18 @@ body {
 .header #changeFeedback {
     position:absolute;
 
-    background-color: rgba(0, 0, 0, 0.582);
-    width:350px;
-    height:40px;
-    margin-top:70px;
+    background-color: rgba(145, 25, 25, 0.582);
+    /* width:350px; */
+    /* height:40px; */
+    margin-top:80px;
     padding: 5px;
     border-radius: 5px;
+    border: solid white 2px; 
 
-    color:red;
-    font-weight:normal;
+    color:rgb(255, 255, 255);
+    font-weight:500;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
     display:none;
 }
 
@@ -41,7 +44,7 @@ body {
 	width: 0;
 	height: 0;
 	border: 10px solid transparent;
-	border-bottom-color:rgba(0, 0, 0, 0.445);
+	border-bottom-color:white;
 	border-top: 0;
 }
 
