@@ -108,45 +108,55 @@
     <hr class="dividers" />
     <!-- Divier, This is the upper center portion of the main page (coupon section)-->
     <div id="mid">
-        <div class="slide">
-            <img src="images/coupon/coupon1.jpg" style="width:100%"/>
-            <span class="addTo" onclick="addCoupon(this, 0);">
-                <span class="addOverlay">Add to cart</span>
-                <span class="addWarning">Only 1 coupon allowed per order. Adding this item will remove your current coupon from the cart.</span>
-            </span>
-        </div>
-        <div class="slide">
-            <img src="images/coupon/coupon2.jpg" style="width:100%"/>
-            <span class="addTo" onclick="addCoupon(this, 1);">
-                <span class="addOverlay">Add to cart</span>
-                <span class="addWarning">Only 1 coupon allowed per order. Adding this item will remove your current coupon from the cart.</span>
-            </span>
-        </div>
-        <div class="slide">
-            <img src="images/coupon/coupn3.jpg" style="width:100%"/>
-            <span class="addTo" onclick="addCoupon(this, 2);">
-                <span class="addOverlay">Add to cart</span>
-                <span class="addWarning">Only 1 coupon allowed per order. Adding this item will remove your current coupon from the cart.</span>
-            </span>
-        </div>
-        <div class="slide">
-            <img src="images/coupon/coupon4.jpg" style="width:100%"/>
-            <span class="addTo" onclick="addCoupon(this, 3);">
-                <span class="addOverlay">Add to cart</span>
-                <span class="addWarning">Only 1 coupon allowed per order. Adding this item will remove your current coupon from the cart.</span>
-            </span>
-        </div>
+        <!-- <div class="slide-wrapper"> -->
+            <div class="slide">
+                <div class="slide-left">
+                    <img src="images/coupon/coupon1.jpg" style="width:95%"/>
+                    <span class="addTo" onclick="addCoupon(this, 0);">
+                        <span class="addOverlay">Add to cart</span>
+                        <span class="addWarning">Only 1 coupon allowed per order. Adding this item will remove your current coupon from the cart.</span>
+                    </span>
+                </div>
+            <!-- </div>
+            <div class="slide"> -->
+                <div class="slide-right">
+                    <img src="images/coupon/coupon2.jpg" style="width:95%"/>
+                    <span class="addTo" onclick="addCoupon(this, 1);">
+                        <span class="addOverlay">Add to cart</span>
+                        <span class="addWarning">Only 1 coupon allowed per order. Adding this item will remove your current coupon from the cart.</span>
+                    </span>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-left">
+                    <img src="images/coupon/coupn3.jpg" style="width:95%"/>
+                    <span class="addTo" onclick="addCoupon(this, 2);">
+                        <span class="addOverlay">Add to cart</span>
+                        <span class="addWarning">Only 1 coupon allowed per order. Adding this item will remove your current coupon from the cart.</span>
+                    </span>
+                </div>
+            <!-- </div>
+            <div class="slide"> -->
+                <div class="slide-right">
+                    <img src="images/coupon/coupon4.jpg" style="width:95%"/>
+                    <span class="addTo" onclick="addCoupon(this, 3);">
+                        <span class="addOverlay">Add to cart</span>
+                        <span class="addWarning">Only 1 coupon allowed per order. Adding this item will remove your current coupon from the cart.</span>
+                    </span>
+                </div>
+            </div>
+        <!-- </div> -->
 
         <a class="rightRotate" onclick="rotateCouponSection(1)">❯</a>
         <a class="leftRotate" onclick="rotateCouponSection(-1)">❮</a>
 
         <!-- The dots below the coupons to indicate which section the user is seeing -->
-        <center>
+        <!-- <center> -->
         <span class="circles" onclick="rotateCouponToIndex(0);"></span>
         <span class="circles" onclick="rotateCouponToIndex(1);"></span>
-        <span class="circles" onclick="rotateCouponToIndex(2);"></span>
-        <span class="circles" onclick="rotateCouponToIndex(3);"></span>
-        </center>
+        <!-- <span class="circles" onclick="rotateCouponToIndex(2);"></span>
+        <span class="circles" onclick="rotateCouponToIndex(3);"></span> -->
+        <!-- </center> -->
 
     </div>
 

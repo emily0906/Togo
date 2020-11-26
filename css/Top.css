@@ -614,16 +614,18 @@ This is the lines that divide the portions of the screens
 .topAddress #failedFeedback {
     position:fixed;
 
-    background-color: rgba(0, 0, 0, 0.582);
+    background-color: rgba(145, 25, 25, 0.753);
     width:179px;
     height:20px;
     padding: 5px;
     bottom:25%;
     border-radius: 5px;
-    top:77px;
+    top:80px;
     left:35%;
-    color:red;
+    color:white;
+    /* border: solid white 2px; */
     font-weight:normal;
+    font-family: Arial, Helvetica, sans-serif;
     display:none;
 }
 .topAddress #failedFeedback:after {
@@ -632,10 +634,10 @@ This is the lines that divide the portions of the screens
     margin-left: -10px;
 	margin-top: -10px;
 	top: 0;
-	left: 8%;
+	left: 10%;
 	width: 0;
 	height: 0;
 	border: 10px solid transparent;
-	border-bottom-color:rgba(0, 0, 0, 0.445);
+	border-bottom-color:rgba(145, 25, 25, 0.753);
 	border-top: 0;
 }

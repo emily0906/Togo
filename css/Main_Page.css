@@ -1,5 +1,4 @@
 body {
-    /* color: #fff; */
     background-color: #f0f0ef;
     background-position: center;
     background-repeat: repeat;
@@ -33,19 +32,29 @@ This is the lines that divide the portions of the screens
 /*
 slides for coupons
 */
+#mid{
+    margin: auto;
+    width: 1000px;
+}
 
-#mid .slide {
-    left:32%;
-    /* display: flex; */
+.slide {
     display: none;
     position: relative;
-    margin: auto;
+    top: 20px;
+    left: 10px;
     padding-top:90px;
 }
 
-#mid .slide img {
+.slide-left{
+    float: left;
+}
+
+.slide-right{
+    float: right;
+}
+
+.slide img {
     display: block;
-    top: 50%;
     height: auto;
     max-width:500px;
     border-radius: 5px;
@@ -55,19 +64,31 @@ slides for coupons
   	-webkit-transition: 0.5s ease;
 }
 
-#mid .slide:hover img{
+.slide-left:hover img{
+    opacity: 0.2;
+}
+
+.slide-right:hover img{
     opacity:0.2;
 }
 
-#mid .slide:hover .addTo .addOverlay {
+.slide-left:hover .addTo .addOverlay {
     visibility:visible !important; /* !important will override JS removing the hover event */
 }
 
-#mid .slide:hover .addTo .addWarning {
+.slide-right:hover .addTo .addOverlay {
     visibility:visible !important; /* !important will override JS removing the hover event */
 }
 
-#mid .slide .addTo{
+.slide-left:hover .addTo .addWarning {
+    visibility:visible !important; /* !important will override JS removing the hover event */
+}
+
+.slide-right:hover .addTo .addWarning {
+    visibility:visible !important; /* !important will override JS removing the hover event */
+}
+
+.slide .addTo{
     cursor:pointer;
     z-index:1;
     display:inline-block;
@@ -78,10 +99,9 @@ slides for coupons
     margin:auto;
     position: absolute;
     text-align:center;
-
 }
 
-#mid .slide .addTo .addOverlay {
+.slide .addTo .addOverlay {
     visibility:hidden;
     padding-top: 90px;
     font-size: 30px;
@@ -107,7 +127,7 @@ slides for coupons
     transform:translateX(-125px);
 }
 
-#mid .slide .addTo .addWarning {
+.slide .addTo .addWarning {
     opacity:0;
     visibility:hidden;
     position:relative;
@@ -122,11 +142,6 @@ slides for coupons
     word-wrap:break-word;
     max-width:250px;
 }
-
-/* #mid .slide:hover .addTo img {
-  color: #4f4f4f;
-  background-color: white;
-} */
 
 #mid .rightRotate,
 #mid .leftRotate {
@@ -144,12 +159,12 @@ slides for coupons
 }
 
 #mid .rightRotate{
-    left: 35%;
+    left: 99%;
     border-radius: 0 3px 3px 0;
 }
 
 #mid .leftRotate {
-    right: 15%;
+    right: 8%;
     border-radius: 3px 0 0 3px;
 }
 
@@ -158,8 +173,8 @@ slides for coupons
     background-color:#808080;
 }
 
+/* Clears rest of page for no overlap */
 #mid::after {
-    /* Clears rest of page for no overlap */
     content: "";
     clear: both;
     display: table;
@@ -168,11 +183,12 @@ slides for coupons
 /* Having the circles under the coupons look like circles */
 #mid .circles {
   cursor: pointer;
-  /* position: relative;
-  left: -2%; */
+  position: relative;
+  top: 20px;
+  left: 38%;
   height: 15px;
   width: 15px;
-  margin: 0 2px;
+  margin: auto;
   background-color: white;
   border-radius: 50%;
   display: inline-block;
