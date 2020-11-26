@@ -10,6 +10,7 @@ var formatter = new Intl.NumberFormat('en-US', {
 // Open the Modal
 function openModal() {
     document.getElementById("modal").style.display = "block";
+    document.getElementById("instructions").value = null; // Clear instructions when opening product
 
     var itemInCart = hasFoodItem(foodName); // Check if they already have the item in their cart
 
