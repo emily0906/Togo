@@ -339,6 +339,40 @@ The location image should be placed inside the textfield
     color: rgb(248, 99, 31);
 }
 
+#cartPopUp #checkoutFailure {
+    position:absolute;
+    display:inline-block;
+    top:478px;
+    left:10px;
+    text-align:center;
+
+    padding: 5px;
+    border-radius: 5px;
+    border: solid white 2px; 
+    color:rgb(255, 255, 255);
+    font-weight:500;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    border: solid black 2px; 
+    background-color: rgba(145, 25, 25, 0.582);
+    display:none;
+}
+
+#cartPopUp #checkoutFailure:after {
+    content: '';
+    position: absolute;
+    margin-left: -10px;
+	margin-top: -10px;
+	top: 0;
+	left: 45%;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-bottom-color:black;
+	border-top: 0;
+}
+
 .count {
     position:relative;
     left:1%;

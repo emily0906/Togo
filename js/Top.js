@@ -486,3 +486,26 @@ function invalidInput() {
 function validInput() {
     document.getElementById("failedFeedback").style.display = "none";
 }
+
+function goCheckout() {
+    var obj = document.getElementById("empty-message");
+
+    // We have an order
+    if (obj == null) {
+        // Redirect the user to checkout page
+        window.location = "Checkout.html";
+    }
+    else {
+        // No order, display error message
+        checkOutFeedbackAnimation();
+    }
+}
+
+function checkOutFeedbackAnimation() {
+    $("#checkoutFailure").fadeIn("slow", function () {
+        document.getElementById("checkoutFailure").style.opacity = "3.0"; // Slower fadeout
+        $("#checkoutFailure").fadeOut(8000, function () {
+            // Do nothing once complete
+        });
+    });
+}

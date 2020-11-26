@@ -84,7 +84,8 @@
                     <hr class="cartDividor" />
                 </div>
                 <div id="CouponTitle">Applying Coupon: <span id="Coupon">None</span></div>
-                <a href="Checkout.html"><button id="makeOrder">Checkout</button></a>
+                <button id="makeOrder" onclick="goCheckout();">Checkout</button>
+                <span id="checkoutFailure">Cannot checkout. No items in cart.</span>
                 <div id="tipSection">
                     <div id="tipTitle">! Important !</div>
                     <div id="tipText">In order for your coupon to work..</div>
