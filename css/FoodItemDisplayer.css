@@ -84,7 +84,7 @@
     cursor: pointer;
     position:relative;
     left:20%;
-    width:50%;
+    width:620px;
     height:130px;
     margin-top:15px;
     /* border: 2px solid white; */
@@ -183,4 +183,57 @@ footer {
     color: white;
     background-color: rgb(78, 78, 78);
     /* margin-left:10%; */
+}
+
+@media only screen and (max-width: 900px) {
+    #bodyComponents .foodItem {
+        cursor: pointer;
+        position:relative;
+        left:2%;
+        width:600px;
+        height:130px;
+        margin-top:15px;
+    }
+
+    #bodyComponents #price {
+        position:absolute;
+        left:85%;
+        float:right;
+        top:15px;
+        font-size:20px;
+        color:rgb(255, 101, 40);
+        width:50%;
+        overflow: hidden; /* make sure it hides the content that overflows */
+        white-space: nowrap; /* don't break the line */
+        text-overflow: ellipsis; /* give the beautiful '...' effect */
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #historyText {
+        margin-left:3%;
+    }
+
+    #historyText #text1{
+        font-size: 28px;
+    }
+
+    #bodyComponents .foodItem {
+        cursor: pointer;
+        position:relative;
+        left:1%;
+        width:450px;
+        height:130px;
+        margin-top:15px;
+    }
+
+    #bodyComponents #price {
+        position:absolute;
+        left:84%;
+        float:right;
+        top:15px;
+        font-size:18px;
+        color:rgb(255, 101, 40);
+        width:50%;
+    }
 }

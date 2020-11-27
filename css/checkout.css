@@ -19,40 +19,36 @@ body {
 }
 
 #cannotCheckout {
-    position:fixed;
+    position: absolute;;
     display:block;
-    width:350px;
-    height:20px;
-    right:16%;
+    right:15%;
     transform:translate(135px, 0);
-    bottom:97px;
+    bottom:60px;
     display:none;
     z-index:100;
     text-align:center;
     padding: 5px;
     border-radius: 5px;
-    border: solid white 2px; 
     color:rgb(255, 255, 255);
     font-weight:500;
     font-size: 17px;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 5px;
-    border: solid black 2px; 
-    background-color: rgba(145, 25, 25, 0.582);
+    background-color:  rgba(145, 25, 25, 0.753);
 }
 
 #cannotCheckout:after {
     content: '';
     position: absolute;
     margin-left: -10px;
-	margin-top: -10px;
-	top: 40px;
-	left: 51%;
-	width: 0;
-	height: 0;
-	border: 10px solid transparent;
-	border-bottom-color:black;
-	border-top: 0;
+    margin-top: -10px;
+    top: 60px;
+    left: 70%;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: rgba(145, 25, 25, 0.753);
+    border-top: 0;
     transform:rotate(180deg);
 }
 
@@ -145,9 +141,9 @@ li {
 
 /* Floating action button */
 .fab {
-  position: fixed;
-  right: 16%;
-  bottom:10px;
+  position: absolute;
+  right: 2%;
+  bottom:-35px;
   box-sizing: border-box;
   padding-top: 18px;
   background-color: rgb(253, 94, 46);
@@ -375,4 +371,37 @@ a {
 }
 .box button:hover {
   opacity: 0.5;
+}
+
+@media only screen and (max-width: 950px) {
+  .card {
+    width: 500px;
+    top: -30px;
+    margin: 200px auto;
+  }
+  
+  /* Image on the left side */
+  .thumbnail .left{
+    display:none;
+  }
+  h6 {
+    display:none;
+  }
+
+  /* Right side of the card */
+  .right {
+    margin-left:20px;
+    margin-right: 3px;
+    height: 520px;
+  }
+  
+}
+
+@media only screen and (max-width: 600px) {
+  .page-title{
+    position: absolute;
+    color: white;
+    top: 55px;
+    left: 5%;
+  }
 }

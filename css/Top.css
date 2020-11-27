@@ -325,7 +325,7 @@ The location image should be placed inside the textfield
     position: absolute;
     padding:10px;
     left:31%;
-    top: 420px;
+    top: 425px;
     margin-bottom: 10px;
     /* top: 50px; */
     color: white; /* Text color */
@@ -345,19 +345,19 @@ The location image should be placed inside the textfield
     position:absolute;
     display:inline-block;
     top:478px;
-    left:10px;
+    left:13px;
     text-align:center;
 
     padding: 5px;
     border-radius: 5px;
-    border: solid white 2px; 
+    /* border: solid white 2px;  */
     color:rgb(255, 255, 255);
     font-weight:500;
     font-size: 17px;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 5px;
-    border: solid black 2px; 
-    background-color: rgba(145, 25, 25, 0.582);
+    /* border: solid black 2px;  */
+    background-color: rgba(145, 25, 25, 0.753);
     display:none;
 }
 
@@ -367,11 +367,11 @@ The location image should be placed inside the textfield
     margin-left: -10px;
 	margin-top: -10px;
 	top: 0;
-	left: 45%;
+	left: 48%;
 	width: 0;
 	height: 0;
 	border: 10px solid transparent;
-	border-bottom-color:black;
+	border-bottom-color: rgba(145, 25, 25, 0.753);
 	border-top: 0;
 }
 
@@ -578,7 +578,6 @@ This is the lines that divide the portions of the screens
         left: -85px;
     }
 }
-
 
 
 .popUp #popUpBox {
