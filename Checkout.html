@@ -21,6 +21,7 @@
     <script src="https://raw.githubusercontent.com/Eddcapone/custom_jquery-ui-1.12.1/master/jquery-ui.js"></script>
     <script type="text/javascript" src="js/Top.js"></script>
     <script type="text/javascript" src="js/modelBox.js"></script>
+    <script type="text/javascript" src="js/Checkout.js"></script>
 
     <meta charset="utf-8" />
     <title>TO GO Online Delivery</title>
@@ -36,8 +37,10 @@
 
                 <!-- Address at top of screen -->
                 <span class="topAddress">
-                    <input type="text" id="deliveryAddress" onchange="addressChange();" />
-                    <a onclick="submitAddress();"><button class="loc-btn" type="button"> Confirm </button></a>
+                    <span id="failedFeedback">Please enter an address.</span>
+                    <span id="changeFeedback">Address Updated!</span>
+                    <input type="text" id="deliveryAddress" onkeydown="addressKeyPress(this); displayAddressOnCheckout();" />
+                    <button class="loc-btn" type="button" onclick="addressSubmitCheck(); displayAddressOnCheckout();"> Confirm </button>
                     <img src="images/locationIcon.png" />
                 </span>
             </div>
@@ -93,6 +96,7 @@
             <h1>ORDER DETAILS</h1>
             <!-- <div class="separator"></div> -->
             <p> Delivery ASAP: 30 minutes - 45 minutes</p>
+            <p id="addressDisplayed"> Delivering To: 123 fake Street.</p>
             <div class="separator"></div>
             <div id="allOrders">
                 <span id="empty-message">No items in your cart. Make an order!</span>
@@ -127,7 +131,9 @@
         // Close the Modal
         function closeBox() {
           document.getElementById("myBox").style.display = "none";
-        }
+            }
+
+            displayAddressOnCheckout();
         </script>
 
 </body>

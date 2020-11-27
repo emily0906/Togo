@@ -185,15 +185,6 @@ function redirectToRestaurantByObject(obj) {
     window.location = "FoodItemDisplayer.html";
 }
 
-function addressKeyPress(elem) {
-
-    if (correctFormat(elem.value)) {
-        if (event.key === 'Enter') {
-            addressChange();
-        }
-    }
-}
-
 function addressSubmitCheck() {
     if (correctFormat(document.getElementById("deliveryAddress").value)) {
         validInput();
