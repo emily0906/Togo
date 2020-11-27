@@ -47,7 +47,7 @@
         </div>
     </div>
 
-    <div class="fab"><div id="test" button onclick="goCheckout();">Place Order</div></div>
+    <!-- <div class="fab"><div id="test" button onclick="goCheckout();">Place Order</div></div> -->
     <div id ="myBox" class= "box">
       <div class= "confirmation">
         <h2>Order sucessful</h2>
@@ -82,11 +82,12 @@
 
     </script>
 
-    <span id="cannotCheckout">Cannot checkout. No items in cart.</span>
+    <!-- <span id="cannotCheckout">Cannot checkout. <br> No items in cart.</span> -->
     <hr class="dividers" />
     <!-- the body of checkout page-->
     <p class="page-title">Checkout</p>
     <div class="card">
+        <div class="fab"><div id="test" button onclick="goCheckout();">Place Order</div></div>
         <div class="thumbnail"><img class="left" src="images/checkout.jpg" /></div>
         <div class="right">
             <h1>ORDER DETAILS</h1>
@@ -115,6 +116,7 @@
                 <div id="tipTitle">! Important !</div>
                 <div id="tipText">In order for your coupon to work..</div>
             </div>
+            <span id="cannotCheckout">Cannot checkout. <br> No items in cart.</span>
             <h6>Expect the Best</h6>
         </div><!-- .card -->
         <script>
