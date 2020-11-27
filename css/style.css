@@ -9,7 +9,7 @@ body {
   background-image: url('../images/logo-welcome-page.png'), url('../images/welcome-page.jpg');
   background-position: 50% 130px, left top;
   background-repeat: no-repeat, no-repeat;
-  background-size: 23% auto, cover;
+  background-size: 300px, cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,7 +56,7 @@ body {
   letter-spacing:2px;
   text-align: center;
   font-family: Gill Sans, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 #search-field
@@ -88,4 +88,54 @@ body {
 .search-btn:hover{
   background: #fd6a16;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  .header
+  {
+    height: 100vh;
+    background-image: url('../images/logo-welcome-page.png'), url('../images/welcome-page.jpg');
+    background-position: 50% 150px, 50% 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 270px, cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .welcome_text
+  {
+    color: rgb(255, 255, 255);
+    margin-top: 100px;
+    font-size:150%;
+    letter-spacing:2px;
+    text-align: center;
+    font-family: Gill Sans, sans-serif;
+    font-weight: 400;
+  }
+  
+  #search-field
+  {
+    width: 350px;
+    height: 50px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    text-indent: .5cm;
+  }
+  .search-btn
+  {
+    height: 50px;
+    width: 100px;
+    background: #000000bd;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid #ffffff67;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+  }
 }

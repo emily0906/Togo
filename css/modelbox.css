@@ -1,35 +1,36 @@
-
 #myImg {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
 }
-#myImg:hover {opacity: 0.7;}
+#myImg:hover {
+  opacity: 0.7;
+}
 
 /* The Modal (background) */
 #modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 100; /* Sit on top */
-  top:485px;
+  top: 485px;
 
   /* Center image*/
-  left:50%;
-  transform:translate(-50%, -45%);
+  left: 50%;
+  transform: translate(-50%, -45%);
 
   width: 100%; /* Full width */
   height: 900px; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   /* background-color: rgb(0,0,0); Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
 }
 
 #container {
-    margin: auto;
-    width: 650px;
-    color: white;
-    position: relative;
-    top: 15%;
+  margin: auto;
+  width: 650px;
+  color: white;
+  position: relative;
+  top: 15%;
 }
 
 /* Modal Content (image) */
@@ -45,10 +46,7 @@
 
 #container #menu-details {
   text-align: left;
-  /* width: 400px; */
-  /* float: right; */
   margin-right: 10px;
-  /* font-size: 19px; */
   font-weight: 300;
 }
 
@@ -58,20 +56,22 @@
 }
 
 #container #menu-details #foodPrice {
-  color:rgb(255, 111, 44);
+  color: rgb(255, 111, 44);
   font-size: 20px;
   font-weight: normal;
   margin-top: 5px;
 }
 
 /* restaurant name */
-#container #menu-details #modalTitle, #dishDescription, #dishIngrediants {
+#container #menu-details #modalTitle,
+#dishDescription,
+#dishIngrediants {
   color: rgb(219, 219, 219);
   font-size: 18px;
 }
 
 #container #modalTitle {
-    cursor:pointer;
+  cursor: pointer;
 }
 
 /* Caption of Modal Image */
@@ -87,29 +87,10 @@
   height: 150px;
 }
 
-/* Add Animation */
-/* #modal-content, #caption {
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-} */
-
-/* @-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)}
-  to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
-} */
-
 #buttons {
   margin: auto;
   width: 65%; /* 95% for 3 buttons [Modified in modelBox.js] */
 }
-
 
 #close:hover,
 #close:focus {
@@ -123,48 +104,103 @@
   border: 2px solid white; /* Border thickness, line style, and color */
   border-radius: 5px; /* Adds curve to border corners */
   text-transform: uppercase; /* Make letters uppercase */
-  width:150px;
-  height:40px;
-  margin-left:40px;
-  margin-top:20px;
-  cursor:pointer;
+  width: 150px;
+  height: 40px;
+  margin-left: 40px;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
 #container button:hover {
   opacity: 0.7;
 }
 
-/* #container #addButton {
-  border-color:rgb(255, 122, 45);
-  color:rgb(255, 122, 45);
-  font-weight: bolder;
-} */
-
 #container #closeButton {
-  border-color:rgb(255, 76, 45);
-  color:rgb(255, 76, 45);
+  border-color: rgb(255, 76, 45);
+  color: rgb(255, 76, 45);
   font-weight: bolder;
 }
 
 #container #removeButton {
-    /* Only displayed if the item is already in the cart */
-    display:none;
-    position: relative;
-    top: -7px;
+  /* Only displayed if the item is already in the cart */
+  display: none;
+  position: relative;
+  top: -7px;
 }
 
 /* The special instructions */
-#modal #instructions{
+#modal #instructions {
   width: 650px;
-  max-width:100%;
-  min-width:10%;
+  max-width: 100%;
+  min-width: 10%;
   height: 55px;
 
   border: none;
   border-radius: 5px;
   outline: none;
   font-size: 18px;
-  /* font-family: Gill Sans, sans-serif; */
   font-family: "Roboto", sans-serif;
-  text-indent: .5cm;
+  text-indent: 0.5cm;
+}
+
+@media only screen and (max-width: 800px) {
+  #container {
+    margin: auto;
+    width: 500px;
+    color: white;
+    position: relative;
+    top: 15%;
+  }
+
+  /* Modal Content (image) */
+  #modal-content {
+    float: left;
+    width: 200px;
+    height: 220px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  #container #menu-details #foodName {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  #container #menu-details #foodPrice {
+    color: rgb(255, 111, 44);
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 5px;
+  }
+
+  /* restaurant name */
+  #container #menu-details #modalTitle,
+  #dishDescription,
+  #dishIngrediants {
+    color: rgb(219, 219, 219);
+    font-size: 16px;
+  }
+
+  #buttons {
+    width: 500px;
+    margin: auto;
+  }
+
+  #container button {
+    width: 120px;
+    height: 40px;
+    font-size: 12px;
+    margin-left: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  /* The special instructions */
+  #modal #instructions {
+    width: 500px;
+    height: 55px;
+    font-size: 16px;
+  }
 }
