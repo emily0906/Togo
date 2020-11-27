@@ -371,3 +371,35 @@ footer {
     color: white;
     background-color: rgb(78, 78, 78);
 }
+
+@media only screen and (max-width: 800px) {
+
+    #bottom {
+        margin:center;
+    }
+    
+    #bottom #search input {
+        position: relative;
+        left: 20px;
+        top: 20px;
+        background: rgba(255, 255, 255, 0.685);
+        border: none;
+        width: 220px;
+        height: 25px;
+        padding: 5px;
+        box-shadow: 1px 1px 3px 3px rgb(221, 220, 220);
+        border-radius: 3px;
+    
+        font-size: 16px;
+        text-indent: 30px;
+        color: rgb(63, 63, 63);
+    }
+    
+    #bottom #search img {
+        position:relative;
+        width: 20px;
+        height: 20px;
+        right: 210px;
+        top:25px;
+    }
+}
