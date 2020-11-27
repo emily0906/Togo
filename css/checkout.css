@@ -387,6 +387,7 @@ a {
     margin: 200px auto;
   }
   
+
   /* Image on the left side */
   .thumbnail .left{
     display:none;
@@ -415,4 +416,4 @@ a {
     top: 55px;
     left: 5%;
   }
-}
+}}
