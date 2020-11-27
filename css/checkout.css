@@ -402,6 +402,10 @@ a {
     height: 520px;
   }
 
+  /* Increase offset on warning message for small screens */
+  #cannotCheckout {
+      right:28%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
