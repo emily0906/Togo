@@ -39,7 +39,7 @@ var foodItems = [
         "Noodles spiced so well it will bring you to a new season", "Spicy Rice Noodles, Pork, Avacado", 13.15, 5),
     new FoodItem(18, "Seafood Sushi", "images/food/Food - Sushi.jpg", "Ume Japanese",
         "A finely pieced seafood sushi dish", "Seasoned Rice, Smoked Salmon, Noodles, Sweet and Sour Sauce", 10.35, 5),
-   
+
 
     // -----------------------------------------------------------
     // This is excess / Situational foods (Drinks, excess stuff)
@@ -101,27 +101,27 @@ var foodItems = [
         "Freshin the day with a cold one", "Yogurt, Sugar, Flaxseeds, Kiwi, Celery", 4.99, 3.9),
     // ------------------------------
 
-    new FoodItem(42, "Salmon Dinner", "images/food/Food - Salmon Dinner.jpg", "Stellas", 
+    new FoodItem(42, "Salmon Dinner", "images/food/Food - Salmon Dinner.jpg", "Stellas",
         "A Salmon Dinner with salad", "Salmon, Letuce, Lemon", 14.99, 4.6),
-    new FoodItem(43, "Pancakes", "images/food/Food - Pancakes.jpg", "Stellas", 
+    new FoodItem(43, "Pancakes", "images/food/Food - Pancakes.jpg", "Stellas",
         "Fluffly Pancakes", "Egg, Milk, Fruit", 12.99, 4.4),
-    new FoodItem(44, "Chocolate Cake", "images/food/Food - Chocolate Cake.jpg", "Stellas", 
+    new FoodItem(44, "Chocolate Cake", "images/food/Food - Chocolate Cake.jpg", "Stellas",
         "A slice of chocolate cake covered with fresh fruit", "Egg, Milk, Fruit", 9.99, 4.9),
-    new FoodItem(45, "Avocado and Cucumber Sushi", "images/food/Food - Sushi4.jpg", "Ume Japanese", 
+    new FoodItem(45, "Avocado and Cucumber Sushi", "images/food/Food - Sushi4.jpg", "Ume Japanese",
         "Sushi with Avocado and Cucumber", "Seaweed, Avocoda, Cucumber, Rice", 8.99, 4.3),
-    new FoodItem(46, "Noodles and Shrimp", "images/food/Food - Noodles Shrimp.jpg", "Gong Cha", 
+    new FoodItem(46, "Noodles and Shrimp", "images/food/Food - Noodles Shrimp.jpg", "Gong Cha",
         "Noodles with Shrimp", "Noodles, Shrimp", 11.99, 3.9),
-    new FoodItem(47, "Shirataki Noodles", "images/food/Food - Noodles Shirataki.jpg", "Pho Kim Tuong", 
+    new FoodItem(47, "Shirataki Noodles", "images/food/Food - Noodles Shirataki.jpg", "Pho Kim Tuong",
         "Noodles ", "Shirataki Noodles, vegetables", 13.99, 3.9),
-    new FoodItem(48, "Kimchi Rice", "images/food/Food - Kimchi Rice.jpg", "Pho Kim Tuong", 
+    new FoodItem(48, "Kimchi Rice", "images/food/Food - Kimchi Rice.jpg", "Pho Kim Tuong",
         "A Kimchi Rice dish garnished with an egg ", "Rice, vegetables, egg", 14.99, 4.2),
-    new FoodItem(49, "Canned Pop Drinks", "images/food/Food - Pop Drink.jpg", null, 
-        "Coke, Sprite, Pepsie, Dr Pepper, Cream Soda, Orage Crush", "", 2.99, 4.8), 
+    new FoodItem(49, "Canned Pop Drinks", "images/food/Food - Pop drink.jpg", null,
+        "Coke, Sprite, Pepsie, Dr Pepper, Cream Soda, Orage Crush", "", 2.99, 4.8),
     new FoodItem(50, "Fired Pork Dish", "images/food/Food - Fired Pork.jpg", "Pho Kim Tuong",
         "A fried pork dish", "Pork, Vegetables", 12.95, 4.7),
     new FoodItem(51, "Cookie (GF&VGN)", "images/food/cookies.jpg", "Smittys",
         "A special treat for the special occasion.", "Coconut Flour, Dairy Free Chocolate Chips, Peanut Butter", 2.95, 5)
-        
+
     /*  HAVE NOT YET USED THE IMAGES OF SALMON OR PIZZA ! */
 ]
 
@@ -203,7 +203,7 @@ var restaurants = [
                 ],
                 Drinks:
                 [
-                    foodItems[19], 
+                    foodItems[19],
                     foodItems[49]
                 ]
             }
@@ -254,13 +254,13 @@ var restaurants = [
                 ],
                 Drinks:
                 [
-                    foodItems[19], 
+                    foodItems[19],
                     foodItems[49]
                 ]
             }
         ), 105),
- 
-    new Restaurant(3, "Gong Cha", "images/restaurants/Gong Cha.jpg", 
+
+    new Restaurant(3, "Gong Cha", "images/restaurants/Gong Cha.jpg",
         new Menu(
             {
                 /* TODO: Lets make some more smoothies for this restaurant */
@@ -277,7 +277,7 @@ var restaurants = [
                 ],
                 Drinks:
                 [
-                    foodItems[19], 
+                    foodItems[19],
                     foodItems[49]
                 ]
             }
@@ -297,13 +297,13 @@ var restaurants = [
                 ],
                 Drinks:
                 [
-                    foodItems[19], 
+                    foodItems[19],
                     foodItems[49]
                 ]
             }
         )
         , 80),
-    new Restaurant(5, "Fion", "images/restaurants/Fion.jpg", 
+    new Restaurant(5, "Fion", "images/restaurants/Fion.jpg",
         new Menu(
             {
                 Mains:
@@ -327,7 +327,7 @@ var restaurants = [
             }
         )
         , 100),
-    new Restaurant(6, "Smittys", "images/restaurants/Smitty.png", 
+    new Restaurant(6, "Smittys", "images/restaurants/Smitty.png",
         new Menu(
             {
                 Starters:
@@ -347,13 +347,13 @@ var restaurants = [
                     ],
                     Drinks:
                     [
-                        foodItems[19], 
+                        foodItems[19],
                         foodItems[49]
                     ]
             }
         )
         , 50),
-  
+
     new Restaurant(7, "Pho Kim Tuong", "images/restaurants/Pho Kim Tuong.jpg",
         new Menu(
             {
@@ -370,7 +370,7 @@ var restaurants = [
                     ],
                     Drinks:
                     [
-                        foodItems[19], 
+                        foodItems[19],
                         foodItems[49]
                     ]
             }
@@ -393,14 +393,14 @@ var restaurants = [
                     foodItems[33],
                     foodItems[36],
                     foodItems[42]
-                ], 
+                ],
                 Dessert:
                 [
                     foodItems[44]
                 ],
                 Drinks:
                 [
-                    foodItems[19], 
+                    foodItems[19],
                     foodItems[49]
                 ]
             }
