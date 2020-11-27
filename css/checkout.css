@@ -401,6 +401,10 @@ a {
     margin-right: 3px;
     height: 520px;
   }
+
+  #cannotCheckout {
+      right:28%;
+  }
   
 }
 
